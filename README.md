@@ -4,11 +4,11 @@
 
 ## About
 
-`lesTools` is a toolbox of `MATLAB` scripts that can aid in the construction and assessment of subgrid-scale models for large-eddy simulations of incompressible turbulent flows.
+`lesTools` is a toolbox of `MATLAB` scripts that can aid in the construction and assessment of subgrid-scale models for large-eddy simulations of turbulent flows.
 
 Currently, `lesTools` consists of one module:
 
-1. [nearWallScaling](#nearWallScaling)
+1. [nearWallScaling](#nearwallscaling)
 
 ## nearWallScaling
 
@@ -18,7 +18,7 @@ Currently, `lesTools` consists of one module:
 
 Using numerical simulations, Chapman and Kuhn (1986) revealed the limiting power-law behavior of incompressible turbulence near a solid wall.
 Among other things, they determined the scaling behavior of the Reynolds stresses in terms of the wall-normal distance.
-It is desirable that subgrid-scale models for the turbulent stresses exhibit the same asymptotic near-wall behavior as the Reynolds stresses (Nicoud et al. 2011, Trias et al. 2015, Silvis et al. 2017, Silvis and Verstappen n.d.).
+It is desirable that subgrid-scale models for the turbulent stresses exhibit the same asymptotic near-wall behavior as the Reynolds stresses (Nicoud et al. 2011; Trias et al. 2015; Silvis et al. 2017; Silvis and Verstappen n.d.).
 
 The near-wall behavior of subgrid-scale models can be studied by expanding the components of the velocity field in terms of the wall-normal coordinate (Trias et al. 2015).
 Due to the no-slip condition, the zeroth-order terms in these expansions have to vanish.
@@ -28,7 +28,7 @@ The expansion of the velocity field can be inserted in subgrid-scale models (or 
 
 ### Module
 
-The `nearWallScaling` module, which can be found in the [nearWallScaling folder](nearWallScaling) of this toolbox, facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows.
+The `nearWallScaling` module, which can be found in the [nearWallScaling](nearWallScaling) folder of this toolbox, facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows (Silvis et al. 2017; Silvis and Verstappen n.d.).
 
 ### Usage
 
@@ -83,7 +83,7 @@ Depending on your purposes, please consider citing the work by Silvis et al. (20
 
 ### References
 
-Chapman, D. R. and Kuhn, G. D. (1986). ''The limiting behaviour of turbulence near a wall''. *J. Fluid Mech.* **170**, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
+Chapman, D. R. and Kuhn, G. D. (1986). ''The limiting behaviour of turbulence near a wall''. *Journal of Fluid Mechanics* **170**, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
 
 Nicoud, F., Baya Toda, H., Cabrit, O., Bose, S. and Lee, J. (2011). ''Using singular values to build a subgrid-scale model for large eddy simulations''. *Physics of Fluids* **23**, 085106. DOI: [10.1063/1.3623274](http://doi.org/10.1063/1.3623274).
 
