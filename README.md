@@ -1,29 +1,99 @@
 # lesTools
 
+> A toolbox for the construction and assessment of subgrid-scale models for large-eddy simulations
+
 ## About
 
 `lesTools` is a toolbox of `MATLAB` scripts that can aid in the construction and assessment of subgrid-scale models for large-eddy simulations of incompressible turbulent flows.
-Currently, `lesTools` consists of one module.
+
+Currently, `lesTools` consists of one module:
+
+1. [Near-wall scaling behavior](#near-wall-scaling-behavior)
 
 ## Modules
 
 ### Near-wall scaling behavior
 
-In their 1986 paper, Chapman and Kuhn revealed the near-wall scaling behavior of the time-averaged turbulent stresses.
-It is desirable that subgrid-scale models for the turbulent stresses exhibit the same behavior in the vicinity of solid walls (see, e.g., Silvis et al. 2017).
+#### Background
 
-The current module, which can be found in the [`nearWallScal` folder](nearWallScal) of this package, can be used to determine the near-wall scaling behavior of physical quantities that depend on the velocity field and/or the velocity field of an incompressible turbulent flow.
+Using numerical simulations, Chapman and Kuhn (1986) revealed the limiting power-law behavior of incompressible turbulence near a solid wall.
+Among other things, they determined the scaling behavior of the Reynolds stresses in terms of the wall-normal distance.
+It is desirable that subgrid-scale models for the turbulent stresses exhibit the same asymptotic near-wall behavior as the Reynolds stresses (Nicoud et al. 2011, Trias et al. 2015, Silvis et al. 2017, Silvis and Verstappen n.d.).
+
+The near-wall behavior of subgrid-scale models can be studied by expanding the components of the velocity field in terms of the wall-normal coordinate (Trias et al. 2015).
+Due to the no-slip condition, the zeroth-order terms in these expansions have to vanish.
+By incompressibility, the first-order term in the expansion of the wall-normal velocity component then also has to vanish.
+The tangential velocity components will, thus, be first order in the wall-normal coordinate, while the wall-normal velocity component exhibits a second-order near-wall scaling.
+The expansion of the velocity field can be inserted in subgrid-scale models (or other physical quantities based on the velocity field) to study their behavior near a solid wall.
+
+The `nearWallScaling` module, which can be found in the [nearWallScaling folder](nearWallScaling) of this toolbox, facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows.
+
+#### Usage
+
+To use the scripts of the `nearWallScaling` module one needs `MATLAB` with the `symbolic` toolbox.
+Usage was tested in `MATLAB R2018a`.
+
+The main function of the `nearWallScaling` module can be found in the script [nearWallScaling.m](nearWallScaling/nearWallScaling.m).
+This function has two arguments, `fun` and `ord`.
+
+The first argument, `fun` should be a function name or handle, representing a function of the velocity field and/or the velocity gradient.
+This function should accept between 1 and 10 arguments.
+The first argument should be:
+
+- the velocity field (in which a velocity field expansion will be inserted as a 3 x 1 vector).
+
+The next arguments, if present, are assumed to be:
+
+- the velocity gradient `G` (a 3 x 3 matrix),
+- the rate-of-strain tensor `S` (a 3 x 3 matrix),
+- the rate-of-rotation tensor `W` (a 3 x 3 matrix),
+
+and the following scalar combined invariants of the rate-of-strain
+and rate-of-rotation tensors:
+
+- `I1 = trace(S^2)`,
+- `I2 = trace(W^2)`,
+- `I3 = trace(S^3)`,
+- `I4 = trace(S W^2)`,
+- `I5 = trace(S^2 W^2)`,
+- `I6 = trace(S^2 W^2 S W)`.
+
+Examples of input functions are:
+
+- `@(vel) vel(1)`, to see the (expected) near-wall scaling of the first velocity field component,
+- `@(vel, G, S) S`, to determine the scaling behavior of the rate-of-strain tensor,
+- `@(vel, G, S, W, I1, I2) I1 - I2 `, to determine the scaling behavior of the (squared) velocity gradient magnitude,
+- `@(vel, G, S, W, I1, I2) I1 + I2 `,
+- etc.
+
+Note that fractions, fractional powers and special functions of the velocity field and/or gradient are not accepted.
+
+The second argument, `ord`, is optional and represents the polynomial order that will be used in the expansion of the velocity field in terms of the wall-normal coordinate (which is denoted as `y`).
+The default value of this argument is 1.
+
+If the script successfully finishes running, two output variables are provided, `scal` and `expn`.
+The first output variable, `scal`, contains the near-wall scaling information of the physical quantity represent by `fun`.
+The second variable, `expn`, contains the full expansion of the provided quantity in terms the wall-normal coordinate.
+
+To study the near-wall scaling behavior of quantities involving fractional functions of the velocity field or gradient, one can first study the numerators and denominators separately, and then (manually) draw conclusions about the near-wall scaling behavior of the full function.
+The same holds for (the arguments of) special functions and nth roots.
+
+Depending on your purposes, please consider citing the work by Silvis et al. (2017) and/or Silvis and Verstappen (n.d.) when making use of the `nearWallScaling` module.
 
 #### References
 
-Chapman, D. R. and Kuhn, G. D. (1986) The limiting behaviour of turbulence near a wall. *J. Fluid Mech.* **170**, 265-292.
+Chapman, D. R. and Kuhn, G. D. (1986). ''The limiting behaviour of turbulence near a wall''. *J. Fluid Mech.* **170**, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
 
-Silvis, M. H., Remmerswaal, R. A. and Verstappen, R. (2017) Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows. *Phys. Fluids* **29**, 015105.
+Nicoud, F., Baya Toda, H., Cabrit, O., Bose, S. and Lee, J. (2011). ''Using singular values to build a subgrid-scale model for large eddy simulations''. *Physics of Fluids* **23**, 085106. DOI: [10.1063/1.3623274](http://doi.org/10.1063/1.3623274).
+
+Silvis, M. H., Remmerswaal, R. A. and Verstappen, R. (2017). ''Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows''. *Physics of Fluids* **29**, 015105. DOI: [10.1063/1.4974093](http://doi.org/10.1063/1.4974093).
+
+Silvis, M. H. and Verstappen, R. (n.d.). ''How to create new physics-based turbulence models for large-eddy simulation?''. (in preparation).
+
+Trias, F. X., Folch, D., Gorobets, A. and Oliva, A. (2015). ''Building proper invariants for eddy-viscosity subgrid-scale models''. *Physics of Fluids* **27**, 065103. DOI: [10.1063/1.4921817](http://doi.org/10.1063/1.4921817).
 
 ## License
 
 Copyright (c) 2016-2019 Maurits H. Silvis
 
-This file is subject to the terms and conditions defined in
-the MIT License, which can be found in the file 'license.txt'
-that is part of this source code package.
+This source code package is subject to the terms and conditions defined in the MIT License, which can be found in the file [LICENSE.txt](LICENSE.txt).

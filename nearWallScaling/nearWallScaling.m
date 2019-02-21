@@ -25,13 +25,15 @@ function [scal, expn] = nearWallScaling(fun, ord)
 %           - I4 = trace(S W^2),
 %           - I5 = trace(S^2 W^2),
 %           - I6 = trace(S^2 W^2 S W).
-%           Note that fractions, fractional powers and special functions of the
-%           velocity field and/or gradient are not accepted.
 %           Examples:
 %               @(vel) vel(1) % The x-component of the velocity field
 %               @(vel, G, S) S % The rate-of-strain tensor
+%               @(vel, G, S, W, I1, I2) I1 - I2 % The (squared) velocity 
+%                   gradient magnitude
 %               @(vel, G, S, W, I1, I2) I1 + I2 % Invariants 1 + 2
 %               ...
+%           Note that fractions, fractional powers and special functions of the
+%           velocity field and/or gradient are not accepted.
 %
 % ord   int -- Polynomial order of the expansion of the velocity field in terms
 %           of a wall-normal coordinate y.
