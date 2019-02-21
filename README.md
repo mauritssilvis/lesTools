@@ -66,15 +66,14 @@ Examples of input functions are:
 - `@(vel, G, S, W, I1, I2) I1 + I2 `,
 - etc.
 
-Note that fractions, fractional powers and special functions of the velocity field and/or gradient are not accepted.
-
 The second argument, `ord`, is optional and represents the polynomial order that will be used in the expansion of the velocity field in terms of the wall-normal coordinate (which is denoted as `y`).
 The default value of this argument is 1.
 
 If the script successfully finishes running, two output variables are provided, `scal` and `expn`.
 The first output variable, `scal`, contains the near-wall scaling information of the physical quantity represent by `fun`.
-The second variable, `expn`, contains the full expansion of the provided quantity in terms the wall-normal coordinate.
+The second variable, `expn`, contains the full expansion of the provided quantity in terms of the wall-normal coordinate.
 
+Note that, currently, functions `fun` involving fractions, fractional powers and/or special functions of the velocity field and/or velocity gradient are not accepted.
 To study the near-wall scaling behavior of quantities involving fractional functions of the velocity field or gradient, one can first study the numerators and denominators separately, and then (manually) draw conclusions about the near-wall scaling behavior of the full function.
 The same holds for (the arguments of) special functions and nth roots.
 
