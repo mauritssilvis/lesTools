@@ -83,15 +83,15 @@ Depending on your purposes, please consider citing the work by Silvis et al. [[4
 
 ### References
 
-1. Chapman, D. R. and Kuhn, G. D. (1986). <a id="chapmankuhn1986"></a> “The limiting behaviour of turbulence near a wall”. *Journal of Fluid Mechanics* 170, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
+1. Chapman, D. R. and Kuhn, G. D. (1986). <a name="chapmankuhn1986"></a> “The limiting behaviour of turbulence near a wall”. *Journal of Fluid Mechanics* 170, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
 
-2. Nicoud, F., Baya Toda, H., Cabrit, O., Bose, S. and Lee, J. (2011). <a id="nicoudetal2011"></a> “Using singular values to build a subgrid-scale model for large eddy simulations”. *Physics of Fluids* 23, 085106. DOI: [10.1063/1.3623274](http://doi.org/10.1063/1.3623274).
+2. Nicoud, F., Baya Toda, H., Cabrit, O., Bose, S. and Lee, J. (2011). <a name="nicoudetal2011"></a> “Using singular values to build a subgrid-scale model for large eddy simulations”. *Physics of Fluids* 23, 085106. DOI: [10.1063/1.3623274](http://doi.org/10.1063/1.3623274).
 
-3. Trias, F. X., Folch, D., Gorobets, A. and Oliva, A. (2015). <a id="triasetal2015"></a> “Building proper invariants for eddy-viscosity subgrid-scale models”. *Physics of Fluids* 27, 065103. DOI: [10.1063/1.4921817](http://doi.org/10.1063/1.4921817).
+3. Trias, F. X., Folch, D., Gorobets, A. and Oliva, A. (2015). <a name="triasetal2015"></a> “Building proper invariants for eddy-viscosity subgrid-scale models”. *Physics of Fluids* 27, 065103. DOI: [10.1063/1.4921817](http://doi.org/10.1063/1.4921817).
 
-4. **Silvis**, M. H., Remmerswaal, R. A. and Verstappen, R. (2017). <a id="silvisetal2017"></a> “Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows”. *Physics of Fluids* 29, 015105. DOI: [10.1063/1.4974093](http://doi.org/10.1063/1.4974093).
+4. **Silvis**, M. H., Remmerswaal, R. A. and Verstappen, R. (2017). <a name="silvisetal2017"></a> “Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows”. *Physics of Fluids* 29, 015105. DOI: [10.1063/1.4974093](http://doi.org/10.1063/1.4974093).
 
-5. **Silvis**, M. H. and Verstappen, R. (n.d.). <a id="silvisverstappennd"></a> “How to create new physics-based turbulence models for large-eddy simulation?”. (in preparation).
+5. **Silvis**, M. H. and Verstappen, R. (n.d.). <a name="silvisverstappennd"></a> “How to create new physics-based turbulence models for large-eddy simulation?”. (in preparation).
 
 ## License
 
