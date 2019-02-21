@@ -1,20 +1,8 @@
-# lesTools
-
-> A toolbox for the construction and assessment of subgrid-scale models for large-eddy simulations
-
-## About
-
-`lesTools` is a toolbox of `MATLAB` scripts that can aid in the construction and assessment of subgrid-scale models for large-eddy simulations of incompressible turbulent flows.
-
-Currently, `lesTools` consists of one module:
-
-1. [nearWallScaling](#nearWallScaling)
-
-## nearWallScaling
+# nearWallScaling
 
 > A tool to study the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows
 
-### Background
+## Background
 
 Using numerical simulations, Chapman and Kuhn (1986) revealed the limiting power-law behavior of incompressible turbulence near a solid wall.
 Among other things, they determined the scaling behavior of the Reynolds stresses in terms of the wall-normal distance.
@@ -26,16 +14,16 @@ By incompressibility, the first-order term in the expansion of the wall-normal v
 The tangential velocity components will, thus, be first order in the wall-normal coordinate, while the wall-normal velocity component exhibits a second-order near-wall scaling.
 The expansion of the velocity field can be inserted in subgrid-scale models (or other physical quantities based on the velocity field) to study their behavior near a solid wall.
 
-### Module
+## Module
 
-The `nearWallScaling` module, which can be found in the [nearWallScaling folder](nearWallScaling) of this toolbox, facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows.
+The `nearWallScaling` module facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows.
 
-### Usage
+## Usage
 
 To use the scripts of the `nearWallScaling` module one needs `MATLAB` with the `symbolic` toolbox.
 Usage was tested in `MATLAB R2018a`.
 
-The main function of the `nearWallScaling` module can be found in the script [nearWallScaling.m](nearWallScaling/nearWallScaling.m).
+The main function of the `nearWallScaling` module can be found in the script [nearWallScaling.m](nearWallScaling.m).
 This function has two arguments, `fun` and `ord`.
 
 The first argument, `fun` should be a function name or handle, representing a function of the velocity field and/or the velocity gradient.
@@ -81,7 +69,7 @@ The same holds for (the arguments of) special functions and nth roots.
 
 Depending on your purposes, please consider citing the work by Silvis et al. (2017) and/or Silvis and Verstappen (n.d.) when making use of the `nearWallScaling` module.
 
-### References
+## References
 
 Chapman, D. R. and Kuhn, G. D. (1986). ''The limiting behaviour of turbulence near a wall''. *J. Fluid Mech.* **170**, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
 
@@ -97,4 +85,4 @@ Trias, F. X., Folch, D., Gorobets, A. and Oliva, A. (2015). ''Building proper in
 
 Copyright (c) 2016-2019 Maurits H. Silvis
 
-This source code package is subject to the terms and conditions defined in the MIT License, which can be found in the file [LICENSE.txt](LICENSE.txt).
+This source code package is subject to the terms and conditions defined in the MIT License, which can be found in the file [LICENSE.txt](../LICENSE.txt).
