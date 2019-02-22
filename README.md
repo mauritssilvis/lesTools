@@ -81,6 +81,10 @@ The same holds for (the arguments of) special functions and nth roots.
 
 Depending on your purposes, please consider citing the work by Silvis et al. [[4](#silvisetal2017)] and/or Silvis and Verstappen [[5](#silvisverstappennd)] when making use of the `nearWallScaling` module.
 
+### More information
+
+Refer to http://www.mauritssilvis.nl/code.php#lesTools for more information.
+
 ### References
 
 1. Chapman, D. R. and Kuhn, G. D. (1986). <a name="chapmankuhn1986"></a> “The limiting behaviour of turbulence near a wall”. *Journal of Fluid Mechanics* 170, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
