@@ -6,11 +6,11 @@ function grad = makeInc(grad, flowDims)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% grad      matrix of doubles -- Velocity gradient
+% grad      matrix of doubles -- Velocity gradient.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% grad      matrix of doubles -- Incompressible (traceless) velocity gradient
+% grad      matrix of doubles -- Incompressible (traceless) velocity gradient.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

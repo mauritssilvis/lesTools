@@ -9,21 +9,29 @@ function grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, ...
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% gradsFun      function name or handle -- Generator of the velocity gradients
-%                   Examples: "normMats", "unifMats", a function reading 
+% gradsFun      function name or handle -- Generator of the velocity gradients.
+%                   Examples: 'normMats', 'unifMats', a function reading 
 %                       velocity gradients from a file, etc.
-% sampleNr      int -- Sample number
-% nGrads        int -- Desired number of velocity gradients
-% spaceDims     int -- Number of spatial dimensions
-% flowDims      int -- Number of flow dimensions
+%
+% sampleNr      int -- Sample number.
+%
+% nGrads        int -- Desired number of velocity gradients.
+%
+% spaceDims     int -- Number of spatial dimensions.
+%                   Examples: 2 or 3.
+%
+% flowDims      int -- Number of flow dimensions.
+%                   Examples: 2 or 3.
+%
 % makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
-%                   or not
+%                   or not.
+%
 % checkIncompr  bool -- Check the incompressibility of the velocity gradients
-%                   or not
+%                   or not.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% G             array of matrices -- Velocity gradients
+% grads         array of matrices -- Velocity gradients.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -45,13 +53,11 @@ elseif spaceDims > flowDims
     % Restrict the velocity gradients to the number of flow dimensions
 
     % Select the dimensions in which there is no flow
-    selDims = flowDims + 1 : spaceDims;
+    rmDims = flowDims + 1 : spaceDims;
 
     % Nullify the corresponding elements
     for ix = 1 : nGrads
-        grads(selDims, :, ix) = 0;
-        grads(:, selDims, ix) = 0;
-
+        grads(:, :, ix) = rmFlowDims(grads(:, :, ix), rmDims);
     end
 
 else

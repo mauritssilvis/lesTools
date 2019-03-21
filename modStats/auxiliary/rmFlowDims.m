@@ -1,12 +1,16 @@
-function checkInc(grad)
+function grad = rmFlowDims(grad, rmDims)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Checks if a velocity gradient is incompressible (traceless).
+% Reduce the number of flow dimensions of a given velocity gradient.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % grad      matrix of doubles -- Velocity gradient.
+%
+% OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% grad      matrix of doubles -- Velocity gradient with reduced flow dimensions.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -18,15 +22,8 @@ function checkInc(grad)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Check whether the trace of the velocity gradients is small w.r.t. the machine
-% precision
-if trace(grad) > 10 * eps
-    warning( ...
-        ['The trace of a velocity gradient is more than ten times larger ', ...
-         'than the machine precision: ', newline, ...
-         'trace(grad) = ', num2str(trace(grad)), ' > 10 * eps = ', ...
-         num2str(10 * eps), '.'] ...
-    );
-end
+% Reduce the number of flow dimensions
+grad(rmDims, :) = 0;
+grad(:, rmDims) = 0;
 
 end
