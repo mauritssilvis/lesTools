@@ -165,8 +165,10 @@ if nQuants >= 9
     for ix = 1 : nGrads
         % Product of the rate-of-strain and rate-of-rotation tensors
         SW(:, :, ix) = S(:, :, ix) * W(:, :, ix);
+        % Product of the rate-of-strain and rate-of-rotation tensors
+        SSWWSW(:, :, ix) = SSWW(:, :, ix) * SW(:, :, ix);
         % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I6(1, 1, ix) = trace( SW(:, :, ix) );
+        I6(1, 1, ix) = trace( SSWWSW(:, :, ix) );
     end
 
     % Add to list of quantities

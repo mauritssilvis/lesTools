@@ -999,3 +999,457 @@ selQt = gradsQts{ixQt};
 expQt(1, 1, 2) = 0;
 expQt(1, 1, 1) = 0;
 assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #19
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 1;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 1;
+selQt = gradsQts{ixQt};
+expQt = grad;
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #20
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 2;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 2;
+selQt = gradsQts{ixQt};
+expQt = [
+    1, 3, 5;
+    3, 5, 7;
+    5, 7, 9;
+];
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #21
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 3;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 3;
+selQt = gradsQts{ixQt};
+expQt = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #22
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 4;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 4;
+selQt = gradsQts{ixQt};
+expQt = 273;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #23
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 5;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 5;
+selQt = gradsQts{ixQt};
+expQt = -12;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #24
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 6;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 6;
+selQt = gradsQts{ixQt};
+expQt = 4455;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #25
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 7;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 7;
+selQt = gradsQts{ixQt};
+expQt = -90;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #26
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 8;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 8;
+selQt = gradsQts{ixQt};
+expQt = -1638;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #27
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = 9;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 9;
+selQt = gradsQts{ixQt};
+expQt = 0;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #28
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 1;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 1;
+selQt = gradsQts{ixQt};
+expQt = grads;
+assert( all( all( all(expQt == selQt) ) ), 'Unexpected output');
+
+%% Test actual output #29
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 2;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 2;
+selQt = gradsQts{ixQt};
+expQt(1 : 3, 1 : 3, 2) = [
+    10, 12, 14;
+    12, 14, 16;
+    14, 16, 18;
+];
+expQt(1 : 3, 1 : 3, 1) = [
+    1, 3, 5;
+    3, 5, 7;
+    5, 7, 9;
+];
+assert( all( all( all(expQt == selQt) ) ), 'Unexpected output');
+
+%% Test actual output #30
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 3;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 3;
+selQt = gradsQts{ixQt};
+expQt(1 : 3, 1 : 3, 2) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+expQt(1 : 3, 1 : 3, 1) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+assert( all( all( all(expQt == selQt) ) ), 'Unexpected output');
+
+%% Test actual output #31
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 4;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 4;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = 1812;
+expQt(1, 1, 1) = 273;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #32
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 5;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 5;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = -12;
+expQt(1, 1, 1) = -12;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #33
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 6;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 6;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = 77112;
+expQt(1, 1, 1) = 4455;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #34
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 7;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 7;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = -252;
+expQt(1, 1, 1) = -90;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #35
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 8;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 8;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = -10872;
+expQt(1, 1, 1) = -1638;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #36
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = 9;
+gradsQts = gradsQuants(grads, nQuants);
+ixQt = 9;
+selQt = gradsQts{ixQt};
+expQt(1, 1, 2) = 0;
+expQt(1, 1, 1) = 0;
+assert( all(expQt == selQt), 'Unexpected output');
+
+%% Test actual output #37
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 1;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 1;
+selQt = gradsQts{ixQt};
+expQt = grad;
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #38
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 2;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 2;
+selQt = gradsQts{ixQt};
+expQt = [
+     1.0,  4.5, 13.0;
+     4.5, 11.0, 22.5;
+    13.0, 22.5, 37.0;
+];
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #39
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 3;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 3;
+selQt = gradsQts{ixQt};
+expQt = [
+      0.0, -2.5, -9.0;
+      2.5,  0.0, -6.5;
+      9.0,  6.5,  0.0;
+];
+assert( all( all(expQt == selQt) ), 'Unexpected output');
+
+%% Test actual output #40
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 4;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 4;
+selQt = gradsQts{ixQt};
+expQt = 2882;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #41
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 5;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 5;
+selQt = gradsQts{ixQt};
+expQt = -259;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #42
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 6;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 6;
+selQt = gradsQts{ixQt};
+expQt = 152777.5;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #43
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 7;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 7;
+selQt = gradsQts{ixQt};
+expQt = -6297.5;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #44
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 8;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 8;
+selQt = gradsQts{ixQt};
+expQt = -372384.25;
+assert(expQt == selQt, 'Unexpected output');
+
+%% Test actual output #45
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = 9;
+gradsQts = gradsQuants(grad, nQuants);
+ixQt = 9;
+selQt = gradsQts{ixQt}
+expQt = 93494.25;
+assert(expQt == selQt, 'Unexpected output');
