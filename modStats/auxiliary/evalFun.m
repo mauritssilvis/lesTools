@@ -7,8 +7,6 @@ function funVals = evalFun(fun, gradsQts)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% grads     array of matrices -- Velocity gradient.
-%
 % fun       function name or handle -- A function of the velocity gradient.
 %               This function should should accept between 1 and 9 arguments.
 %               The first argument should be 
@@ -27,13 +25,12 @@ function funVals = evalFun(fun, gradsQts)
 %               Examples:
 %                   ...
 %
-
-% HERE I AM
-
-% OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 % gradsQts  cell of array of matrices -- Quantities derived from the velocity 
 %               gradient.
+%
+% OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% funVals   array of scalars/vectors/matrices -- Function values.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -45,140 +42,27 @@ function funVals = evalFun(fun, gradsQts)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Check input
-
 %% Initialize variables
-% Size of gradients matrix
-sGrads = size(grads);
-% Number of gradients
-nGrads = size(grads, 3);
+% Number of required input arguments
+nArgs = nargin(fun);
 
-% Output storage
-gradsQts = cell(1, nQuants);
+% Size of values
+sQt = [ size( gradsQts{1}, 1 ), size( gradsQts{1}, 2 ) ];
+testQts = [
+    repmat( { ones( sQt ) } , 1, 3), ...
+    repmat( {1}, 1, 6)
+];
+sVals = size(feval(fun, testQts{1 : nArgs}))
 
-%% Store velocity gradient
-% Velocity gradients
-G = grads;
+% Number of values
+nVals = size(gradsQts{1}, 3)
 
-% Add to list of quantities
-gradsQts{1} = G;
+% Output
+funVals = zeros( [ sVals(1), sVals(2), nVals ] );
 
-%% Compute and store derived quantities, if needed
-if nQuants >= 2
-    % Transposed velocity gradients
-    GT = permute(G, [2 1 3]);
+%% Compute function values
+for ix = 1 : nVals
 
-    % Rate-of-strain tensors
-    S = 1 / 2 * ( G + GT );
-
-    % Add to list of quantities
-    gradsQts{2} = S;
-end
-
-if nQuants >= 3
-    % Rate-of-rotation tensors
-    W = 1 / 2 * ( G - GT );
-
-    % Add to list of quantities
-    gradsQts{3} = W;
-end
-
-if nQuants >= 4
-    % Initialize variables
-    SS = zeros(sGrads);
-    I1 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Squared rate-of-strain tensor
-        SS(:, :, ix) = S(:, :, ix) * S(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I1(1, 1, ix) = trace( SS(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{4} = I1;
-end
-
-if nQuants >= 5
-    % Initialize variables
-    WW = zeros(sGrads);
-    I2 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Squared rate-of-rotation tensor
-        WW(:, :, ix) = W(:, :, ix) * W(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I2(1, 1, ix) = trace( WW(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{5} = I2;
-end
-
-if nQuants >= 6
-    % Initialize variables
-    SSS = zeros(sGrads);
-    I3 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Third power of the rate-of-strain tensor
-        SSS(:, :, ix) = S(:, :, ix) * SS(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I3(1, 1, ix) = trace( SSS(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{6} = I3;
-end
-
-if nQuants >= 7
-    % Initialize variables
-    SWW = zeros(sGrads);
-    I4 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Product of the rate-of-strain and squared rate-of-rotation tensors
-        SWW(:, :, ix) = S(:, :, ix) * WW(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I4(1, 1, ix) = trace( SWW(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{7} = I4;
-end
-
-if nQuants >= 8
-    % Initialize variables
-    SSWW = zeros(sGrads);
-    I5 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Product of the squared rate-of-strain and rate-of-rotation tensors
-        SSWW(:, :, ix) = SS(:, :, ix) * WW(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I5(1, 1, ix) = trace( SSWW(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{8} = I5;
-end
-
-if nQuants >= 9
-    % Initialize variables
-    SSWWSW = zeros(sGrads);
-    I6 = zeros(1, 1, nGrads);
-
-    for ix = 1 : nGrads
-        % Product of the rate-of-strain and rate-of-rotation tensors
-        SW(:, :, ix) = S(:, :, ix) * W(:, :, ix);
-        % Product of the rate-of-strain and rate-of-rotation tensors
-        SSWWSW(:, :, ix) = SSWW(:, :, ix) * SW(:, :, ix);
-        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
-        I6(1, 1, ix) = trace( SSWWSW(:, :, ix) );
-    end
-
-    % Add to list of quantities
-    gradsQts{9} = I6;
-end
+    % funVals(:, :, ix) = feval(fun);
 
 end
