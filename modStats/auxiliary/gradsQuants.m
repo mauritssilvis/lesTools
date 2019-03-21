@@ -45,20 +45,19 @@ function gradsQts = gradsQuants(grads, nQuants)
 % Size of gradients matrix
 sGrads = size(grads);
 % Number of gradients
-nGrads = sGrads(3);
+nGrads = size(grads, 3);
 
 % Output storage
 gradsQts = cell(1, nQuants);
 
-%% Compute derived quantities, if needed
-if nQuants >= 1
-    % Velocity gradients
-    G = grads;
+%% Store velocity gradient
+% Velocity gradients
+G = grads;
 
-    % Add to list of quantities
-    gradsQts{1} = G;
-end
+% Add to list of quantities
+gradsQts{1} = G;
 
+%% Compute and store derived quantities, if needed
 if nQuants >= 2
     % Transposed velocity gradients
     GT = permute(G, [2 1 3]);
@@ -137,28 +136,38 @@ if nQuants >= 7
         % Combined invariant of the rate-of-strain and rate-of-rotation tensor
         I4(1, 1, ix) = trace( SWW(:, :, ix) );
     end
-    % Combined invariant of the rate-of-strain and rate-of-rotation tensors
-    SWW = S * WW;
-    I4 = trace( SWW );
 
     % Add to list of quantities
     gradsQts{7} = I4;
 end
 
 if nQuants >= 8
-    % Combined invariant of the rate-of-strain and rate-of-rotation tensors
-    SSWW = SS * WW;
-    I5 = trace( SSWW );
+    % Initialize variables
+    SSWW = zeros(sGrads);
+    I5 = zeros(1, 1, nGrads);
+
+    for ix = 1 : nGrads
+        % Product of the squared rate-of-strain and rate-of-rotation tensors
+        SSWW(:, :, ix) = SS(:, :, ix) * WW(:, :, ix);
+        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
+        I5(1, 1, ix) = trace( SSWW(:, :, ix) );
+    end
 
     % Add to list of quantities
     gradsQts{8} = I5;
 end
 
 if nQuants >= 9
-    % Combined invariant of the rate-of-strain and rate-of-rotation tensors
-    SW = S * W;
-    SSWWSW = SSWW * SW;
-    I6 = trace( SSWWSW );
+    % Initialize variables
+    SSWWSW = zeros(sGrads);
+    I6 = zeros(1, 1, nGrads);
+
+    for ix = 1 : nGrads
+        % Product of the rate-of-strain and rate-of-rotation tensors
+        SW(:, :, ix) = S(:, :, ix) * W(:, :, ix);
+        % Combined invariant of the rate-of-strain and rate-of-rotation tensor
+        I6(1, 1, ix) = trace( SW(:, :, ix) );
+    end
 
     % Add to list of quantities
     gradsQts{9} = I6;
