@@ -46,12 +46,16 @@ function funVals = evalFun(fun, gradsQts)
 % Number of required input arguments
 nArgs = nargin(fun);
 
-% Size of values
+% Size of matrices
 sQt = [ size( gradsQts{1}, 1 ), size( gradsQts{1}, 2 ) ];
+
+% Test quantities
 testQts = [
     repmat( { ones( sQt ) } , 1, 3), ...
     repmat( {1}, 1, 6)
 ];
+
+% Size of values
 sVals = size(feval(fun, testQts{1 : nArgs}))
 
 % Number of values
