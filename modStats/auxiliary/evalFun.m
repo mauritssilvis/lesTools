@@ -56,17 +56,26 @@ testQts = [
 ];
 
 % Size of values
-sVals = size(feval(fun, testQts{1 : nArgs}))
+sVals = size(feval(fun, testQts{1 : nArgs}));
 
 % Number of values
-nVals = size(gradsQts{1}, 3)
+nVals = size(gradsQts{1}, 3);
 
 % Output
 funVals = zeros( [ sVals(1), sVals(2), nVals ] );
 
 %% Compute function values
 for ix = 1 : nVals
+    % Initialize current velocity-gradient-based quantities
+    qts = testQts;
 
-    % funVals(:, :, ix) = feval(fun);
+    % Store current velocity-gradient-based quantities
+    for jx = 1 : nArgs
+        qts{jx} = gradsQts{jx}(:, :, ix);
+    end
+
+    % Evaluate current function value
+    funVals(:, :, ix) = feval(fun, qts{1 : nArgs});
+end
 
 end
