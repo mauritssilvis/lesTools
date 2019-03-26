@@ -26,7 +26,7 @@ function funVals = evalFun(fun, quants)
 %                   ...
 %
 % quants    cell of array of matrices -- Quantities derived from the velocity 
-%               gradient as obtained from getQuants().
+%               gradient as obtained from compQuants().
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -50,7 +50,7 @@ nArgs = nargin(fun);
 sQt = [ size( quants{1}, 1 ), size( quants{1}, 2 ) ];
 
 % Test quantities
-testQts = getQuants( zeros(sQt), nArgs );
+testQts = compQuants( zeros(sQt), nArgs );
 
 % Size of values
 sVals = size(feval(fun, testQts{1 : nArgs}));

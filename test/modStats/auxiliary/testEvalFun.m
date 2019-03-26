@@ -24,42 +24,42 @@ grads31 = ones(spaceDims3, spaceDims3, nGrads1);
 grads32 = ones(spaceDims3, spaceDims3, nGrads2);
 
 % Define velocity-gradient-based quantities
-quants211 = getQuants(grads21, nQuants1);
-quants212 = getQuants(grads21, nQuants2);
-quants213 = getQuants(grads21, nQuants3);
-quants214 = getQuants(grads21, nQuants4);
-quants215 = getQuants(grads21, nQuants5);
-quants216 = getQuants(grads21, nQuants6);
-quants217 = getQuants(grads21, nQuants7);
-quants218 = getQuants(grads21, nQuants8);
-quants219 = getQuants(grads21, nQuants9);
-quants221 = getQuants(grads22, nQuants1);
-quants222 = getQuants(grads22, nQuants2);
-quants223 = getQuants(grads22, nQuants3);
-quants224 = getQuants(grads22, nQuants4);
-quants225 = getQuants(grads22, nQuants5);
-quants226 = getQuants(grads22, nQuants6);
-quants227 = getQuants(grads22, nQuants7);
-quants228 = getQuants(grads22, nQuants8);
-quants229 = getQuants(grads22, nQuants9);
-quants311 = getQuants(grads31, nQuants1);
-quants312 = getQuants(grads31, nQuants2);
-quants313 = getQuants(grads31, nQuants3);
-quants314 = getQuants(grads31, nQuants4);
-quants315 = getQuants(grads31, nQuants5);
-quants316 = getQuants(grads31, nQuants6);
-quants317 = getQuants(grads31, nQuants7);
-quants318 = getQuants(grads31, nQuants8);
-quants319 = getQuants(grads31, nQuants9);
-quants321 = getQuants(grads32, nQuants1);
-quants322 = getQuants(grads32, nQuants2);
-quants323 = getQuants(grads32, nQuants3);
-quants324 = getQuants(grads32, nQuants4);
-quants325 = getQuants(grads32, nQuants5);
-quants326 = getQuants(grads32, nQuants6);
-quants327 = getQuants(grads32, nQuants7);
-quants328 = getQuants(grads32, nQuants8);
-quants329 = getQuants(grads32, nQuants9);
+quants211 = compQuants(grads21, nQuants1);
+quants212 = compQuants(grads21, nQuants2);
+quants213 = compQuants(grads21, nQuants3);
+quants214 = compQuants(grads21, nQuants4);
+quants215 = compQuants(grads21, nQuants5);
+quants216 = compQuants(grads21, nQuants6);
+quants217 = compQuants(grads21, nQuants7);
+quants218 = compQuants(grads21, nQuants8);
+quants219 = compQuants(grads21, nQuants9);
+quants221 = compQuants(grads22, nQuants1);
+quants222 = compQuants(grads22, nQuants2);
+quants223 = compQuants(grads22, nQuants3);
+quants224 = compQuants(grads22, nQuants4);
+quants225 = compQuants(grads22, nQuants5);
+quants226 = compQuants(grads22, nQuants6);
+quants227 = compQuants(grads22, nQuants7);
+quants228 = compQuants(grads22, nQuants8);
+quants229 = compQuants(grads22, nQuants9);
+quants311 = compQuants(grads31, nQuants1);
+quants312 = compQuants(grads31, nQuants2);
+quants313 = compQuants(grads31, nQuants3);
+quants314 = compQuants(grads31, nQuants4);
+quants315 = compQuants(grads31, nQuants5);
+quants316 = compQuants(grads31, nQuants6);
+quants317 = compQuants(grads31, nQuants7);
+quants318 = compQuants(grads31, nQuants8);
+quants319 = compQuants(grads31, nQuants9);
+quants321 = compQuants(grads32, nQuants1);
+quants322 = compQuants(grads32, nQuants2);
+quants323 = compQuants(grads32, nQuants3);
+quants324 = compQuants(grads32, nQuants4);
+quants325 = compQuants(grads32, nQuants5);
+quants326 = compQuants(grads32, nQuants6);
+quants327 = compQuants(grads32, nQuants7);
+quants328 = compQuants(grads32, nQuants8);
+quants329 = compQuants(grads32, nQuants9);
 
 % Define velocity-gradient-based functions
 fun11 = @(G) G;
@@ -3976,7 +3976,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -3988,7 +3988,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4000,7 +4000,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4012,7 +4012,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4024,7 +4024,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4036,7 +4036,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4048,7 +4048,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4060,7 +4060,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4072,7 +4072,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4091,7 +4091,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4110,7 +4110,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4129,7 +4129,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4148,7 +4148,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4167,7 +4167,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4186,7 +4186,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4205,7 +4205,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4224,7 +4224,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4243,7 +4243,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4256,7 +4256,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4269,7 +4269,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4282,7 +4282,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4295,7 +4295,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4308,7 +4308,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4321,7 +4321,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4334,7 +4334,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4347,7 +4347,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4360,7 +4360,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4381,7 +4381,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4402,7 +4402,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4423,7 +4423,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4444,7 +4444,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4465,7 +4465,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4486,7 +4486,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4507,7 +4507,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4528,7 +4528,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4549,7 +4549,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4562,7 +4562,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4575,7 +4575,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4588,7 +4588,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4601,7 +4601,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4614,7 +4614,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4627,7 +4627,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4640,7 +4640,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4653,7 +4653,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4666,7 +4666,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4678,7 +4678,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4697,7 +4697,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4710,7 +4710,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4731,7 +4731,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4744,7 +4744,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4756,7 +4756,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4775,7 +4775,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4788,7 +4788,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4809,7 +4809,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4822,7 +4822,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4834,7 +4834,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4853,7 +4853,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4866,7 +4866,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4887,7 +4887,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4900,7 +4900,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4912,7 +4912,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4931,7 +4931,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4944,7 +4944,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4965,7 +4965,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -4978,7 +4978,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -4990,7 +4990,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5009,7 +5009,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5022,7 +5022,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5043,7 +5043,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5056,7 +5056,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5068,7 +5068,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5087,7 +5087,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5100,7 +5100,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5121,7 +5121,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5134,7 +5134,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5146,7 +5146,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5165,7 +5165,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5178,7 +5178,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5199,7 +5199,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5212,7 +5212,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5224,7 +5224,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5243,7 +5243,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5256,7 +5256,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5277,7 +5277,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5290,7 +5290,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5302,7 +5302,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5321,7 +5321,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5334,7 +5334,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5355,7 +5355,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5368,7 +5368,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5380,7 +5380,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5399,7 +5399,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5412,7 +5412,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5433,7 +5433,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5446,7 +5446,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun11;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5458,7 +5458,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5477,7 +5477,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5490,7 +5490,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5511,7 +5511,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5524,7 +5524,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun21;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5536,7 +5536,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5555,7 +5555,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5568,7 +5568,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5589,7 +5589,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5602,7 +5602,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun31;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5614,7 +5614,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5633,7 +5633,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5646,7 +5646,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5667,7 +5667,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5680,7 +5680,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun41;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5692,7 +5692,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5711,7 +5711,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5724,7 +5724,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5745,7 +5745,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5758,7 +5758,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun51;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5770,7 +5770,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5789,7 +5789,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5802,7 +5802,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5823,7 +5823,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5836,7 +5836,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun61;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5848,7 +5848,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5867,7 +5867,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5880,7 +5880,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5901,7 +5901,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5914,7 +5914,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun71;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5926,7 +5926,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5945,7 +5945,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5958,7 +5958,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -5979,7 +5979,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -5992,7 +5992,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun81;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6004,7 +6004,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6023,7 +6023,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6036,7 +6036,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6057,7 +6057,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6070,7 +6070,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun91;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6082,7 +6082,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6094,7 +6094,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6106,7 +6106,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6118,7 +6118,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6130,7 +6130,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6142,7 +6142,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6154,7 +6154,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6166,7 +6166,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6178,7 +6178,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6197,7 +6197,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6216,7 +6216,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6235,7 +6235,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6254,7 +6254,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6273,7 +6273,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6292,7 +6292,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6311,7 +6311,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6330,7 +6330,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6349,7 +6349,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6362,7 +6362,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6375,7 +6375,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6388,7 +6388,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6401,7 +6401,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6414,7 +6414,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6427,7 +6427,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6440,7 +6440,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6453,7 +6453,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6466,7 +6466,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6487,7 +6487,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6508,7 +6508,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6529,7 +6529,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6550,7 +6550,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6571,7 +6571,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6592,7 +6592,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6613,7 +6613,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6634,7 +6634,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6655,7 +6655,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6668,7 +6668,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6681,7 +6681,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6694,7 +6694,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6707,7 +6707,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6720,7 +6720,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6733,7 +6733,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6746,7 +6746,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6759,7 +6759,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6772,7 +6772,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6784,7 +6784,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6803,7 +6803,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6816,7 +6816,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6837,7 +6837,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -6850,7 +6850,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -6862,7 +6862,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -6884,7 +6884,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -6904,7 +6904,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -6929,7 +6929,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -6951,7 +6951,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -6967,7 +6967,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -6989,7 +6989,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7009,7 +7009,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7034,7 +7034,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7056,7 +7056,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7072,7 +7072,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 29.5;
@@ -7091,7 +7091,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 173.5;
@@ -7105,7 +7105,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 273;
@@ -7126,7 +7126,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 1812;
@@ -7140,7 +7140,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 2882;
@@ -7152,7 +7152,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -0.5;
@@ -7171,7 +7171,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -0.5;
@@ -7185,7 +7185,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -12;
@@ -7206,7 +7206,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -12;
@@ -7220,7 +7220,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -259;
@@ -7232,7 +7232,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 158.75;
@@ -7251,7 +7251,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 2284.75;
@@ -7265,7 +7265,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 4455;
@@ -7286,7 +7286,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 77112;
@@ -7300,7 +7300,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 152777.5;
@@ -7312,7 +7312,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -1.25;
@@ -7331,7 +7331,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -3.25;
@@ -7345,7 +7345,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -90;
@@ -7366,7 +7366,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -252;
@@ -7380,7 +7380,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -6297.5;
@@ -7392,7 +7392,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -7.375;
@@ -7411,7 +7411,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -43.375;
@@ -7425,7 +7425,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -1638;
@@ -7446,7 +7446,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -10872;
@@ -7460,7 +7460,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -372384.25;
@@ -7472,7 +7472,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 0;
@@ -7491,7 +7491,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
@@ -7505,7 +7505,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 0;
@@ -7526,7 +7526,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
@@ -7540,7 +7540,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 93494.25;
@@ -7552,7 +7552,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -7571,7 +7571,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -7584,7 +7584,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -7605,7 +7605,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grads;
@@ -7618,7 +7618,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun1;
 actVal = evalFun(fun, quants);
 expVal = grad;
@@ -7630,7 +7630,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7652,7 +7652,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7672,7 +7672,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7697,7 +7697,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7719,7 +7719,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun2;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7735,7 +7735,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7757,7 +7757,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7777,7 +7777,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7802,7 +7802,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
@@ -7824,7 +7824,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun3;
 actVal = evalFun(fun, quants);
 expVal = [
@@ -7840,7 +7840,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 29.5;
@@ -7859,7 +7859,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 173.5;
@@ -7873,7 +7873,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 273;
@@ -7894,7 +7894,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 1812;
@@ -7908,7 +7908,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun4;
 actVal = evalFun(fun, quants);
 expVal = 2882;
@@ -7920,7 +7920,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -0.5;
@@ -7939,7 +7939,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -0.5;
@@ -7953,7 +7953,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -12;
@@ -7974,7 +7974,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -12;
@@ -7988,7 +7988,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun5;
 actVal = evalFun(fun, quants);
 expVal = -259;
@@ -8000,7 +8000,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 158.75;
@@ -8019,7 +8019,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 2284.75;
@@ -8033,7 +8033,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 4455;
@@ -8054,7 +8054,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 77112;
@@ -8068,7 +8068,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun6;
 actVal = evalFun(fun, quants);
 expVal = 152777.5;
@@ -8080,7 +8080,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -1.25;
@@ -8099,7 +8099,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -3.25;
@@ -8113,7 +8113,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -90;
@@ -8134,7 +8134,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -252;
@@ -8148,7 +8148,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun7;
 actVal = evalFun(fun, quants);
 expVal = -6297.5;
@@ -8160,7 +8160,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -7.375;
@@ -8179,7 +8179,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -43.375;
@@ -8193,7 +8193,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -1638;
@@ -8214,7 +8214,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -10872;
@@ -8228,7 +8228,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun8;
 actVal = evalFun(fun, quants);
 expVal = -372384.25;
@@ -8240,7 +8240,7 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 0;
@@ -8259,7 +8259,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
@@ -8273,7 +8273,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 0;
@@ -8294,7 +8294,7 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
@@ -8308,7 +8308,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 fun = fun9;
 actVal = evalFun(fun, quants);
 expVal = 93494.25;

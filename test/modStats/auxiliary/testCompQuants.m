@@ -1,4 +1,4 @@
-% Test getQuants()
+% Test compQuants()
 
 % Define parameters
 nQuants1 = 1;
@@ -17,333 +17,333 @@ grads31 = ones(spaceDims3, spaceDims3, nGrads1);
 grads32 = ones(spaceDims3, spaceDims3, nGrads2);
 
 %% Test output type #1
-quants = getQuants(grads21, nQuants1);
+quants = compQuants(grads21, nQuants1);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #2
-quants = getQuants(grads21, nQuants1);
+quants = compQuants(grads21, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #3
-quants = getQuants(grads22, nQuants1);
+quants = compQuants(grads22, nQuants1);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #4
-quants = getQuants(grads22, nQuants1);
+quants = compQuants(grads22, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #5
-quants = getQuants(grads31, nQuants1);
+quants = compQuants(grads31, nQuants1);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #6
-quants = getQuants(grads31, nQuants1);
+quants = compQuants(grads31, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #7
-quants = getQuants(grads32, nQuants1);
+quants = compQuants(grads32, nQuants1);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #8
-quants = getQuants(grads32, nQuants1);
+quants = compQuants(grads32, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #9
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #10
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #11
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #12
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #13
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #14
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #15
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #16
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #17
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #18
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #19
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #20
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #21
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #22
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #23
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #24
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #25
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #26
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #27
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #28
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #29
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #30
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #31
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #32
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #33
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #34
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #35
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #36
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #37
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #38
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #39
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 expType = 'cell';
 assert( isa(quants, expType), 'Output not of expected type ''cell''.');
 
 %% Test output type #40
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #41
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #42
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #43
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #44
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #45
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #46
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #47
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #48
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expType = 'double';
 assert( isa(selQt, expType), 'Output not of expected type ''double''.');
 
 %% Test output size #1
-quants = getQuants(grads21, nQuants1);
+quants = compQuants(grads21, nQuants1);
 expSize = [1, nQuants1];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #2
-quants = getQuants(grads21, nQuants1);
+quants = compQuants(grads21, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads1];
@@ -351,13 +351,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #3
-quants = getQuants(grads22, nQuants1);
+quants = compQuants(grads22, nQuants1);
 expSize = [1, nQuants1];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #4
-quants = getQuants(grads22, nQuants1);
+quants = compQuants(grads22, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads2];
@@ -365,13 +365,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #5
-quants = getQuants(grads31, nQuants1);
+quants = compQuants(grads31, nQuants1);
 expSize = [1, nQuants1];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #6
-quants = getQuants(grads31, nQuants1);
+quants = compQuants(grads31, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads1];
@@ -379,13 +379,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #7
-quants = getQuants(grads32, nQuants1);
+quants = compQuants(grads32, nQuants1);
 expSize = [1, nQuants1];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #8
-quants = getQuants(grads32, nQuants1);
+quants = compQuants(grads32, nQuants1);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads2];
@@ -393,13 +393,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #9
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 expSize = [1, nQuants9];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #10
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads1];
@@ -407,7 +407,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #11
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads1];
@@ -415,7 +415,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #12
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads1];
@@ -423,7 +423,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #13
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -431,7 +431,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #14
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -439,7 +439,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #15
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -447,7 +447,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #16
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -455,7 +455,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #17
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -463,7 +463,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #18
-quants = getQuants(grads21, nQuants9);
+quants = compQuants(grads21, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -471,13 +471,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #19
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 expSize = [1, nQuants9];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #20
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads2];
@@ -485,7 +485,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #21
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads2];
@@ -493,7 +493,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #22
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expSize = [spaceDims2, spaceDims2, nGrads2];
@@ -501,7 +501,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #23
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -509,7 +509,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #24
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -517,7 +517,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #25
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -525,7 +525,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #26
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -533,7 +533,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #27
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -541,7 +541,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #28
-quants = getQuants(grads22, nQuants9);
+quants = compQuants(grads22, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -549,13 +549,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #29
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 expSize = [1, nQuants9];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #30
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads1];
@@ -563,7 +563,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #31
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads1];
@@ -571,7 +571,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #32
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads1];
@@ -579,7 +579,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #33
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -587,7 +587,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #34
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -595,7 +595,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #35
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -603,7 +603,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #36
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -611,7 +611,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #37
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -619,7 +619,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #38
-quants = getQuants(grads31, nQuants9);
+quants = compQuants(grads31, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads1];
@@ -627,13 +627,13 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #39
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 expSize = [1, nQuants9];
 actSize = size(quants);
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #40
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 1;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads2];
@@ -641,7 +641,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #41
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 2;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads2];
@@ -649,7 +649,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #42
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 3;
 selQt = quants{ixQt};
 expSize = [spaceDims3, spaceDims3, nGrads2];
@@ -657,7 +657,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #43
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 4;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -665,7 +665,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #44
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 5;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -673,7 +673,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #45
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 6;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -681,7 +681,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #46
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 7;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -689,7 +689,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #47
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 8;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -697,7 +697,7 @@ actSize = [size(selQt, 1), size(selQt, 2), size(selQt, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #48
-quants = getQuants(grads32, nQuants9);
+quants = compQuants(grads32, nQuants9);
 ixQt = 9;
 selQt = quants{ixQt};
 expSize = [1, 1, nGrads2];
@@ -710,7 +710,7 @@ grad = [
     3, 4;
 ];
 nQuants = 1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 1;
 selQt = quants{ixQt};
 expQt = grad;
@@ -722,7 +722,7 @@ grad = [
     3, 4;
 ];
 nQuants = 2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 2;
 selQt = quants{ixQt};
 expQt = [
@@ -737,7 +737,7 @@ grad = [
     3, 4;
 ];
 nQuants = 3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 3;
 selQt = quants{ixQt};
 expQt = [
@@ -752,7 +752,7 @@ grad = [
     3, 4;
 ];
 nQuants = 4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 4;
 selQt = quants{ixQt};
 expQt = 29.5;
@@ -764,7 +764,7 @@ grad = [
     3, 4;
 ];
 nQuants = 5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 5;
 selQt = quants{ixQt};
 expQt = -0.5;
@@ -776,7 +776,7 @@ grad = [
     3, 4;
 ];
 nQuants = 6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 6;
 selQt = quants{ixQt};
 expQt = 158.75;
@@ -788,7 +788,7 @@ grad = [
     3, 4;
 ];
 nQuants = 7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 7;
 selQt = quants{ixQt};
 expQt = -1.25;
@@ -800,7 +800,7 @@ grad = [
     3, 4;
 ];
 nQuants = 8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 8;
 selQt = quants{ixQt};
 expQt = -7.375;
@@ -812,7 +812,7 @@ grad = [
     3, 4;
 ];
 nQuants = 9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 9;
 selQt = quants{ixQt};
 expQt = 0;
@@ -830,7 +830,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 1;
 selQt = quants{ixQt};
 expQt = grads;
@@ -848,7 +848,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 2;
 selQt = quants{ixQt};
 expQt(1 : 2, 1 : 2, 2) = [
@@ -873,7 +873,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 3;
 selQt = quants{ixQt};
 expQt(1 : 2, 1 : 2, 2) = [
@@ -898,7 +898,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 4;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 173.5;
@@ -917,7 +917,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 5;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -0.5;
@@ -936,7 +936,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 6;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 2284.75;
@@ -955,7 +955,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 7;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -3.25;
@@ -974,7 +974,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 8;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -43.375;
@@ -993,7 +993,7 @@ grad2 = [
 grads(1 : 2, 1 : 2, 2) = grad2;
 grads(1 : 2, 1 : 2, 1) = grad1;
 nQuants = 9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 9;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 0;
@@ -1007,7 +1007,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 1;
 selQt = quants{ixQt};
 expQt = grad;
@@ -1020,7 +1020,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 2;
 selQt = quants{ixQt};
 expQt = [
@@ -1037,7 +1037,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 3;
 selQt = quants{ixQt};
 expQt = [
@@ -1054,7 +1054,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 4;
 selQt = quants{ixQt};
 expQt = 273;
@@ -1067,7 +1067,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 5;
 selQt = quants{ixQt};
 expQt = -12;
@@ -1080,7 +1080,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 6;
 selQt = quants{ixQt};
 expQt = 4455;
@@ -1093,7 +1093,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 7;
 selQt = quants{ixQt};
 expQt = -90;
@@ -1106,7 +1106,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 8;
 selQt = quants{ixQt};
 expQt = -1638;
@@ -1119,7 +1119,7 @@ grad = [
     7, 8, 9;
 ];
 nQuants = 9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 9;
 selQt = quants{ixQt};
 expQt = 0;
@@ -1139,7 +1139,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 1;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 1;
 selQt = quants{ixQt};
 expQt = grads;
@@ -1159,7 +1159,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 2;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 2;
 selQt = quants{ixQt};
 expQt(1 : 3, 1 : 3, 2) = [
@@ -1188,7 +1188,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 3;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 3;
 selQt = quants{ixQt};
 expQt(1 : 3, 1 : 3, 2) = [
@@ -1217,7 +1217,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 4;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 4;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 1812;
@@ -1238,7 +1238,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 5;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 5;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -12;
@@ -1259,7 +1259,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 6;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 6;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 77112;
@@ -1280,7 +1280,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 7;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 7;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -252;
@@ -1301,7 +1301,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 8;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 8;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = -10872;
@@ -1322,7 +1322,7 @@ grad2 = [
 grads(1 : 3, 1 : 3, 2) = grad2;
 grads(1 : 3, 1 : 3, 1) = grad1;
 nQuants = 9;
-quants = getQuants(grads, nQuants);
+quants = compQuants(grads, nQuants);
 ixQt = 9;
 selQt = quants{ixQt};
 expQt(1, 1, 2) = 0;
@@ -1336,7 +1336,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 1;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 1;
 selQt = quants{ixQt};
 expQt = grad;
@@ -1349,7 +1349,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 2;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 2;
 selQt = quants{ixQt};
 expQt = [
@@ -1366,7 +1366,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 3;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 3;
 selQt = quants{ixQt};
 expQt = [
@@ -1383,7 +1383,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 4;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 4;
 selQt = quants{ixQt};
 expQt = 2882;
@@ -1396,7 +1396,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 5;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 5;
 selQt = quants{ixQt};
 expQt = -259;
@@ -1409,7 +1409,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 6;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 6;
 selQt = quants{ixQt};
 expQt = 152777.5;
@@ -1422,7 +1422,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 7;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 7;
 selQt = quants{ixQt};
 expQt = -6297.5;
@@ -1435,7 +1435,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 8;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 8;
 selQt = quants{ixQt};
 expQt = -372384.25;
@@ -1448,7 +1448,7 @@ grad = [
     22, 29, 37;
 ];
 nQuants = 9;
-quants = getQuants(grad, nQuants);
+quants = compQuants(grad, nQuants);
 ixQt = 9;
 selQt = quants{ixQt}
 expQt = 93494.25;

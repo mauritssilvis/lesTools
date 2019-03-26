@@ -1,4 +1,4 @@
-function quants = getQuants(grads, nQuants)
+function quants = compQuants(grads, nQuants)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
