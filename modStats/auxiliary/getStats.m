@@ -1,4 +1,6 @@
-function stats = getStats(fun, precision)
+function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
+    gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr ...
+)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -6,31 +8,58 @@ function stats = getStats(fun, precision)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% fun           function name or handle -- A function of the velocity gradient
-%                   This function should have 1, 1 + 2 or 1 + 2 + 5 input
-%                   arguments.
-%                   The first input argument is assumed to be the velocity
-%                   gradient G.
-%                   The next two arguments are seen as the rate-of-strain tensor
-%                   S and the rate-of-rotation tensor W.
-%                   The last five arguments are seen as the following combined
-%                   invariants of the rate-of-strain and rate-of-rotation
-%                   tensors:
-%                   I1 = trace(S^2),
-%                   I2 = trace(W^2),
-%                   I3 = trace(S^3),
-%                   I4 = trace(S W^2),
-%                   I5 = trace(S^2 W^2).
-% precision     double -- Desired minimal relative standard deviation
+% fun       function name or handle -- A function of the velocity gradient.
+%               This function should should accept between 1 and 9 arguments.
+%               The first argument should be 
+%               - the velocity gradient G (a 3 x 3 matrix).
+%               The next arguments, if present, are assumed to be
+%               - the rate-of-strain tensor S (a 3 x 3 matrix),
+%               - the rate-of-rotation tensor W (a 3 x 3 matrix),
+%               and the following scalar combined invariants of the 
+%               rate-of-strain and rate-of-rotation tensors:
+%               - I1 = trace(S^2),
+%               - I2 = trace(W^2),
+%               - I3 = trace(S^3),
+%               - I4 = trace(S W^2),
+%               - I5 = trace(S^2 W^2),
+%               - I6 = trace(S^2 W^2 S W).
+%               Examples:
+%                   ...
+%
+% nSamples      int -- Desired number of samples.
+%
+% nGrads        int -- Desired number of velocity gradients per sample.
+%
+% gradsFun      function name or handle -- Generator of the velocity gradients.
+%                   Examples: 'normMats', 'unifMats', a function reading 
+%                       velocity gradients from a file, etc.
+%
+% spaceDims     int -- Number of spatial dimensions.
+%                   Examples: 2 or 3.
+%
+% flowDims      int -- Number of flow dimensions.
+%                   Examples: 2 or 3.
+%
+% makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
+%                   or not.
+%
+% checkIncompr  bool -- Check the incompressibility of the velocity gradients
+%                   or not.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% stats         struct -- Statistical information about the function of the
-%                   velocity gradient
+% avgs          array of scalars/vectors/matrices -- Sample averages.
+%
+% avg           scalar/vector/matrix of doubles -- Sample average.
+%
+% stdDev        scalar/vector/matrix of doubles -- Sample standard deviation.
+%
+% relStdDev     scalar/vector/matrix of doubles -- Sample relative standard
+%                   deviation.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Copyright (c) 2016-2018 Maurits H. Silvis
+% Copyright (c) 2016-2019 Maurits H. Silvis
 %
 % This file is subject to the terms and conditions defined in
 % the MIT License, which can be found in the file 'license.txt'
@@ -38,26 +67,32 @@ function stats = getStats(fun, precision)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Initialize variables
-converged = false;                      % Set the converged flag to false
-sumPows = 1;                            % Set the initial number of statistical
-                                        % samples to 10^sumPows
+%% Initialize variables
+% Number of velocity-gradient-based quantities to compute
+nQuants = nargin(fun);
 
-while ~converged
+% Array of averages
+avgs = zeros(...);
 
-    sumPows = sumPows + 1;              % Increase the number of samples
+for ix = 1 : nSamples
+    % Set the sample number
+    sampleNr = ix;
 
-    for expPow = 1 : sumPows - 1
-        nExps = 10^expPow;
+    % Obtain a sample of velocity gradients
+    grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
-        samplePow = sumPows - expPow;
-        nSamples = 10^samplePow;
+    % Compute velocity-gradient-based quantities
+    quants = compQuants(grads, nQuants);
 
-        stop;
-        % TODO
+    % Compute function values
+    funVals = evalFun(fun, quants);
 
-    end
+    % Compute function averages
+    avgs(:, :, ix) = compAvg(funVals);
 
 end
+
+% Compute the function statistics
+[avg, stdDev, relStdDev] = compStats(avgs);
 
 end
