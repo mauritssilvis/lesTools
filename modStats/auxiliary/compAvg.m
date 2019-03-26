@@ -1,16 +1,16 @@
-function means = compMeans(funVals)
+function avg = compAvg(vals)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the mean of a sample of function values.
+% Compute the average of an array of values.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% funVals   array of scalars/vectors/matrices -- Function values.
+% vals      array of scalars/vectors/matrices -- Values.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% means     scalar/vector/matrix -- Mean of function values.
+% avg       scalar/vector/matrix -- Average of values.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -22,7 +22,7 @@ function means = compMeans(funVals)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the function value means
-means = mean(funVals, 3);
+%% Compute the value average
+avg = mean(vals, 3);
 
 end

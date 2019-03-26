@@ -1,4 +1,4 @@
-% Test compMeans()
+% Test compAvg()
 
 % Define parameters
 nDims1 = 1;
@@ -13,79 +13,79 @@ nVals3 = 3;
 nDims = nDims1;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #2
 nDims = nDims1;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #3
 nDims = nDims1;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #4
 nDims = nDims2;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #5
 nDims = nDims2;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #6
 nDims = nDims2;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #7
 nDims = nDims3;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #8
 nDims = nDims3;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #9
 nDims = nDims3;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-means = compMeans(vals);
+avg = compAvg(vals);
 expType = 'double';
-assert( isa(means, expType), 'Output not of expected type ''double''.');
+assert( isa(avg, expType), 'Output not of expected type ''double''.');
 
 %% Test output size #1
 nDims = nDims1;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -93,7 +93,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims1;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -101,7 +101,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims1;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -109,7 +109,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims2;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -117,7 +117,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims2;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -125,7 +125,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims2;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -133,7 +133,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims3;
 nVals = nVals1;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -141,7 +141,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims3;
 nVals = nVals2;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -149,7 +149,7 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nDims = nDims3;
 nVals = nVals3;
 vals = ones(nDims, nDims, nVals);
-actSize = size( compMeans(vals) );
+actSize = size( compAvg(vals) );
 expSize = [nDims, nDims];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -158,99 +158,99 @@ nDims = nDims1;
 nVals = nVals1;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = 1;
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+actAvg = compAvg(vals);
+expAvg = 1;
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #2
 nDims = nDims1;
 nVals = nVals2;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = 1.5;
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+actAvg = compAvg(vals);
+expAvg = 1.5;
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #3
 nDims = nDims1;
 nVals = nVals3;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = 2;
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+actAvg = compAvg(vals);
+expAvg = 2;
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #4
 nDims = nDims2;
 nVals = nVals1;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
     1, 3;
     2, 4;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #5
 nDims = nDims2;
 nVals = nVals2;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
     3, 5;
     4, 6;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #6
 nDims = nDims2;
 nVals = nVals3;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
     5, 7;
     6, 8;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #7
 nDims = nDims3;
 nVals = nVals1;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
     1, 4, 7;
     2, 5, 8;
     3, 6, 9;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #8
 nDims = nDims3;
 nVals = nVals2;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
      5.5,  8.5, 11.5;
      6.5,  9.5, 12.5;
      7.5, 10.5, 13.5;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
 
 %% Test actual output #9
 nDims = nDims3;
 nVals = nVals3;
 vals = zeros(nDims, nDims, nVals);
 vals(:) = 1 : nDims * nDims * nVals;
-actMeans = compMeans(vals);
-expMeans = [
+actAvg = compAvg(vals);
+expAvg = [
     10, 13, 16;
     11, 14, 17;
     12, 15, 18;
 ];
-assert( all( all( all( expMeans == actMeans ) ) ), 'Unexpected output.');
+assert( all( all( all( expAvg == actAvg ) ) ), 'Unexpected output.');
