@@ -24,42 +24,42 @@ grads31 = ones(spaceDims3, spaceDims3, nGrads1);
 grads32 = ones(spaceDims3, spaceDims3, nGrads2);
 
 % Define velocity-gradient-based quantities
-gradsQts211 = gradsQuants(grads21, nQuants1);
-gradsQts212 = gradsQuants(grads21, nQuants2);
-gradsQts213 = gradsQuants(grads21, nQuants3);
-gradsQts214 = gradsQuants(grads21, nQuants4);
-gradsQts215 = gradsQuants(grads21, nQuants5);
-gradsQts216 = gradsQuants(grads21, nQuants6);
-gradsQts217 = gradsQuants(grads21, nQuants7);
-gradsQts218 = gradsQuants(grads21, nQuants8);
-gradsQts219 = gradsQuants(grads21, nQuants9);
-gradsQts221 = gradsQuants(grads22, nQuants1);
-gradsQts222 = gradsQuants(grads22, nQuants2);
-gradsQts223 = gradsQuants(grads22, nQuants3);
-gradsQts224 = gradsQuants(grads22, nQuants4);
-gradsQts225 = gradsQuants(grads22, nQuants5);
-gradsQts226 = gradsQuants(grads22, nQuants6);
-gradsQts227 = gradsQuants(grads22, nQuants7);
-gradsQts228 = gradsQuants(grads22, nQuants8);
-gradsQts229 = gradsQuants(grads22, nQuants9);
-gradsQts311 = gradsQuants(grads31, nQuants1);
-gradsQts312 = gradsQuants(grads31, nQuants2);
-gradsQts313 = gradsQuants(grads31, nQuants3);
-gradsQts314 = gradsQuants(grads31, nQuants4);
-gradsQts315 = gradsQuants(grads31, nQuants5);
-gradsQts316 = gradsQuants(grads31, nQuants6);
-gradsQts317 = gradsQuants(grads31, nQuants7);
-gradsQts318 = gradsQuants(grads31, nQuants8);
-gradsQts319 = gradsQuants(grads31, nQuants9);
-gradsQts321 = gradsQuants(grads32, nQuants1);
-gradsQts322 = gradsQuants(grads32, nQuants2);
-gradsQts323 = gradsQuants(grads32, nQuants3);
-gradsQts324 = gradsQuants(grads32, nQuants4);
-gradsQts325 = gradsQuants(grads32, nQuants5);
-gradsQts326 = gradsQuants(grads32, nQuants6);
-gradsQts327 = gradsQuants(grads32, nQuants7);
-gradsQts328 = gradsQuants(grads32, nQuants8);
-gradsQts329 = gradsQuants(grads32, nQuants9);
+quants211 = getQuants(grads21, nQuants1);
+quants212 = getQuants(grads21, nQuants2);
+quants213 = getQuants(grads21, nQuants3);
+quants214 = getQuants(grads21, nQuants4);
+quants215 = getQuants(grads21, nQuants5);
+quants216 = getQuants(grads21, nQuants6);
+quants217 = getQuants(grads21, nQuants7);
+quants218 = getQuants(grads21, nQuants8);
+quants219 = getQuants(grads21, nQuants9);
+quants221 = getQuants(grads22, nQuants1);
+quants222 = getQuants(grads22, nQuants2);
+quants223 = getQuants(grads22, nQuants3);
+quants224 = getQuants(grads22, nQuants4);
+quants225 = getQuants(grads22, nQuants5);
+quants226 = getQuants(grads22, nQuants6);
+quants227 = getQuants(grads22, nQuants7);
+quants228 = getQuants(grads22, nQuants8);
+quants229 = getQuants(grads22, nQuants9);
+quants311 = getQuants(grads31, nQuants1);
+quants312 = getQuants(grads31, nQuants2);
+quants313 = getQuants(grads31, nQuants3);
+quants314 = getQuants(grads31, nQuants4);
+quants315 = getQuants(grads31, nQuants5);
+quants316 = getQuants(grads31, nQuants6);
+quants317 = getQuants(grads31, nQuants7);
+quants318 = getQuants(grads31, nQuants8);
+quants319 = getQuants(grads31, nQuants9);
+quants321 = getQuants(grads32, nQuants1);
+quants322 = getQuants(grads32, nQuants2);
+quants323 = getQuants(grads32, nQuants3);
+quants324 = getQuants(grads32, nQuants4);
+quants325 = getQuants(grads32, nQuants5);
+quants326 = getQuants(grads32, nQuants6);
+quants327 = getQuants(grads32, nQuants7);
+quants328 = getQuants(grads32, nQuants8);
+quants329 = getQuants(grads32, nQuants9);
 
 % Define velocity-gradient-based functions
 fun11 = @(G) G;
@@ -84,1513 +84,1513 @@ fun9 = @(G, S, W, I1, I2, I3, I4, I5, I6) I6;
 
 %% Test output type #1
 fun = fun11;
-gradsQts = gradsQts211;
-funVals = evalFun(fun, gradsQts);
+quants = quants211;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #2
 fun = fun11;
-gradsQts = gradsQts212;
-funVals = evalFun(fun, gradsQts);
+quants = quants212;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #3
 fun = fun11;
-gradsQts = gradsQts213;
-funVals = evalFun(fun, gradsQts);
+quants = quants213;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #4
 fun = fun11;
-gradsQts = gradsQts214;
-funVals = evalFun(fun, gradsQts);
+quants = quants214;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #5
 fun = fun11;
-gradsQts = gradsQts215;
-funVals = evalFun(fun, gradsQts);
+quants = quants215;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #6
 fun = fun11;
-gradsQts = gradsQts216;
-funVals = evalFun(fun, gradsQts);
+quants = quants216;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #7
 fun = fun11;
-gradsQts = gradsQts217;
-funVals = evalFun(fun, gradsQts);
+quants = quants217;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #8
 fun = fun11;
-gradsQts = gradsQts218;
-funVals = evalFun(fun, gradsQts);
+quants = quants218;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #9
 fun = fun11;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #10
 fun = fun11;
-gradsQts = gradsQts221;
-funVals = evalFun(fun, gradsQts);
+quants = quants221;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #11
 fun = fun11;
-gradsQts = gradsQts222;
-funVals = evalFun(fun, gradsQts);
+quants = quants222;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #12
 fun = fun11;
-gradsQts = gradsQts223;
-funVals = evalFun(fun, gradsQts);
+quants = quants223;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #13
 fun = fun11;
-gradsQts = gradsQts224;
-funVals = evalFun(fun, gradsQts);
+quants = quants224;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #14
 fun = fun11;
-gradsQts = gradsQts225;
-funVals = evalFun(fun, gradsQts);
+quants = quants225;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #15
 fun = fun11;
-gradsQts = gradsQts226;
-funVals = evalFun(fun, gradsQts);
+quants = quants226;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #16
 fun = fun11;
-gradsQts = gradsQts227;
-funVals = evalFun(fun, gradsQts);
+quants = quants227;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #17
 fun = fun11;
-gradsQts = gradsQts228;
-funVals = evalFun(fun, gradsQts);
+quants = quants228;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #18
 fun = fun11;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #19
 fun = fun11;
-gradsQts = gradsQts311;
-funVals = evalFun(fun, gradsQts);
+quants = quants311;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #20
 fun = fun11;
-gradsQts = gradsQts312;
-funVals = evalFun(fun, gradsQts);
+quants = quants312;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #21
 fun = fun11;
-gradsQts = gradsQts313;
-funVals = evalFun(fun, gradsQts);
+quants = quants313;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #22
 fun = fun11;
-gradsQts = gradsQts314;
-funVals = evalFun(fun, gradsQts);
+quants = quants314;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #23
 fun = fun11;
-gradsQts = gradsQts315;
-funVals = evalFun(fun, gradsQts);
+quants = quants315;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #24
 fun = fun11;
-gradsQts = gradsQts316;
-funVals = evalFun(fun, gradsQts);
+quants = quants316;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #25
 fun = fun11;
-gradsQts = gradsQts317;
-funVals = evalFun(fun, gradsQts);
+quants = quants317;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #26
 fun = fun11;
-gradsQts = gradsQts318;
-funVals = evalFun(fun, gradsQts);
+quants = quants318;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #27
 fun = fun11;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #28
 fun = fun11;
-gradsQts = gradsQts321;
-funVals = evalFun(fun, gradsQts);
+quants = quants321;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #29
 fun = fun11;
-gradsQts = gradsQts322;
-funVals = evalFun(fun, gradsQts);
+quants = quants322;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #30
 fun = fun11;
-gradsQts = gradsQts323;
-funVals = evalFun(fun, gradsQts);
+quants = quants323;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #31
 fun = fun11;
-gradsQts = gradsQts324;
-funVals = evalFun(fun, gradsQts);
+quants = quants324;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #32
 fun = fun11;
-gradsQts = gradsQts325;
-funVals = evalFun(fun, gradsQts);
+quants = quants325;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #33
 fun = fun11;
-gradsQts = gradsQts326;
-funVals = evalFun(fun, gradsQts);
+quants = quants326;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #34
 fun = fun11;
-gradsQts = gradsQts327;
-funVals = evalFun(fun, gradsQts);
+quants = quants327;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #35
 fun = fun11;
-gradsQts = gradsQts328;
-funVals = evalFun(fun, gradsQts);
+quants = quants328;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #36
 fun = fun11;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #37
 fun = fun11;
-gradsQts = gradsQts211;
-funVals = evalFun(fun, gradsQts);
+quants = quants211;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #38
 fun = fun11;
-gradsQts = gradsQts221;
-funVals = evalFun(fun, gradsQts);
+quants = quants221;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #39
 fun = fun11;
-gradsQts = gradsQts311;
-funVals = evalFun(fun, gradsQts);
+quants = quants311;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #40
 fun = fun11;
-gradsQts = gradsQts321;
-funVals = evalFun(fun, gradsQts);
+quants = quants321;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #41
 fun = fun21;
-gradsQts = gradsQts212;
-funVals = evalFun(fun, gradsQts);
+quants = quants212;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #42
 fun = fun21;
-gradsQts = gradsQts222;
-funVals = evalFun(fun, gradsQts);
+quants = quants222;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #43
 fun = fun21;
-gradsQts = gradsQts312;
-funVals = evalFun(fun, gradsQts);
+quants = quants312;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #44
 fun = fun21;
-gradsQts = gradsQts322;
-funVals = evalFun(fun, gradsQts);
+quants = quants322;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #45
 fun = fun31;
-gradsQts = gradsQts213;
-funVals = evalFun(fun, gradsQts);
+quants = quants213;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #46
 fun = fun31;
-gradsQts = gradsQts223;
-funVals = evalFun(fun, gradsQts);
+quants = quants223;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #47
 fun = fun31;
-gradsQts = gradsQts313;
-funVals = evalFun(fun, gradsQts);
+quants = quants313;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #48
 fun = fun31;
-gradsQts = gradsQts323;
-funVals = evalFun(fun, gradsQts);
+quants = quants323;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #49
 fun = fun41;
-gradsQts = gradsQts214;
-funVals = evalFun(fun, gradsQts);
+quants = quants214;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #50
 fun = fun41;
-gradsQts = gradsQts224;
-funVals = evalFun(fun, gradsQts);
+quants = quants224;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #51
 fun = fun41;
-gradsQts = gradsQts314;
-funVals = evalFun(fun, gradsQts);
+quants = quants314;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #52
 fun = fun41;
-gradsQts = gradsQts324;
-funVals = evalFun(fun, gradsQts);
+quants = quants324;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #53
 fun = fun51;
-gradsQts = gradsQts215;
-funVals = evalFun(fun, gradsQts);
+quants = quants215;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #54
 fun = fun51;
-gradsQts = gradsQts225;
-funVals = evalFun(fun, gradsQts);
+quants = quants225;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #55
 fun = fun51;
-gradsQts = gradsQts315;
-funVals = evalFun(fun, gradsQts);
+quants = quants315;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #56
 fun = fun51;
-gradsQts = gradsQts325;
-funVals = evalFun(fun, gradsQts);
+quants = quants325;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #57
 fun = fun61;
-gradsQts = gradsQts216;
-funVals = evalFun(fun, gradsQts);
+quants = quants216;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #58
 fun = fun61;
-gradsQts = gradsQts226;
-funVals = evalFun(fun, gradsQts);
+quants = quants226;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #59
 fun = fun61;
-gradsQts = gradsQts316;
-funVals = evalFun(fun, gradsQts);
+quants = quants316;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #60
 fun = fun61;
-gradsQts = gradsQts326;
-funVals = evalFun(fun, gradsQts);
+quants = quants326;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #61
 fun = fun71;
-gradsQts = gradsQts217;
-funVals = evalFun(fun, gradsQts);
+quants = quants217;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #62
 fun = fun71;
-gradsQts = gradsQts227;
-funVals = evalFun(fun, gradsQts);
+quants = quants227;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #63
 fun = fun71;
-gradsQts = gradsQts317;
-funVals = evalFun(fun, gradsQts);
+quants = quants317;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #64
 fun = fun71;
-gradsQts = gradsQts327;
-funVals = evalFun(fun, gradsQts);
+quants = quants327;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #65
 fun = fun81;
-gradsQts = gradsQts218;
-funVals = evalFun(fun, gradsQts);
+quants = quants218;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #66
 fun = fun81;
-gradsQts = gradsQts228;
-funVals = evalFun(fun, gradsQts);
+quants = quants228;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #67
 fun = fun81;
-gradsQts = gradsQts318;
-funVals = evalFun(fun, gradsQts);
+quants = quants318;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #68
 fun = fun81;
-gradsQts = gradsQts328;
-funVals = evalFun(fun, gradsQts);
+quants = quants328;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #69
 fun = fun91;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #70
 fun = fun91;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #71
 fun = fun91;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #72
 fun = fun91;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #73
 fun = fun11;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #74
 fun = fun11;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #75
 fun = fun11;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #76
 fun = fun11;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #77
 fun = fun21;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #78
 fun = fun21;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #79
 fun = fun21;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #80
 fun = fun21;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #81
 fun = fun31;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #82
 fun = fun31;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #83
 fun = fun31;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #84
 fun = fun31;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #85
 fun = fun41;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #86
 fun = fun41;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #87
 fun = fun41;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #88
 fun = fun41;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #89
 fun = fun51;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #90
 fun = fun51;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #91
 fun = fun51;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #92
 fun = fun51;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #93
 fun = fun61;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #94
 fun = fun61;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #95
 fun = fun61;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #96
 fun = fun61;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #97
 fun = fun71;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #98
 fun = fun71;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #99
 fun = fun71;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #100
 fun = fun71;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #101
 fun = fun81;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #102
 fun = fun81;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #103
 fun = fun81;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #104
 fun = fun81;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #105
 fun = fun91;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #106
 fun = fun91;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #107
 fun = fun91;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #108
 fun = fun91;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #109
 fun = fun1;
-gradsQts = gradsQts211;
-funVals = evalFun(fun, gradsQts);
+quants = quants211;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #110
 fun = fun1;
-gradsQts = gradsQts212;
-funVals = evalFun(fun, gradsQts);
+quants = quants212;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #111
 fun = fun1;
-gradsQts = gradsQts213;
-funVals = evalFun(fun, gradsQts);
+quants = quants213;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #112
 fun = fun1;
-gradsQts = gradsQts214;
-funVals = evalFun(fun, gradsQts);
+quants = quants214;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #113
 fun = fun1;
-gradsQts = gradsQts215;
-funVals = evalFun(fun, gradsQts);
+quants = quants215;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #114
 fun = fun1;
-gradsQts = gradsQts216;
-funVals = evalFun(fun, gradsQts);
+quants = quants216;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #115
 fun = fun1;
-gradsQts = gradsQts217;
-funVals = evalFun(fun, gradsQts);
+quants = quants217;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #116
 fun = fun1;
-gradsQts = gradsQts218;
-funVals = evalFun(fun, gradsQts);
+quants = quants218;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #117
 fun = fun1;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #118
 fun = fun1;
-gradsQts = gradsQts221;
-funVals = evalFun(fun, gradsQts);
+quants = quants221;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #119
 fun = fun1;
-gradsQts = gradsQts222;
-funVals = evalFun(fun, gradsQts);
+quants = quants222;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #120
 fun = fun1;
-gradsQts = gradsQts223;
-funVals = evalFun(fun, gradsQts);
+quants = quants223;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #121
 fun = fun1;
-gradsQts = gradsQts224;
-funVals = evalFun(fun, gradsQts);
+quants = quants224;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #122
 fun = fun1;
-gradsQts = gradsQts225;
-funVals = evalFun(fun, gradsQts);
+quants = quants225;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #123
 fun = fun1;
-gradsQts = gradsQts226;
-funVals = evalFun(fun, gradsQts);
+quants = quants226;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #124
 fun = fun1;
-gradsQts = gradsQts227;
-funVals = evalFun(fun, gradsQts);
+quants = quants227;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #125
 fun = fun1;
-gradsQts = gradsQts228;
-funVals = evalFun(fun, gradsQts);
+quants = quants228;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #126
 fun = fun1;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #127
 fun = fun1;
-gradsQts = gradsQts311;
-funVals = evalFun(fun, gradsQts);
+quants = quants311;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #128
 fun = fun1;
-gradsQts = gradsQts312;
-funVals = evalFun(fun, gradsQts);
+quants = quants312;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #129
 fun = fun1;
-gradsQts = gradsQts313;
-funVals = evalFun(fun, gradsQts);
+quants = quants313;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #130
 fun = fun1;
-gradsQts = gradsQts314;
-funVals = evalFun(fun, gradsQts);
+quants = quants314;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #131
 fun = fun1;
-gradsQts = gradsQts315;
-funVals = evalFun(fun, gradsQts);
+quants = quants315;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #132
 fun = fun1;
-gradsQts = gradsQts316;
-funVals = evalFun(fun, gradsQts);
+quants = quants316;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #133
 fun = fun1;
-gradsQts = gradsQts317;
-funVals = evalFun(fun, gradsQts);
+quants = quants317;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #134
 fun = fun1;
-gradsQts = gradsQts318;
-funVals = evalFun(fun, gradsQts);
+quants = quants318;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #135
 fun = fun1;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #136
 fun = fun1;
-gradsQts = gradsQts321;
-funVals = evalFun(fun, gradsQts);
+quants = quants321;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #137
 fun = fun1;
-gradsQts = gradsQts322;
-funVals = evalFun(fun, gradsQts);
+quants = quants322;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #138
 fun = fun1;
-gradsQts = gradsQts323;
-funVals = evalFun(fun, gradsQts);
+quants = quants323;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #139
 fun = fun1;
-gradsQts = gradsQts324;
-funVals = evalFun(fun, gradsQts);
+quants = quants324;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #140
 fun = fun1;
-gradsQts = gradsQts325;
-funVals = evalFun(fun, gradsQts);
+quants = quants325;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #141
 fun = fun1;
-gradsQts = gradsQts326;
-funVals = evalFun(fun, gradsQts);
+quants = quants326;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #142
 fun = fun1;
-gradsQts = gradsQts327;
-funVals = evalFun(fun, gradsQts);
+quants = quants327;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #143
 fun = fun1;
-gradsQts = gradsQts328;
-funVals = evalFun(fun, gradsQts);
+quants = quants328;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #144
 fun = fun1;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #145
 fun = fun1;
-gradsQts = gradsQts211;
-funVals = evalFun(fun, gradsQts);
+quants = quants211;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #146
 fun = fun1;
-gradsQts = gradsQts221;
-funVals = evalFun(fun, gradsQts);
+quants = quants221;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #147
 fun = fun1;
-gradsQts = gradsQts311;
-funVals = evalFun(fun, gradsQts);
+quants = quants311;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #148
 fun = fun1;
-gradsQts = gradsQts321;
-funVals = evalFun(fun, gradsQts);
+quants = quants321;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #149
 fun = fun2;
-gradsQts = gradsQts212;
-funVals = evalFun(fun, gradsQts);
+quants = quants212;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #150
 fun = fun2;
-gradsQts = gradsQts222;
-funVals = evalFun(fun, gradsQts);
+quants = quants222;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #151
 fun = fun2;
-gradsQts = gradsQts312;
-funVals = evalFun(fun, gradsQts);
+quants = quants312;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #152
 fun = fun2;
-gradsQts = gradsQts322;
-funVals = evalFun(fun, gradsQts);
+quants = quants322;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #153
 fun = fun3;
-gradsQts = gradsQts213;
-funVals = evalFun(fun, gradsQts);
+quants = quants213;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #154
 fun = fun3;
-gradsQts = gradsQts223;
-funVals = evalFun(fun, gradsQts);
+quants = quants223;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #155
 fun = fun3;
-gradsQts = gradsQts313;
-funVals = evalFun(fun, gradsQts);
+quants = quants313;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #156
 fun = fun3;
-gradsQts = gradsQts323;
-funVals = evalFun(fun, gradsQts);
+quants = quants323;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #157
 fun = fun4;
-gradsQts = gradsQts214;
-funVals = evalFun(fun, gradsQts);
+quants = quants214;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #158
 fun = fun4;
-gradsQts = gradsQts224;
-funVals = evalFun(fun, gradsQts);
+quants = quants224;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #159
 fun = fun4;
-gradsQts = gradsQts314;
-funVals = evalFun(fun, gradsQts);
+quants = quants314;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #160
 fun = fun4;
-gradsQts = gradsQts324;
-funVals = evalFun(fun, gradsQts);
+quants = quants324;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #161
 fun = fun5;
-gradsQts = gradsQts215;
-funVals = evalFun(fun, gradsQts);
+quants = quants215;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #162
 fun = fun5;
-gradsQts = gradsQts225;
-funVals = evalFun(fun, gradsQts);
+quants = quants225;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #163
 fun = fun5;
-gradsQts = gradsQts315;
-funVals = evalFun(fun, gradsQts);
+quants = quants315;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #164
 fun = fun5;
-gradsQts = gradsQts325;
-funVals = evalFun(fun, gradsQts);
+quants = quants325;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #165
 fun = fun6;
-gradsQts = gradsQts216;
-funVals = evalFun(fun, gradsQts);
+quants = quants216;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #166
 fun = fun6;
-gradsQts = gradsQts226;
-funVals = evalFun(fun, gradsQts);
+quants = quants226;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #167
 fun = fun6;
-gradsQts = gradsQts316;
-funVals = evalFun(fun, gradsQts);
+quants = quants316;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #168
 fun = fun6;
-gradsQts = gradsQts326;
-funVals = evalFun(fun, gradsQts);
+quants = quants326;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #169
 fun = fun7;
-gradsQts = gradsQts217;
-funVals = evalFun(fun, gradsQts);
+quants = quants217;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #170
 fun = fun7;
-gradsQts = gradsQts227;
-funVals = evalFun(fun, gradsQts);
+quants = quants227;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #171
 fun = fun7;
-gradsQts = gradsQts317;
-funVals = evalFun(fun, gradsQts);
+quants = quants317;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #172
 fun = fun7;
-gradsQts = gradsQts327;
-funVals = evalFun(fun, gradsQts);
+quants = quants327;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #173
 fun = fun8;
-gradsQts = gradsQts218;
-funVals = evalFun(fun, gradsQts);
+quants = quants218;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #174
 fun = fun8;
-gradsQts = gradsQts228;
-funVals = evalFun(fun, gradsQts);
+quants = quants228;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #175
 fun = fun8;
-gradsQts = gradsQts318;
-funVals = evalFun(fun, gradsQts);
+quants = quants318;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #176
 fun = fun8;
-gradsQts = gradsQts328;
-funVals = evalFun(fun, gradsQts);
+quants = quants328;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #177
 fun = fun9;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #178
 fun = fun9;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #179
 fun = fun9;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #180
 fun = fun9;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #181
 fun = fun1;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #182
 fun = fun1;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #183
 fun = fun1;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #184
 fun = fun1;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #185
 fun = fun2;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #186
 fun = fun2;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #187
 fun = fun2;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #188
 fun = fun2;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #189
 fun = fun3;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #190
 fun = fun3;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #191
 fun = fun3;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #192
 fun = fun3;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #193
 fun = fun4;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #194
 fun = fun4;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #195
 fun = fun4;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #196
 fun = fun4;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #197
 fun = fun5;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #198
 fun = fun5;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #199
 fun = fun5;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #200
 fun = fun5;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #201
 fun = fun6;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #202
 fun = fun6;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #203
 fun = fun6;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #204
 fun = fun6;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #205
 fun = fun7;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #206
 fun = fun7;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #207
 fun = fun7;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #208
 fun = fun7;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #209
 fun = fun8;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #210
 fun = fun8;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #211
 fun = fun8;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #212
 fun = fun8;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #213
 fun = fun9;
-gradsQts = gradsQts219;
-funVals = evalFun(fun, gradsQts);
+quants = quants219;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #214
 fun = fun9;
-gradsQts = gradsQts229;
-funVals = evalFun(fun, gradsQts);
+quants = quants229;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #215
 fun = fun9;
-gradsQts = gradsQts319;
-funVals = evalFun(fun, gradsQts);
+quants = quants319;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
 %% Test output type #216
 fun = fun9;
-gradsQts = gradsQts329;
-funVals = evalFun(fun, gradsQts);
+quants = quants329;
+funVals = evalFun(fun, quants);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
@@ -1598,10 +1598,10 @@ assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts211;
+quants = quants211;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1609,10 +1609,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts212;
+quants = quants212;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1620,10 +1620,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts213;
+quants = quants213;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1631,10 +1631,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts214;
+quants = quants214;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1642,10 +1642,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts215;
+quants = quants215;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1653,10 +1653,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts216;
+quants = quants216;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1664,10 +1664,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts217;
+quants = quants217;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1675,10 +1675,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts218;
+quants = quants218;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1686,10 +1686,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1697,10 +1697,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts221;
+quants = quants221;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1708,10 +1708,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts222;
+quants = quants222;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1719,10 +1719,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts223;
+quants = quants223;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1730,10 +1730,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts224;
+quants = quants224;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1741,10 +1741,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts225;
+quants = quants225;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1752,10 +1752,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts226;
+quants = quants226;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1763,10 +1763,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts227;
+quants = quants227;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1774,10 +1774,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts228;
+quants = quants228;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1785,10 +1785,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1796,10 +1796,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts311;
+quants = quants311;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1807,10 +1807,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts312;
+quants = quants312;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1818,10 +1818,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts313;
+quants = quants313;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1829,10 +1829,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts314;
+quants = quants314;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1840,10 +1840,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts315;
+quants = quants315;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1851,10 +1851,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts316;
+quants = quants316;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1862,10 +1862,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts317;
+quants = quants317;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1873,10 +1873,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts318;
+quants = quants318;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1884,10 +1884,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1895,10 +1895,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts321;
+quants = quants321;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1906,10 +1906,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts322;
+quants = quants322;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1917,10 +1917,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts323;
+quants = quants323;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1928,10 +1928,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts324;
+quants = quants324;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1939,10 +1939,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts325;
+quants = quants325;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1950,10 +1950,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts326;
+quants = quants326;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1961,10 +1961,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts327;
+quants = quants327;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1972,10 +1972,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts328;
+quants = quants328;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1983,10 +1983,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -1994,10 +1994,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts211;
+quants = quants211;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2005,10 +2005,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts221;
+quants = quants221;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2016,10 +2016,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts311;
+quants = quants311;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2027,10 +2027,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts321;
+quants = quants321;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2038,10 +2038,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts212;
+quants = quants212;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2049,10 +2049,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts222;
+quants = quants222;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2060,10 +2060,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts312;
+quants = quants312;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2071,10 +2071,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts322;
+quants = quants322;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2082,10 +2082,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts213;
+quants = quants213;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2093,10 +2093,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts223;
+quants = quants223;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2104,10 +2104,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts313;
+quants = quants313;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2115,10 +2115,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts323;
+quants = quants323;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2126,10 +2126,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts214;
+quants = quants214;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2137,10 +2137,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts224;
+quants = quants224;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2148,10 +2148,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts314;
+quants = quants314;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2159,10 +2159,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts324;
+quants = quants324;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2170,10 +2170,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts215;
+quants = quants215;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2181,10 +2181,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts225;
+quants = quants225;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2192,10 +2192,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts315;
+quants = quants315;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2203,10 +2203,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts325;
+quants = quants325;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2214,10 +2214,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts216;
+quants = quants216;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2225,10 +2225,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts226;
+quants = quants226;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2236,10 +2236,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts316;
+quants = quants316;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2247,10 +2247,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts326;
+quants = quants326;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2258,10 +2258,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts217;
+quants = quants217;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2269,10 +2269,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts227;
+quants = quants227;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2280,10 +2280,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts317;
+quants = quants317;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2291,10 +2291,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts327;
+quants = quants327;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2302,10 +2302,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts218;
+quants = quants218;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2313,10 +2313,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts228;
+quants = quants228;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2324,10 +2324,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts318;
+quants = quants318;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2335,10 +2335,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts328;
+quants = quants328;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2346,10 +2346,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2357,10 +2357,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2368,10 +2368,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2379,10 +2379,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2390,10 +2390,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2401,10 +2401,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2412,10 +2412,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2423,10 +2423,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun11;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2434,10 +2434,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2445,10 +2445,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2456,10 +2456,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2467,10 +2467,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun21;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2478,10 +2478,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2489,10 +2489,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2500,10 +2500,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2511,10 +2511,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun31;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2522,10 +2522,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2533,10 +2533,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2544,10 +2544,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2555,10 +2555,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun41;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2566,10 +2566,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2577,10 +2577,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2588,10 +2588,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2599,10 +2599,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun51;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2610,10 +2610,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2621,10 +2621,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2632,10 +2632,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2643,10 +2643,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun61;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2654,10 +2654,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2665,10 +2665,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2676,10 +2676,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2687,10 +2687,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun71;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2698,10 +2698,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2709,10 +2709,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2720,10 +2720,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2731,10 +2731,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun81;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2742,10 +2742,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2753,10 +2753,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2764,10 +2764,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2775,10 +2775,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun91;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2786,10 +2786,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts211;
+quants = quants211;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2797,10 +2797,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts212;
+quants = quants212;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2808,10 +2808,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts213;
+quants = quants213;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2819,10 +2819,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts214;
+quants = quants214;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2830,10 +2830,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts215;
+quants = quants215;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2841,10 +2841,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts216;
+quants = quants216;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2852,10 +2852,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts217;
+quants = quants217;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2863,10 +2863,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts218;
+quants = quants218;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2874,10 +2874,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2885,10 +2885,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts221;
+quants = quants221;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2896,10 +2896,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts222;
+quants = quants222;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2907,10 +2907,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts223;
+quants = quants223;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2918,10 +2918,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts224;
+quants = quants224;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2929,10 +2929,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts225;
+quants = quants225;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2940,10 +2940,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts226;
+quants = quants226;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2951,10 +2951,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts227;
+quants = quants227;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2962,10 +2962,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts228;
+quants = quants228;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2973,10 +2973,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2984,10 +2984,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts311;
+quants = quants311;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -2995,10 +2995,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts312;
+quants = quants312;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3006,10 +3006,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts313;
+quants = quants313;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3017,10 +3017,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts314;
+quants = quants314;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3028,10 +3028,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts315;
+quants = quants315;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3039,10 +3039,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts316;
+quants = quants316;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3050,10 +3050,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts317;
+quants = quants317;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3061,10 +3061,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts318;
+quants = quants318;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3072,10 +3072,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3083,10 +3083,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts321;
+quants = quants321;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3094,10 +3094,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts322;
+quants = quants322;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3105,10 +3105,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts323;
+quants = quants323;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3116,10 +3116,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts324;
+quants = quants324;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3127,10 +3127,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts325;
+quants = quants325;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3138,10 +3138,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts326;
+quants = quants326;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3149,10 +3149,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts327;
+quants = quants327;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3160,10 +3160,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts328;
+quants = quants328;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3171,10 +3171,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3182,10 +3182,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts211;
+quants = quants211;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3193,10 +3193,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts221;
+quants = quants221;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3204,10 +3204,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts311;
+quants = quants311;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3215,10 +3215,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants1;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts321;
+quants = quants321;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3226,10 +3226,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts212;
+quants = quants212;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3237,10 +3237,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts222;
+quants = quants222;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3248,10 +3248,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts312;
+quants = quants312;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3259,10 +3259,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants2;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts322;
+quants = quants322;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3270,10 +3270,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts213;
+quants = quants213;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3281,10 +3281,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts223;
+quants = quants223;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3292,10 +3292,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts313;
+quants = quants313;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3303,10 +3303,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants3;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts323;
+quants = quants323;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3314,10 +3314,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts214;
+quants = quants214;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3325,10 +3325,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts224;
+quants = quants224;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3336,10 +3336,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts314;
+quants = quants314;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3347,10 +3347,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants4;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts324;
+quants = quants324;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3358,10 +3358,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts215;
+quants = quants215;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3369,10 +3369,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts225;
+quants = quants225;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3380,10 +3380,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts315;
+quants = quants315;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3391,10 +3391,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants5;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts325;
+quants = quants325;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3402,10 +3402,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts216;
+quants = quants216;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3413,10 +3413,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts226;
+quants = quants226;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3424,10 +3424,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts316;
+quants = quants316;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3435,10 +3435,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants6;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts326;
+quants = quants326;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3446,10 +3446,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts217;
+quants = quants217;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3457,10 +3457,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts227;
+quants = quants227;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3468,10 +3468,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts317;
+quants = quants317;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3479,10 +3479,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants7;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts327;
+quants = quants327;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3490,10 +3490,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts218;
+quants = quants218;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3501,10 +3501,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts228;
+quants = quants228;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3512,10 +3512,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts318;
+quants = quants318;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3523,10 +3523,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants8;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts328;
+quants = quants328;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3534,10 +3534,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3545,10 +3545,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3556,10 +3556,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3567,10 +3567,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3578,10 +3578,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3589,10 +3589,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3600,10 +3600,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3611,10 +3611,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun1;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3622,10 +3622,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3633,10 +3633,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3644,10 +3644,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3655,10 +3655,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun2;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3666,10 +3666,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3677,10 +3677,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3688,10 +3688,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3699,10 +3699,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun3;
 expSize = [spaceDims, spaceDims, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3710,10 +3710,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3721,10 +3721,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3732,10 +3732,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3743,10 +3743,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun4;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3754,10 +3754,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3765,10 +3765,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3776,10 +3776,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3787,10 +3787,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun5;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3798,10 +3798,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3809,10 +3809,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3820,10 +3820,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3831,10 +3831,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun6;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3842,10 +3842,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3853,10 +3853,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3864,10 +3864,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3875,10 +3875,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun7;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3886,10 +3886,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3897,10 +3897,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3908,10 +3908,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3919,10 +3919,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun8;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3930,10 +3930,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads1;
-gradsQts = gradsQts219;
+quants = quants219;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3941,10 +3941,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims2;
 nGrads = nGrads2;
-gradsQts = gradsQts229;
+quants = quants229;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3952,10 +3952,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads1;
-gradsQts = gradsQts319;
+quants = quants319;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3963,10 +3963,10 @@ assert( all(expSize == actSize), 'Output not of expected size.');
 nQuants = nQuants9;
 spaceDims =spaceDims3;
 nGrads = nGrads2;
-gradsQts = gradsQts329;
+quants = quants329;
 fun = fun9;
 expSize = [1, 1, nGrads];
-funVals = evalFun(fun, gradsQts);
+funVals = evalFun(fun, quants);
 actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
@@ -3976,9 +3976,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -3988,9 +3988,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4000,9 +4000,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4012,9 +4012,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4024,9 +4024,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4036,9 +4036,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4048,9 +4048,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4060,9 +4060,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4072,9 +4072,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4091,9 +4091,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4110,9 +4110,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4129,9 +4129,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4148,9 +4148,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4167,9 +4167,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4186,9 +4186,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4205,9 +4205,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4224,9 +4224,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4243,9 +4243,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4256,9 +4256,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4269,9 +4269,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4282,9 +4282,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4295,9 +4295,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4308,9 +4308,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4321,9 +4321,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4334,9 +4334,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4347,9 +4347,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4360,9 +4360,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4381,9 +4381,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4402,9 +4402,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4423,9 +4423,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4444,9 +4444,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4465,9 +4465,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4486,9 +4486,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4507,9 +4507,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4528,9 +4528,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4549,9 +4549,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4562,9 +4562,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4575,9 +4575,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4588,9 +4588,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4601,9 +4601,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4614,9 +4614,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4627,9 +4627,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4640,9 +4640,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4653,9 +4653,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4666,9 +4666,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4678,9 +4678,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4697,9 +4697,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4710,9 +4710,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4731,9 +4731,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4744,9 +4744,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4756,9 +4756,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4775,9 +4775,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4788,9 +4788,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4809,9 +4809,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4822,9 +4822,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4834,9 +4834,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4853,9 +4853,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4866,9 +4866,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4887,9 +4887,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4900,9 +4900,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4912,9 +4912,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4931,9 +4931,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4944,9 +4944,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4965,9 +4965,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -4978,9 +4978,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -4990,9 +4990,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5009,9 +5009,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5022,9 +5022,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5043,9 +5043,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5056,9 +5056,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5068,9 +5068,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5087,9 +5087,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5100,9 +5100,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5121,9 +5121,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5134,9 +5134,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5146,9 +5146,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5165,9 +5165,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5178,9 +5178,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5199,9 +5199,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5212,9 +5212,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5224,9 +5224,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5243,9 +5243,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5256,9 +5256,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5277,9 +5277,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5290,9 +5290,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5302,9 +5302,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5321,9 +5321,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5334,9 +5334,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5355,9 +5355,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5368,9 +5368,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5380,9 +5380,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5399,9 +5399,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5412,9 +5412,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5433,9 +5433,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5446,9 +5446,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun11;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5458,9 +5458,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5477,9 +5477,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5490,9 +5490,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5511,9 +5511,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5524,9 +5524,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun21;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5536,9 +5536,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5555,9 +5555,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5568,9 +5568,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5589,9 +5589,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5602,9 +5602,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun31;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5614,9 +5614,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5633,9 +5633,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5646,9 +5646,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5667,9 +5667,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5680,9 +5680,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun41;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5692,9 +5692,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5711,9 +5711,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5724,9 +5724,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5745,9 +5745,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5758,9 +5758,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun51;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5770,9 +5770,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5789,9 +5789,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5802,9 +5802,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5823,9 +5823,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5836,9 +5836,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun61;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5848,9 +5848,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5867,9 +5867,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5880,9 +5880,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5901,9 +5901,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5914,9 +5914,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun71;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5926,9 +5926,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5945,9 +5945,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5958,9 +5958,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -5979,9 +5979,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -5992,9 +5992,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun81;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6004,9 +6004,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6023,9 +6023,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6036,9 +6036,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6057,9 +6057,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6070,9 +6070,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun91;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6082,9 +6082,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6094,9 +6094,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6106,9 +6106,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6118,9 +6118,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6130,9 +6130,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6142,9 +6142,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6154,9 +6154,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6166,9 +6166,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6178,9 +6178,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6197,9 +6197,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6216,9 +6216,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6235,9 +6235,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6254,9 +6254,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6273,9 +6273,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6292,9 +6292,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6311,9 +6311,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6330,9 +6330,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6349,9 +6349,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6362,9 +6362,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6375,9 +6375,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6388,9 +6388,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6401,9 +6401,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6414,9 +6414,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6427,9 +6427,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6440,9 +6440,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6453,9 +6453,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6466,9 +6466,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6487,9 +6487,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6508,9 +6508,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6529,9 +6529,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6550,9 +6550,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6571,9 +6571,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6592,9 +6592,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6613,9 +6613,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6634,9 +6634,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6655,9 +6655,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6668,9 +6668,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6681,9 +6681,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6694,9 +6694,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6707,9 +6707,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6720,9 +6720,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6733,9 +6733,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6746,9 +6746,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6759,9 +6759,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6772,9 +6772,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6784,9 +6784,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6803,9 +6803,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6816,9 +6816,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6837,9 +6837,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants1;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -6850,9 +6850,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants1;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -6862,9 +6862,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
     1.0, 2.5;
     2.5, 4.0;
@@ -6884,9 +6884,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
     5.0, 6.5;
     6.5, 8.0;
@@ -6904,9 +6904,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
     1, 3, 5;
     3, 5, 7;
@@ -6929,9 +6929,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants2;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
     10, 12, 14;
     12, 14, 16;
@@ -6951,9 +6951,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants2;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      1.0,  4.5, 13.0;
      4.5, 11.0, 22.5;
@@ -6967,9 +6967,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      0.0, -0.5;
      0.5,  0.0;
@@ -6989,9 +6989,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
      0.0, -0.5;
      0.5,  0.0;
@@ -7009,9 +7009,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      0, -1, -2;
      1,  0, -1;
@@ -7034,9 +7034,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants3;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
      0, -1, -2;
      1,  0, -1;
@@ -7056,9 +7056,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants3;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
       0.0, -2.5, -9.0;
       2.5,  0.0, -6.5;
@@ -7072,9 +7072,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 29.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7091,9 +7091,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 173.5;
 expVal(1, 1, 1) = 29.5;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7105,9 +7105,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 273;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7126,9 +7126,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants4;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 1812;
 expVal(1, 1, 1) = 273;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7140,9 +7140,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants4;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 2882;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7152,9 +7152,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -0.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7171,9 +7171,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -0.5;
 expVal(1, 1, 1) = -0.5;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7185,9 +7185,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -12;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7206,9 +7206,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants5;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -12;
 expVal(1, 1, 1) = -12;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7220,9 +7220,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants5;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -259;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7232,9 +7232,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 158.75;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7251,9 +7251,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 2284.75;
 expVal(1, 1, 1) = 158.75;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7265,9 +7265,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 4455;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7286,9 +7286,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants6;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 77112;
 expVal(1, 1, 1) = 4455;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7300,9 +7300,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants6;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 152777.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7312,9 +7312,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -1.25;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7331,9 +7331,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -3.25;
 expVal(1, 1, 1) = -1.25;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7345,9 +7345,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -90;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7366,9 +7366,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants7;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -252;
 expVal(1, 1, 1) = -90;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7380,9 +7380,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants7;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -6297.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7392,9 +7392,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -7.375;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7411,9 +7411,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -43.375;
 expVal(1, 1, 1) = -7.375;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7425,9 +7425,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -1638;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7446,9 +7446,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants8;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -10872;
 expVal(1, 1, 1) = -1638;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7460,9 +7460,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants8;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -372384.25;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7472,9 +7472,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 0;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7491,9 +7491,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
 expVal(1, 1, 1) = 0;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7505,9 +7505,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 0;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7526,9 +7526,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
 expVal(1, 1, 1) = 0;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7540,9 +7540,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 93494.25;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7552,9 +7552,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -7571,9 +7571,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -7584,9 +7584,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -7605,9 +7605,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grads;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
 
@@ -7618,9 +7618,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun1;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = grad;
 assert( all( all(expVal == actVal) ), 'Unexpected output.');
 
@@ -7630,9 +7630,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
     1.0, 2.5;
     2.5, 4.0;
@@ -7652,9 +7652,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
     5.0, 6.5;
     6.5, 8.0;
@@ -7672,9 +7672,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
     1, 3, 5;
     3, 5, 7;
@@ -7697,9 +7697,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
     10, 12, 14;
     12, 14, 16;
@@ -7719,9 +7719,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun2;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      1.0,  4.5, 13.0;
      4.5, 11.0, 22.5;
@@ -7735,9 +7735,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      0.0, -0.5;
      0.5,  0.0;
@@ -7757,9 +7757,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
      0.0, -0.5;
      0.5,  0.0;
@@ -7777,9 +7777,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
      0, -1, -2;
      1,  0, -1;
@@ -7802,9 +7802,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(:, :, 2) = [
      0, -1, -2;
      1,  0, -1;
@@ -7824,9 +7824,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun3;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = [
       0.0, -2.5, -9.0;
       2.5,  0.0, -6.5;
@@ -7840,9 +7840,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 29.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7859,9 +7859,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 173.5;
 expVal(1, 1, 1) = 29.5;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7873,9 +7873,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 273;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7894,9 +7894,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 1812;
 expVal(1, 1, 1) = 273;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7908,9 +7908,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun4;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 2882;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7920,9 +7920,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -0.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7939,9 +7939,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -0.5;
 expVal(1, 1, 1) = -0.5;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7953,9 +7953,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -12;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -7974,9 +7974,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -12;
 expVal(1, 1, 1) = -12;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -7988,9 +7988,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun5;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -259;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8000,9 +8000,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 158.75;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8019,9 +8019,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 2284.75;
 expVal(1, 1, 1) = 158.75;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8033,9 +8033,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 4455;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8054,9 +8054,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 77112;
 expVal(1, 1, 1) = 4455;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8068,9 +8068,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun6;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 152777.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8080,9 +8080,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -1.25;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8099,9 +8099,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -3.25;
 expVal(1, 1, 1) = -1.25;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8113,9 +8113,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -90;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8134,9 +8134,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -252;
 expVal(1, 1, 1) = -90;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8148,9 +8148,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun7;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -6297.5;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8160,9 +8160,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -7.375;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8179,9 +8179,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -43.375;
 expVal(1, 1, 1) = -7.375;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8193,9 +8193,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -1638;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8214,9 +8214,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = -10872;
 expVal(1, 1, 1) = -1638;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8228,9 +8228,9 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun8;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = -372384.25;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8240,9 +8240,9 @@ grad = [
     3, 4;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 0;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8259,9 +8259,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
 expVal(1, 1, 1) = 0;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8273,9 +8273,9 @@ grad = [
     7, 8, 9;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 0;
 assert(expVal == actVal, 'Unexpected output.');
 
@@ -8294,9 +8294,9 @@ grad2 = [
 grads(:, :, 2) = grad2;
 grads(:, :, 1) = grad1;
 nQuants = nQuants9;
-gradsQts = gradsQuants(grads, nQuants);
+quants = getQuants(grads, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal(1, 1, 2) = 0;
 expVal(1, 1, 1) = 0;
 assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
@@ -8308,8 +8308,8 @@ grad = [
     22, 29, 37;
 ];
 nQuants = nQuants9;
-gradsQts = gradsQuants(grad, nQuants);
+quants = getQuants(grad, nQuants);
 fun = fun9;
-actVal = evalFun(fun, gradsQts);
+actVal = evalFun(fun, quants);
 expVal = 93494.25;
 assert(expVal == actVal, 'Unexpected output.');

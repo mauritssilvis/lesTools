@@ -1,4 +1,4 @@
-function gradsQts = gradsQuants(grads, nQuants)
+function quants = getQuants(grads, nQuants)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -26,7 +26,7 @@ function gradsQts = gradsQuants(grads, nQuants)
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% gradsQts  cell of array of matrices -- Quantities derived from the velocity 
+% quants    cell of array of matrices -- Quantities derived from the velocity 
 %               gradient.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,14 +48,14 @@ sGrads = size(grads);
 nGrads = size(grads, 3);
 
 % Output storage
-gradsQts = cell(1, nQuants);
+quants = cell(1, nQuants);
 
 %% Store velocity gradient
 % Velocity gradients
 G = grads;
 
 % Add to list of quantities
-gradsQts{1} = G;
+quants{1} = G;
 
 %% Compute and store derived quantities, if needed
 if nQuants >= 2
@@ -66,7 +66,7 @@ if nQuants >= 2
     S = 1 / 2 * ( G + GT );
 
     % Add to list of quantities
-    gradsQts{2} = S;
+    quants{2} = S;
 end
 
 if nQuants >= 3
@@ -74,7 +74,7 @@ if nQuants >= 3
     W = 1 / 2 * ( G - GT );
 
     % Add to list of quantities
-    gradsQts{3} = W;
+    quants{3} = W;
 end
 
 if nQuants >= 4
@@ -90,7 +90,7 @@ if nQuants >= 4
     end
 
     % Add to list of quantities
-    gradsQts{4} = I1;
+    quants{4} = I1;
 end
 
 if nQuants >= 5
@@ -106,7 +106,7 @@ if nQuants >= 5
     end
 
     % Add to list of quantities
-    gradsQts{5} = I2;
+    quants{5} = I2;
 end
 
 if nQuants >= 6
@@ -122,7 +122,7 @@ if nQuants >= 6
     end
 
     % Add to list of quantities
-    gradsQts{6} = I3;
+    quants{6} = I3;
 end
 
 if nQuants >= 7
@@ -138,7 +138,7 @@ if nQuants >= 7
     end
 
     % Add to list of quantities
-    gradsQts{7} = I4;
+    quants{7} = I4;
 end
 
 if nQuants >= 8
@@ -154,7 +154,7 @@ if nQuants >= 8
     end
 
     % Add to list of quantities
-    gradsQts{8} = I5;
+    quants{8} = I5;
 end
 
 if nQuants >= 9
@@ -172,7 +172,7 @@ if nQuants >= 9
     end
 
     % Add to list of quantities
-    gradsQts{9} = I6;
+    quants{9} = I6;
 end
 
 end
