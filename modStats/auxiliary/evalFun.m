@@ -55,6 +55,15 @@ testQts = compQuants( zeros(sQt), nArgs );
 % Size of values
 sVals = size(feval(fun, testQts{1 : nArgs}));
 
+% Check
+if numel(sVals) > 2
+    error( ...
+        ['The function ''fun'' returns a tensor of order higher than 2.', ...
+         newline, ...
+         'This is not currently supported.'] ...
+    );
+end
+
 % Number of values
 nVals = size(quants{1}, 3);
 
