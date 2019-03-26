@@ -14,7 +14,7 @@ function grad = rmFlowDims(grad, rmDims)
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Copyright (c) 2016-2018 Maurits H. Silvis
+% Copyright (c) 2016-2019 Maurits H. Silvis
 %
 % This file is subject to the terms and conditions defined in
 % the MIT License, which can be found in the file 'license.txt'
