@@ -19,7 +19,7 @@ nGrads2 = 2;
 
 % Define arrays of velocity gradients
 grads21 = ones(spaceDims2, spaceDims2, nGrads1);
-grads22= ones(spaceDims2, spaceDims2, nGrads2);
+grads22 = ones(spaceDims2, spaceDims2, nGrads2);
 grads31 = ones(spaceDims3, spaceDims3, nGrads1);
 grads32 = ones(spaceDims3, spaceDims3, nGrads2);
 
@@ -60,7 +60,6 @@ gradsQts326 = gradsQuants(grads32, nQuants6);
 gradsQts327 = gradsQuants(grads32, nQuants7);
 gradsQts328 = gradsQuants(grads32, nQuants8);
 gradsQts329 = gradsQuants(grads32, nQuants9);
-
 
 % Define velocity-gradient-based functions
 fun11 = @(G) G;
@@ -1595,3 +1594,6174 @@ funVals = evalFun(fun, gradsQts);
 expType = 'double';
 assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
 
+%% Test output size #1
+nQuants = nQuants1;
+spaceDims = spaceDims2;
+gradsQts = gradsQts211;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #2
+nQuants = nQuants2;
+spaceDims = spaceDims2;
+gradsQts = gradsQts212;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #3
+nQuants = nQuants3;
+spaceDims = spaceDims2;
+gradsQts = gradsQts213;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #4
+nQuants = nQuants4;
+spaceDims = spaceDims2;
+gradsQts = gradsQts214;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #5
+nQuants = nQuants5;
+spaceDims = spaceDims2;
+gradsQts = gradsQts215;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #6
+nQuants = nQuants6;
+spaceDims = spaceDims2;
+gradsQts = gradsQts216;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #7
+nQuants = nQuants7;
+spaceDims = spaceDims2;
+gradsQts = gradsQts217;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #8
+nQuants = nQuants8;
+spaceDims = spaceDims2;
+gradsQts = gradsQts218;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #9
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #10
+nQuants = nQuants1;
+spaceDims = spaceDims2;
+gradsQts = gradsQts221;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #11
+nQuants = nQuants2;
+spaceDims = spaceDims2;
+gradsQts = gradsQts222;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #12
+nQuants = nQuants3;
+spaceDims = spaceDims2;
+gradsQts = gradsQts223;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #13
+nQuants = nQuants4;
+spaceDims = spaceDims2;
+gradsQts = gradsQts224;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #14
+nQuants = nQuants5;
+spaceDims = spaceDims2;
+gradsQts = gradsQts225;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #15
+nQuants = nQuants6;
+spaceDims = spaceDims2;
+gradsQts = gradsQts226;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #16
+nQuants = nQuants7;
+spaceDims = spaceDims2;
+gradsQts = gradsQts227;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #17
+nQuants = nQuants8;
+spaceDims = spaceDims2;
+gradsQts = gradsQts228;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #18
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #19
+nQuants = nQuants1;
+spaceDims = spaceDims3;
+gradsQts = gradsQts311;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #20
+nQuants = nQuants2;
+spaceDims = spaceDims3;
+gradsQts = gradsQts312;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #21
+nQuants = nQuants3;
+spaceDims = spaceDims3;
+gradsQts = gradsQts313;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #22
+nQuants = nQuants4;
+spaceDims = spaceDims3;
+gradsQts = gradsQts314;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #23
+nQuants = nQuants5;
+spaceDims = spaceDims3;
+gradsQts = gradsQts315;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #24
+nQuants = nQuants6;
+spaceDims = spaceDims3;
+gradsQts = gradsQts316;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #25
+nQuants = nQuants7;
+spaceDims = spaceDims3;
+gradsQts = gradsQts317;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #26
+nQuants = nQuants8;
+spaceDims = spaceDims3;
+gradsQts = gradsQts318;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #27
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #28
+nQuants = nQuants1;
+spaceDims = spaceDims3;
+gradsQts = gradsQts321;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #29
+nQuants = nQuants2;
+spaceDims = spaceDims3;
+gradsQts = gradsQts322;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #30
+nQuants = nQuants3;
+spaceDims = spaceDims3;
+gradsQts = gradsQts323;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #31
+nQuants = nQuants4;
+spaceDims = spaceDims3;
+gradsQts = gradsQts324;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #32
+nQuants = nQuants5;
+spaceDims = spaceDims3;
+gradsQts = gradsQts325;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #33
+nQuants = nQuants6;
+spaceDims = spaceDims3;
+gradsQts = gradsQts326;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #34
+nQuants = nQuants7;
+spaceDims = spaceDims3;
+gradsQts = gradsQts327;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #35
+nQuants = nQuants8;
+spaceDims = spaceDims3;
+gradsQts = gradsQts328;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #36
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #37
+nQuants = nQuants1;
+spaceDims = spaceDims2;
+gradsQts = gradsQts211;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #38
+nQuants = nQuants1;
+spaceDims = spaceDims2;
+gradsQts = gradsQts221;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #39
+nQuants = nQuants1;
+spaceDims = spaceDims3;
+gradsQts = gradsQts311;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #40
+nQuants = nQuants1;
+spaceDims = spaceDims3;
+gradsQts = gradsQts321;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #41
+nQuants = nQuants2;
+spaceDims = spaceDims2;
+gradsQts = gradsQts212;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #42
+nQuants = nQuants2;
+spaceDims = spaceDims2;
+gradsQts = gradsQts222;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #43
+nQuants = nQuants2;
+spaceDims = spaceDims3;
+gradsQts = gradsQts312;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #44
+nQuants = nQuants2;
+spaceDims = spaceDims3;
+gradsQts = gradsQts322;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #45
+nQuants = nQuants3;
+spaceDims = spaceDims2;
+gradsQts = gradsQts213;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #46
+nQuants = nQuants3;
+spaceDims = spaceDims2;
+gradsQts = gradsQts223;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #47
+nQuants = nQuants3;
+spaceDims = spaceDims3;
+gradsQts = gradsQts313;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #48
+nQuants = nQuants3;
+spaceDims = spaceDims3;
+gradsQts = gradsQts323;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #49
+nQuants = nQuants4;
+spaceDims = spaceDims2;
+gradsQts = gradsQts214;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #50
+nQuants = nQuants4;
+spaceDims = spaceDims2;
+gradsQts = gradsQts224;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #51
+nQuants = nQuants4;
+spaceDims = spaceDims3;
+gradsQts = gradsQts314;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #52
+nQuants = nQuants4;
+spaceDims = spaceDims3;
+gradsQts = gradsQts324;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #53
+nQuants = nQuants5;
+spaceDims = spaceDims2;
+gradsQts = gradsQts215;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #54
+nQuants = nQuants5;
+spaceDims = spaceDims2;
+gradsQts = gradsQts225;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #55
+nQuants = nQuants5;
+spaceDims = spaceDims3;
+gradsQts = gradsQts315;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #56
+nQuants = nQuants5;
+spaceDims = spaceDims3;
+gradsQts = gradsQts325;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #57
+nQuants = nQuants6;
+spaceDims = spaceDims2;
+gradsQts = gradsQts216;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #58
+nQuants = nQuants6;
+spaceDims = spaceDims2;
+gradsQts = gradsQts226;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #59
+nQuants = nQuants6;
+spaceDims = spaceDims3;
+gradsQts = gradsQts316;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #60
+nQuants = nQuants6;
+spaceDims = spaceDims3;
+gradsQts = gradsQts326;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #61
+nQuants = nQuants7;
+spaceDims = spaceDims2;
+gradsQts = gradsQts217;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #62
+nQuants = nQuants7;
+spaceDims = spaceDims2;
+gradsQts = gradsQts227;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #63
+nQuants = nQuants7;
+spaceDims = spaceDims3;
+gradsQts = gradsQts317;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #64
+nQuants = nQuants7;
+spaceDims = spaceDims3;
+gradsQts = gradsQts327;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #65
+nQuants = nQuants8;
+spaceDims = spaceDims2;
+gradsQts = gradsQts218;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #66
+nQuants = nQuants8;
+spaceDims = spaceDims2;
+gradsQts = gradsQts228;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #67
+nQuants = nQuants8;
+spaceDims = spaceDims3;
+gradsQts = gradsQts318;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #68
+nQuants = nQuants8;
+spaceDims = spaceDims3;
+gradsQts = gradsQts328;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #69
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #70
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #71
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #72
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #73
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #74
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #75
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #76
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun11;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #77
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #78
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #79
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #80
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun21;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #81
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #82
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #83
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #84
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun31;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #85
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #86
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #87
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #88
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun41;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #89
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #90
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #91
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #92
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun51;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #93
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #94
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #95
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #96
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun61;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #97
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #98
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #99
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #100
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun71;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #101
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #102
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #103
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #104
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun81;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #105
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts219;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #106
+nQuants = nQuants9;
+spaceDims = spaceDims2;
+gradsQts = gradsQts229;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #107
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts319;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #108
+nQuants = nQuants9;
+spaceDims = spaceDims3;
+gradsQts = gradsQts329;
+fun = fun91;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #109
+nQuants = nQuants1;
+spaceDims =spaceDims2;
+gradsQts = gradsQts211; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #110
+nQuants = nQuants2;
+spaceDims =spaceDims2;
+gradsQts = gradsQts212; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #111
+nQuants = nQuants3;
+spaceDims =spaceDims2;
+gradsQts = gradsQts213; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #112
+nQuants = nQuants4;
+spaceDims =spaceDims2;
+gradsQts = gradsQts214; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #113
+nQuants = nQuants5;
+spaceDims =spaceDims2;
+gradsQts = gradsQts215; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #114
+nQuants = nQuants6;
+spaceDims =spaceDims2;
+gradsQts = gradsQts216; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #115
+nQuants = nQuants7;
+spaceDims =spaceDims2;
+gradsQts = gradsQts217; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #116
+nQuants = nQuants8;
+spaceDims =spaceDims2;
+gradsQts = gradsQts218; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #117
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #118
+nQuants = nQuants1;
+spaceDims =spaceDims2;
+gradsQts = gradsQts221; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #119
+nQuants = nQuants2;
+spaceDims =spaceDims2;
+gradsQts = gradsQts222; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #120
+nQuants = nQuants3;
+spaceDims =spaceDims2;
+gradsQts = gradsQts223; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #121
+nQuants = nQuants4;
+spaceDims =spaceDims2;
+gradsQts = gradsQts224; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #122
+nQuants = nQuants5;
+spaceDims =spaceDims2;
+gradsQts = gradsQts225; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #123
+nQuants = nQuants6;
+spaceDims =spaceDims2;
+gradsQts = gradsQts226; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #124
+nQuants = nQuants7;
+spaceDims =spaceDims2;
+gradsQts = gradsQts227; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #125
+nQuants = nQuants8;
+spaceDims =spaceDims2;
+gradsQts = gradsQts228; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #126
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #127
+nQuants = nQuants1;
+spaceDims =spaceDims3;
+gradsQts = gradsQts311; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #128
+nQuants = nQuants2;
+spaceDims =spaceDims3;
+gradsQts = gradsQts312; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #129
+nQuants = nQuants3;
+spaceDims =spaceDims3;
+gradsQts = gradsQts313; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #130
+nQuants = nQuants4;
+spaceDims =spaceDims3;
+gradsQts = gradsQts314; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #131
+nQuants = nQuants5;
+spaceDims =spaceDims3;
+gradsQts = gradsQts315; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #132
+nQuants = nQuants6;
+spaceDims =spaceDims3;
+gradsQts = gradsQts316; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #133
+nQuants = nQuants7;
+spaceDims =spaceDims3;
+gradsQts = gradsQts317; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #134
+nQuants = nQuants8;
+spaceDims =spaceDims3;
+gradsQts = gradsQts318; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #135
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #136
+nQuants = nQuants1;
+spaceDims =spaceDims3;
+gradsQts = gradsQts321; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #137
+nQuants = nQuants2;
+spaceDims =spaceDims3;
+gradsQts = gradsQts322; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #138
+nQuants = nQuants3;
+spaceDims =spaceDims3;
+gradsQts = gradsQts323; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #139
+nQuants = nQuants4;
+spaceDims =spaceDims3;
+gradsQts = gradsQts324; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #140
+nQuants = nQuants5;
+spaceDims =spaceDims3;
+gradsQts = gradsQts325; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #141
+nQuants = nQuants6;
+spaceDims =spaceDims3;
+gradsQts = gradsQts326; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #142
+nQuants = nQuants7;
+spaceDims =spaceDims3;
+gradsQts = gradsQts327; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #143
+nQuants = nQuants8;
+spaceDims =spaceDims3;
+gradsQts = gradsQts328; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #144
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #145
+nQuants = nQuants1;
+spaceDims =spaceDims2;
+gradsQts = gradsQts211; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #146
+nQuants = nQuants1;
+spaceDims =spaceDims2;
+gradsQts = gradsQts221; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #147
+nQuants = nQuants1;
+spaceDims =spaceDims3;
+gradsQts = gradsQts311; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #148
+nQuants = nQuants1;
+spaceDims =spaceDims3;
+gradsQts = gradsQts321; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #149
+nQuants = nQuants2;
+spaceDims =spaceDims2;
+gradsQts = gradsQts212; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #150
+nQuants = nQuants2;
+spaceDims =spaceDims2;
+gradsQts = gradsQts222; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #151
+nQuants = nQuants2;
+spaceDims =spaceDims3;
+gradsQts = gradsQts312; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #152
+nQuants = nQuants2;
+spaceDims =spaceDims3;
+gradsQts = gradsQts322; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #153
+nQuants = nQuants3;
+spaceDims =spaceDims2;
+gradsQts = gradsQts213; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #154
+nQuants = nQuants3;
+spaceDims =spaceDims2;
+gradsQts = gradsQts223; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #155
+nQuants = nQuants3;
+spaceDims =spaceDims3;
+gradsQts = gradsQts313; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #156
+nQuants = nQuants3;
+spaceDims =spaceDims3;
+gradsQts = gradsQts323; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #157
+nQuants = nQuants4;
+spaceDims =spaceDims2;
+gradsQts = gradsQts214; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #158
+nQuants = nQuants4;
+spaceDims =spaceDims2;
+gradsQts = gradsQts224; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #159
+nQuants = nQuants4;
+spaceDims =spaceDims3;
+gradsQts = gradsQts314; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #160
+nQuants = nQuants4;
+spaceDims =spaceDims3;
+gradsQts = gradsQts324; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #161
+nQuants = nQuants5;
+spaceDims =spaceDims2;
+gradsQts = gradsQts215; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #162
+nQuants = nQuants5;
+spaceDims =spaceDims2;
+gradsQts = gradsQts225; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #163
+nQuants = nQuants5;
+spaceDims =spaceDims3;
+gradsQts = gradsQts315; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #164
+nQuants = nQuants5;
+spaceDims =spaceDims3;
+gradsQts = gradsQts325; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #165
+nQuants = nQuants6;
+spaceDims =spaceDims2;
+gradsQts = gradsQts216; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #166
+nQuants = nQuants6;
+spaceDims =spaceDims2;
+gradsQts = gradsQts226; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #167
+nQuants = nQuants6;
+spaceDims =spaceDims3;
+gradsQts = gradsQts316; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #168
+nQuants = nQuants6;
+spaceDims =spaceDims3;
+gradsQts = gradsQts326; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #169
+nQuants = nQuants7;
+spaceDims =spaceDims2;
+gradsQts = gradsQts217; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #170
+nQuants = nQuants7;
+spaceDims =spaceDims2;
+gradsQts = gradsQts227; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #171
+nQuants = nQuants7;
+spaceDims =spaceDims3;
+gradsQts = gradsQts317; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #172
+nQuants = nQuants7;
+spaceDims =spaceDims3;
+gradsQts = gradsQts327; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #173
+nQuants = nQuants8;
+spaceDims =spaceDims2;
+gradsQts = gradsQts218; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #174
+nQuants = nQuants8;
+spaceDims =spaceDims2;
+gradsQts = gradsQts228; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #175
+nQuants = nQuants8;
+spaceDims =spaceDims3;
+gradsQts = gradsQts318; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #176
+nQuants = nQuants8;
+spaceDims =spaceDims3;
+gradsQts = gradsQts328; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #177
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #178
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #179
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #180
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #181
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #182
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #183
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #184
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun1;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #185
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #186
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #187
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #188
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun2;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #189
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #190
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #191
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #192
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun3;
+expSize = [spaceDims, spaceDims, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #193
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #194
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #195
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #196
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun4;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #197
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #198
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #199
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #200
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun5;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #201
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #202
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #203
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #204
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun6;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #205
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #206
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #207
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #208
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun7;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #209
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #210
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #211
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #212
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun8;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #213
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts219; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #214
+nQuants = nQuants9;
+spaceDims =spaceDims2;
+gradsQts = gradsQts229; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #215
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts319; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test output size #216
+nQuants = nQuants9;
+spaceDims =spaceDims3;
+gradsQts = gradsQts329; 
+fun = fun9;
+expSize = [1, 1, nGrads];
+actSize = size(evalFun(fun, gradsQts));
+assert( all(expSize == actSize), 'Output not of expected size.');
+
+%% Test actual output #1
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #2
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #3
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #4
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #5
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #6
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #7
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #8
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #9
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #10
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #11
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #12
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #13
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #14
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #15
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #16
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #17
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #18
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #19
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #20
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #21
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #22
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #23
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #24
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #25
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #26
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #27
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #28
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #29
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #30
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #31
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #32
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #33
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #34
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #35
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #36
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #37
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #38
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #39
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #40
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #41
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #42
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #43
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #44
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #45
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #46
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #47
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #48
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #49
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #50
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #51
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #52
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #53
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #54
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #55
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #56
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #57
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #58
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #59
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #60
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #61
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #62
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #63
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #64
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #65
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #66
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #67
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #68
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #69
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #70
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #71
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #72
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #73
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #74
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #75
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #76
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #77
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #78
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #79
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #80
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #81
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #82
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #83
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #84
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #85
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #86
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #87
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #88
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #89
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #90
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #91
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #92
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #93
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #94
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #95
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun11;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #96
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #97
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #98
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #99
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #100
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun21;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #101
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #102
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #103
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #104
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #105
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun31;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #106
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #107
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #108
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #109
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #110
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun41;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #111
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #112
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #113
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #114
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #115
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun51;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #116
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #117
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #118
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #119
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #120
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun61;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #121
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #122
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #123
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #124
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #125
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun71;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #126
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #127
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #128
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #129
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #130
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun81;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #131
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #132
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #133
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #134
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #135
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun91;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #136
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #137
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #138
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #139
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #140
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #141
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #142
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #143
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #144
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #145
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #146
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #147
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #148
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #149
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #150
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #151
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #152
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #153
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #154
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #155
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #156
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #157
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #158
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #159
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #160
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #161
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #162
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #163
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #164
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #165
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #166
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #167
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #168
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #169
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #170
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #171
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #172
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #173
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #174
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #175
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #176
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #177
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #178
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #179
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #180
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #181
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #182
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #183
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #184
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants1;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #185
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants1;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #186
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+    1.0, 2.5;
+    2.5, 4.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #187
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 2, 1 : 2, 2) = [
+    5.0, 6.5;
+    6.5, 8.0;
+];
+expVal(1 : 2, 1 : 2, 1) = [
+    1.0, 2.5;
+    2.5, 4.0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #188
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+    1, 3, 5;
+    3, 5, 7;
+    5, 7, 9;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #189
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants2;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 3, 1 : 3, 2) = [
+    10, 12, 14;
+    12, 14, 16;
+    14, 16, 18;
+];
+expVal(1 : 3, 1 : 3, 1) = [
+    1, 3, 5;
+    3, 5, 7;
+    5, 7, 9;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #190
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants2;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+     1.0,  4.5, 13.0;
+     4.5, 11.0, 22.5;
+    13.0, 22.5, 37.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #191
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #192
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 2, 1 : 2, 2) = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+expVal(1 : 2, 1 : 2, 1) = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #193
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #194
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants3;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 3, 1 : 3, 2) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+expVal(1 : 3, 1 : 3, 1) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #195
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants3;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+      0.0, -2.5, -9.0;
+      2.5,  0.0, -6.5;
+      9.0,  6.5,  0.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #196
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = 29.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #197
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 173.5;
+expVal(1, 1, 1) = 29.5;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #198
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = 273;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #199
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants4;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 1812;
+expVal(1, 1, 1) = 273;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #200
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants4;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = 2882;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #201
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = -0.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #202
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -0.5;
+expVal(1, 1, 1) = -0.5;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #203
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = -12;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #204
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants5;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -12;
+expVal(1, 1, 1) = -12;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #205
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants5;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = -259;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #206
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = 158.75;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #207
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 2284.75;
+expVal(1, 1, 1) = 158.75;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #208
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = 4455;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #209
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants6;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 77112;
+expVal(1, 1, 1) = 4455;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #210
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants6;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = 152777.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #211
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = -1.25;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #212
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -3.25;
+expVal(1, 1, 1) = -1.25;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #213
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = -90;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #214
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants7;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -252;
+expVal(1, 1, 1) = -90;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #215
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants7;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = -6297.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #216
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = -7.375;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #217
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -43.375;
+expVal(1, 1, 1) = -7.375;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #218
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = -1638;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #219
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants8;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -10872;
+expVal(1, 1, 1) = -1638;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #220
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants8;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = -372384.25;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #221
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = 0;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #222
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 0;
+expVal(1, 1, 1) = 0;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #223
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = 0;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #224
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 0;
+expVal(1, 1, 1) = 0;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #225
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = 93494.25;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #226
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #227
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #228
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #229
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grads;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #230
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun1;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #231
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+    1.0, 2.5;
+    2.5, 4.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #232
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 2, 1 : 2, 2) = [
+    5.0, 6.5;
+    6.5, 8.0;
+];
+expVal(1 : 2, 1 : 2, 1) = [
+    1.0, 2.5;
+    2.5, 4.0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #233
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #234
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 3, 1 : 3, 2) = [
+    10, 12, 14;
+    12, 14, 16;
+    14, 16, 18;
+];
+expVal(1 : 3, 1 : 3, 1) = [
+    1, 3, 5;
+    3, 5, 7;
+    5, 7, 9;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #235
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun2;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+     1.0,  4.5, 13.0;
+     4.5, 11.0, 22.5;
+    13.0, 22.5, 37.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #236
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #237
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 2, 1 : 2, 2) = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+expVal(1 : 2, 1 : 2, 1) = [
+     0.0, -0.5;
+     0.5,  0.0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #238
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #239
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal(1 : 3, 1 : 3, 2) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+expVal(1 : 3, 1 : 3, 1) = [
+     0, -1, -2;
+     1,  0, -1;
+     2,  1,  0;
+];
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #240
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun3;
+actVal = evalFun(fun, gradsQts);
+expVal = [
+      0.0, -2.5, -9.0;
+      2.5,  0.0, -6.5;
+      9.0,  6.5,  0.0;
+];
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #241
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = 29.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #242
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 173.5;
+expVal(1, 1, 1) = 29.5;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #243
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #244
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 1812;
+expVal(1, 1, 1) = 273;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #245
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun4;
+actVal = evalFun(fun, gradsQts);
+expVal = 2882;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #246
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = -0.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #247
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -0.5;
+expVal(1, 1, 1) = -0.5;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #248
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #249
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -12;
+expVal(1, 1, 1) = -12;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #250
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun5;
+actVal = evalFun(fun, gradsQts);
+expVal = -259;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #251
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = 158.75;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #252
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 2284.75;
+expVal(1, 1, 1) = 158.75;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #253
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #254
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 77112;
+expVal(1, 1, 1) = 4455;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #255
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun6;
+actVal = evalFun(fun, gradsQts);
+expVal = 152777.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #256
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = -1.25;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #257
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -3.25;
+expVal(1, 1, 1) = -1.25;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #258
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #259
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -252;
+expVal(1, 1, 1) = -90;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #260
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun7;
+actVal = evalFun(fun, gradsQts);
+expVal = -6297.5;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #261
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = -7.375;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #262
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -43.375;
+expVal(1, 1, 1) = -7.375;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #263
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #264
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = -10872;
+expVal(1, 1, 1) = -1638;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #265
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun8;
+actVal = evalFun(fun, gradsQts);
+expVal = -372384.25;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #266
+grad = [
+    1, 2;
+    3, 4;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = 0;
+assert(expVal == actVal, 'Unexpected output.');
+
+%% Test actual output #267
+grad1 = [
+    1, 2;
+    3, 4;
+];
+grad2 = [
+    5, 6;
+    7, 8;
+];
+grads(1 : 2, 1 : 2, 2) = grad2;
+grads(1 : 2, 1 : 2, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 0;
+expVal(1, 1, 1) = 0;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #268
+grad = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = grad;
+assert( all( all(expVal == actVal) ), 'Unexpected output.');
+
+%% Test actual output #269
+grad1 = [
+    1, 2, 3;
+    4, 5, 6;
+    7, 8, 9;
+];
+grad2 = [
+    10, 11, 12;
+    13, 14, 15;
+    16, 17, 18;
+];
+grads(1 : 3, 1 : 3, 2) = grad2;
+grads(1 : 3, 1 : 3, 1) = grad1;
+nQuants = nQuants9;
+gradsQts = gradsQuants(grads, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal(1, 1, 2) = 0;
+expVal(1, 1, 1) = 0;
+assert( all( all( all(expVal == actVal) ) ), 'Unexpected output.');
+
+%% Test actual output #270
+grad = [
+     1,  2,  4;
+     7, 11, 16;
+    22, 29, 37;
+];
+nQuants = nQuants9;
+gradsQts = gradsQuants(grad, nQuants);
+fun = fun9;
+actVal = evalFun(fun, gradsQts);
+expVal = 93494.25;
+assert(expVal == actVal, 'Unexpected output.');
