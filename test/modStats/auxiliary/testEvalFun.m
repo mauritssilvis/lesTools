@@ -87,1515 +87,1514 @@ fun = fun11;
 quants = quants211;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #2
 fun = fun11;
 quants = quants212;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #3
 fun = fun11;
 quants = quants213;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #4
 fun = fun11;
 quants = quants214;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #5
 fun = fun11;
 quants = quants215;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #6
 fun = fun11;
 quants = quants216;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #7
 fun = fun11;
 quants = quants217;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #8
 fun = fun11;
 quants = quants218;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #9
 fun = fun11;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #10
 fun = fun11;
 quants = quants221;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #11
 fun = fun11;
 quants = quants222;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #12
 fun = fun11;
 quants = quants223;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #13
 fun = fun11;
 quants = quants224;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #14
 fun = fun11;
 quants = quants225;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #15
 fun = fun11;
 quants = quants226;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #16
 fun = fun11;
 quants = quants227;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #17
 fun = fun11;
 quants = quants228;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #18
 fun = fun11;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #19
 fun = fun11;
 quants = quants311;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #20
 fun = fun11;
 quants = quants312;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #21
 fun = fun11;
 quants = quants313;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #22
 fun = fun11;
 quants = quants314;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #23
 fun = fun11;
 quants = quants315;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #24
 fun = fun11;
 quants = quants316;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #25
 fun = fun11;
 quants = quants317;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #26
 fun = fun11;
 quants = quants318;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #27
 fun = fun11;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #28
 fun = fun11;
 quants = quants321;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #29
 fun = fun11;
 quants = quants322;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #30
 fun = fun11;
 quants = quants323;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #31
 fun = fun11;
 quants = quants324;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #32
 fun = fun11;
 quants = quants325;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #33
 fun = fun11;
 quants = quants326;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #34
 fun = fun11;
 quants = quants327;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #35
 fun = fun11;
 quants = quants328;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #36
 fun = fun11;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #37
 fun = fun11;
 quants = quants211;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #38
 fun = fun11;
 quants = quants221;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #39
 fun = fun11;
 quants = quants311;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #40
 fun = fun11;
 quants = quants321;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #41
 fun = fun21;
 quants = quants212;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #42
 fun = fun21;
 quants = quants222;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #43
 fun = fun21;
 quants = quants312;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #44
 fun = fun21;
 quants = quants322;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #45
 fun = fun31;
 quants = quants213;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #46
 fun = fun31;
 quants = quants223;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #47
 fun = fun31;
 quants = quants313;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #48
 fun = fun31;
 quants = quants323;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #49
 fun = fun41;
 quants = quants214;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #50
 fun = fun41;
 quants = quants224;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #51
 fun = fun41;
 quants = quants314;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #52
 fun = fun41;
 quants = quants324;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #53
 fun = fun51;
 quants = quants215;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #54
 fun = fun51;
 quants = quants225;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #55
 fun = fun51;
 quants = quants315;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #56
 fun = fun51;
 quants = quants325;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #57
 fun = fun61;
 quants = quants216;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #58
 fun = fun61;
 quants = quants226;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #59
 fun = fun61;
 quants = quants316;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #60
 fun = fun61;
 quants = quants326;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #61
 fun = fun71;
 quants = quants217;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #62
 fun = fun71;
 quants = quants227;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #63
 fun = fun71;
 quants = quants317;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #64
 fun = fun71;
 quants = quants327;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #65
 fun = fun81;
 quants = quants218;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #66
 fun = fun81;
 quants = quants228;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #67
 fun = fun81;
 quants = quants318;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #68
 fun = fun81;
 quants = quants328;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #69
 fun = fun91;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #70
 fun = fun91;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #71
 fun = fun91;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #72
 fun = fun91;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #73
 fun = fun11;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #74
 fun = fun11;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #75
 fun = fun11;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #76
 fun = fun11;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #77
 fun = fun21;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #78
 fun = fun21;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #79
 fun = fun21;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #80
 fun = fun21;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #81
 fun = fun31;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #82
 fun = fun31;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #83
 fun = fun31;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #84
 fun = fun31;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #85
 fun = fun41;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #86
 fun = fun41;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #87
 fun = fun41;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #88
 fun = fun41;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #89
 fun = fun51;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #90
 fun = fun51;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #91
 fun = fun51;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #92
 fun = fun51;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #93
 fun = fun61;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #94
 fun = fun61;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #95
 fun = fun61;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #96
 fun = fun61;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #97
 fun = fun71;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #98
 fun = fun71;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #99
 fun = fun71;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #100
 fun = fun71;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #101
 fun = fun81;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #102
 fun = fun81;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #103
 fun = fun81;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #104
 fun = fun81;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #105
 fun = fun91;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #106
 fun = fun91;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #107
 fun = fun91;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #108
 fun = fun91;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #109
 fun = fun1;
 quants = quants211;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #110
 fun = fun1;
 quants = quants212;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #111
 fun = fun1;
 quants = quants213;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #112
 fun = fun1;
 quants = quants214;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #113
 fun = fun1;
 quants = quants215;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #114
 fun = fun1;
 quants = quants216;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #115
 fun = fun1;
 quants = quants217;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #116
 fun = fun1;
 quants = quants218;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #117
 fun = fun1;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #118
 fun = fun1;
 quants = quants221;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #119
 fun = fun1;
 quants = quants222;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #120
 fun = fun1;
 quants = quants223;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #121
 fun = fun1;
 quants = quants224;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #122
 fun = fun1;
 quants = quants225;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #123
 fun = fun1;
 quants = quants226;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #124
 fun = fun1;
 quants = quants227;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #125
 fun = fun1;
 quants = quants228;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #126
 fun = fun1;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #127
 fun = fun1;
 quants = quants311;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #128
 fun = fun1;
 quants = quants312;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #129
 fun = fun1;
 quants = quants313;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #130
 fun = fun1;
 quants = quants314;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #131
 fun = fun1;
 quants = quants315;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #132
 fun = fun1;
 quants = quants316;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #133
 fun = fun1;
 quants = quants317;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #134
 fun = fun1;
 quants = quants318;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #135
 fun = fun1;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #136
 fun = fun1;
 quants = quants321;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #137
 fun = fun1;
 quants = quants322;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #138
 fun = fun1;
 quants = quants323;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #139
 fun = fun1;
 quants = quants324;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #140
 fun = fun1;
 quants = quants325;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #141
 fun = fun1;
 quants = quants326;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #142
 fun = fun1;
 quants = quants327;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #143
 fun = fun1;
 quants = quants328;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #144
 fun = fun1;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #145
 fun = fun1;
 quants = quants211;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #146
 fun = fun1;
 quants = quants221;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #147
 fun = fun1;
 quants = quants311;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #148
 fun = fun1;
 quants = quants321;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #149
 fun = fun2;
 quants = quants212;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #150
 fun = fun2;
 quants = quants222;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #151
 fun = fun2;
 quants = quants312;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #152
 fun = fun2;
 quants = quants322;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #153
 fun = fun3;
 quants = quants213;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #154
 fun = fun3;
 quants = quants223;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #155
 fun = fun3;
 quants = quants313;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #156
 fun = fun3;
 quants = quants323;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #157
 fun = fun4;
 quants = quants214;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #158
 fun = fun4;
 quants = quants224;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #159
 fun = fun4;
 quants = quants314;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #160
 fun = fun4;
 quants = quants324;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #161
 fun = fun5;
 quants = quants215;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #162
 fun = fun5;
 quants = quants225;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #163
 fun = fun5;
 quants = quants315;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #164
 fun = fun5;
 quants = quants325;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #165
 fun = fun6;
 quants = quants216;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #166
 fun = fun6;
 quants = quants226;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #167
 fun = fun6;
 quants = quants316;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #168
 fun = fun6;
 quants = quants326;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #169
 fun = fun7;
 quants = quants217;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #170
 fun = fun7;
 quants = quants227;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #171
 fun = fun7;
 quants = quants317;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #172
 fun = fun7;
 quants = quants327;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #173
 fun = fun8;
 quants = quants218;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #174
 fun = fun8;
 quants = quants228;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #175
 fun = fun8;
 quants = quants318;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #176
 fun = fun8;
 quants = quants328;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #177
 fun = fun9;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #178
 fun = fun9;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #179
 fun = fun9;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #180
 fun = fun9;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #181
 fun = fun1;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #182
 fun = fun1;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #183
 fun = fun1;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #184
 fun = fun1;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #185
 fun = fun2;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #186
 fun = fun2;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #187
 fun = fun2;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #188
 fun = fun2;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #189
 fun = fun3;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #190
 fun = fun3;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #191
 fun = fun3;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #192
 fun = fun3;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #193
 fun = fun4;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #194
 fun = fun4;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #195
 fun = fun4;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #196
 fun = fun4;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #197
 fun = fun5;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #198
 fun = fun5;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #199
 fun = fun5;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #200
 fun = fun5;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #201
 fun = fun6;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #202
 fun = fun6;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #203
 fun = fun6;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #204
 fun = fun6;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #205
 fun = fun7;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #206
 fun = fun7;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #207
 fun = fun7;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #208
 fun = fun7;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #209
 fun = fun8;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #210
 fun = fun8;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #211
 fun = fun8;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #212
 fun = fun8;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #213
 fun = fun9;
 quants = quants219;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #214
 fun = fun9;
 quants = quants229;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #215
 fun = fun9;
 quants = quants319;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output type #216
 fun = fun9;
 quants = quants329;
 funVals = evalFun(fun, quants);
 expType = 'double';
-assert( isa(funVals, 'double'), 'Output not of expected type ''double''.');
+assert( isa(funVals, expType), 'Output not of expected type ''double''.');
 
 %% Test output size #1
-nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants211;
@@ -1606,7 +1605,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #2
-nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants212;
@@ -1617,7 +1615,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #3
-nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants213;
@@ -1628,7 +1625,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #4
-nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants214;
@@ -1639,7 +1635,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #5
-nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants215;
@@ -1650,7 +1645,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #6
-nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants216;
@@ -1661,7 +1655,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #7
-nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants217;
@@ -1672,7 +1665,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #8
-nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants218;
@@ -1683,7 +1675,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #9
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -1694,7 +1685,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #10
-nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants221;
@@ -1705,7 +1695,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #11
-nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants222;
@@ -1716,7 +1705,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #12
-nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants223;
@@ -1727,7 +1715,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #13
-nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants224;
@@ -1738,7 +1725,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #14
-nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants225;
@@ -1749,7 +1735,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #15
-nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants226;
@@ -1760,7 +1745,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #16
-nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants227;
@@ -1771,7 +1755,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #17
-nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants228;
@@ -1782,7 +1765,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #18
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -1793,7 +1775,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #19
-nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants311;
@@ -1804,7 +1785,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #20
-nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants312;
@@ -1815,7 +1795,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #21
-nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants313;
@@ -1826,7 +1805,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #22
-nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants314;
@@ -1837,7 +1815,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #23
-nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants315;
@@ -1848,7 +1825,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #24
-nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants316;
@@ -1859,7 +1835,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #25
-nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants317;
@@ -1870,7 +1845,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #26
-nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants318;
@@ -1881,7 +1855,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #27
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -1892,7 +1865,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #28
-nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants321;
@@ -1903,7 +1875,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #29
-nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants322;
@@ -1914,7 +1885,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #30
-nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants323;
@@ -1925,7 +1895,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #31
-nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants324;
@@ -1936,7 +1905,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #32
-nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants325;
@@ -1947,7 +1915,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #33
-nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants326;
@@ -1958,7 +1925,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #34
-nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants327;
@@ -1969,7 +1935,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #35
-nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants328;
@@ -1980,7 +1945,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #36
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -1991,7 +1955,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #37
-nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants211;
@@ -2002,7 +1965,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #38
-nQuants = nQuants1;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants221;
@@ -2013,7 +1975,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #39
-nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants311;
@@ -2024,7 +1985,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #40
-nQuants = nQuants1;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants321;
@@ -2035,7 +1995,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #41
-nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants212;
@@ -2046,7 +2005,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #42
-nQuants = nQuants2;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants222;
@@ -2057,7 +2015,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #43
-nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants312;
@@ -2068,7 +2025,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #44
-nQuants = nQuants2;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants322;
@@ -2079,7 +2035,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #45
-nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants213;
@@ -2090,7 +2045,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #46
-nQuants = nQuants3;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants223;
@@ -2101,7 +2055,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #47
-nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants313;
@@ -2112,7 +2065,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #48
-nQuants = nQuants3;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants323;
@@ -2123,7 +2075,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #49
-nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants214;
@@ -2134,7 +2085,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #50
-nQuants = nQuants4;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants224;
@@ -2145,7 +2095,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #51
-nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants314;
@@ -2156,7 +2105,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #52
-nQuants = nQuants4;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants324;
@@ -2167,7 +2115,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #53
-nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants215;
@@ -2178,7 +2125,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #54
-nQuants = nQuants5;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants225;
@@ -2189,7 +2135,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #55
-nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants315;
@@ -2200,7 +2145,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #56
-nQuants = nQuants5;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants325;
@@ -2211,7 +2155,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #57
-nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants216;
@@ -2222,7 +2165,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #58
-nQuants = nQuants6;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants226;
@@ -2233,7 +2175,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #59
-nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants316;
@@ -2244,7 +2185,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #60
-nQuants = nQuants6;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants326;
@@ -2255,7 +2195,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #61
-nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants217;
@@ -2266,7 +2205,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #62
-nQuants = nQuants7;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants227;
@@ -2277,7 +2215,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #63
-nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants317;
@@ -2288,7 +2225,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #64
-nQuants = nQuants7;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants327;
@@ -2299,7 +2235,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #65
-nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants218;
@@ -2310,7 +2245,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #66
-nQuants = nQuants8;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants228;
@@ -2321,7 +2255,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #67
-nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants318;
@@ -2332,7 +2265,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #68
-nQuants = nQuants8;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants328;
@@ -2343,7 +2275,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #69
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2354,7 +2285,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #70
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2365,7 +2295,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #71
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2376,7 +2305,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #72
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2387,7 +2315,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #73
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2398,7 +2325,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #74
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2409,7 +2335,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #75
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2420,7 +2345,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #76
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2431,7 +2355,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #77
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2442,7 +2365,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #78
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2453,7 +2375,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #79
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2464,7 +2385,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #80
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2475,7 +2395,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #81
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2486,7 +2405,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #82
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2497,7 +2415,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #83
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2508,7 +2425,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #84
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2519,7 +2435,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #85
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2530,7 +2445,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #86
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2541,7 +2455,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #87
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2552,7 +2465,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #88
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2563,7 +2475,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #89
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2574,7 +2485,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #90
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2585,7 +2495,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #91
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2596,7 +2505,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #92
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2607,7 +2515,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #93
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2618,7 +2525,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #94
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2629,7 +2535,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #95
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2640,7 +2545,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #96
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2651,7 +2555,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #97
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2662,7 +2565,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #98
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2673,7 +2575,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #99
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2684,7 +2585,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #100
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2695,7 +2595,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #101
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2706,7 +2605,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #102
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2717,7 +2615,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #103
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2728,7 +2625,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #104
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2739,7 +2635,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #105
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
@@ -2750,7 +2645,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #106
-nQuants = nQuants9;
 spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
@@ -2761,7 +2655,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #107
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
@@ -2772,7 +2665,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #108
-nQuants = nQuants9;
 spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
@@ -2783,8 +2675,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #109
-nQuants = nQuants1;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants211;
 fun = fun1;
@@ -2794,8 +2685,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #110
-nQuants = nQuants2;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants212;
 fun = fun1;
@@ -2805,8 +2695,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #111
-nQuants = nQuants3;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants213;
 fun = fun1;
@@ -2816,8 +2705,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #112
-nQuants = nQuants4;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants214;
 fun = fun1;
@@ -2827,8 +2715,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #113
-nQuants = nQuants5;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants215;
 fun = fun1;
@@ -2838,8 +2725,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #114
-nQuants = nQuants6;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants216;
 fun = fun1;
@@ -2849,8 +2735,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #115
-nQuants = nQuants7;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants217;
 fun = fun1;
@@ -2860,8 +2745,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #116
-nQuants = nQuants8;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants218;
 fun = fun1;
@@ -2871,8 +2755,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #117
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun1;
@@ -2882,8 +2765,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #118
-nQuants = nQuants1;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants221;
 fun = fun1;
@@ -2893,8 +2775,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #119
-nQuants = nQuants2;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants222;
 fun = fun1;
@@ -2904,8 +2785,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #120
-nQuants = nQuants3;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants223;
 fun = fun1;
@@ -2915,8 +2795,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #121
-nQuants = nQuants4;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants224;
 fun = fun1;
@@ -2926,8 +2805,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #122
-nQuants = nQuants5;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants225;
 fun = fun1;
@@ -2937,8 +2815,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #123
-nQuants = nQuants6;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants226;
 fun = fun1;
@@ -2948,8 +2825,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #124
-nQuants = nQuants7;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants227;
 fun = fun1;
@@ -2959,8 +2835,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #125
-nQuants = nQuants8;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants228;
 fun = fun1;
@@ -2970,8 +2845,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #126
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun1;
@@ -2981,8 +2855,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #127
-nQuants = nQuants1;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants311;
 fun = fun1;
@@ -2992,8 +2865,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #128
-nQuants = nQuants2;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants312;
 fun = fun1;
@@ -3003,8 +2875,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #129
-nQuants = nQuants3;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants313;
 fun = fun1;
@@ -3014,8 +2885,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #130
-nQuants = nQuants4;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants314;
 fun = fun1;
@@ -3025,8 +2895,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #131
-nQuants = nQuants5;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants315;
 fun = fun1;
@@ -3036,8 +2905,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #132
-nQuants = nQuants6;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants316;
 fun = fun1;
@@ -3047,8 +2915,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #133
-nQuants = nQuants7;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants317;
 fun = fun1;
@@ -3058,8 +2925,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #134
-nQuants = nQuants8;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants318;
 fun = fun1;
@@ -3069,8 +2935,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #135
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun1;
@@ -3080,8 +2945,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #136
-nQuants = nQuants1;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants321;
 fun = fun1;
@@ -3091,8 +2955,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #137
-nQuants = nQuants2;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants322;
 fun = fun1;
@@ -3102,8 +2965,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #138
-nQuants = nQuants3;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants323;
 fun = fun1;
@@ -3113,8 +2975,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #139
-nQuants = nQuants4;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants324;
 fun = fun1;
@@ -3124,8 +2985,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #140
-nQuants = nQuants5;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants325;
 fun = fun1;
@@ -3135,8 +2995,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #141
-nQuants = nQuants6;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants326;
 fun = fun1;
@@ -3146,8 +3005,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #142
-nQuants = nQuants7;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants327;
 fun = fun1;
@@ -3157,8 +3015,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #143
-nQuants = nQuants8;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants328;
 fun = fun1;
@@ -3168,8 +3025,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #144
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun1;
@@ -3179,8 +3035,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #145
-nQuants = nQuants1;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants211;
 fun = fun1;
@@ -3190,8 +3045,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #146
-nQuants = nQuants1;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants221;
 fun = fun1;
@@ -3201,8 +3055,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #147
-nQuants = nQuants1;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants311;
 fun = fun1;
@@ -3212,8 +3065,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #148
-nQuants = nQuants1;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants321;
 fun = fun1;
@@ -3223,8 +3075,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #149
-nQuants = nQuants2;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants212;
 fun = fun2;
@@ -3234,8 +3085,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #150
-nQuants = nQuants2;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants222;
 fun = fun2;
@@ -3245,8 +3095,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #151
-nQuants = nQuants2;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants312;
 fun = fun2;
@@ -3256,8 +3105,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #152
-nQuants = nQuants2;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants322;
 fun = fun2;
@@ -3267,8 +3115,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #153
-nQuants = nQuants3;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants213;
 fun = fun3;
@@ -3278,8 +3125,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #154
-nQuants = nQuants3;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants223;
 fun = fun3;
@@ -3289,8 +3135,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #155
-nQuants = nQuants3;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants313;
 fun = fun3;
@@ -3300,8 +3145,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #156
-nQuants = nQuants3;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants323;
 fun = fun3;
@@ -3311,8 +3155,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #157
-nQuants = nQuants4;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants214;
 fun = fun4;
@@ -3322,8 +3164,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #158
-nQuants = nQuants4;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants224;
 fun = fun4;
@@ -3333,8 +3173,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #159
-nQuants = nQuants4;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants314;
 fun = fun4;
@@ -3344,8 +3182,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #160
-nQuants = nQuants4;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants324;
 fun = fun4;
@@ -3355,8 +3191,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #161
-nQuants = nQuants5;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants215;
 fun = fun5;
@@ -3366,8 +3200,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #162
-nQuants = nQuants5;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants225;
 fun = fun5;
@@ -3377,8 +3209,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #163
-nQuants = nQuants5;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants315;
 fun = fun5;
@@ -3388,8 +3218,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #164
-nQuants = nQuants5;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants325;
 fun = fun5;
@@ -3399,8 +3227,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #165
-nQuants = nQuants6;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants216;
 fun = fun6;
@@ -3410,8 +3236,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #166
-nQuants = nQuants6;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants226;
 fun = fun6;
@@ -3421,8 +3245,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #167
-nQuants = nQuants6;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants316;
 fun = fun6;
@@ -3432,8 +3254,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #168
-nQuants = nQuants6;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants326;
 fun = fun6;
@@ -3443,8 +3263,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #169
-nQuants = nQuants7;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants217;
 fun = fun7;
@@ -3454,8 +3272,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #170
-nQuants = nQuants7;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants227;
 fun = fun7;
@@ -3465,8 +3281,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #171
-nQuants = nQuants7;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants317;
 fun = fun7;
@@ -3476,8 +3290,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #172
-nQuants = nQuants7;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants327;
 fun = fun7;
@@ -3487,8 +3299,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #173
-nQuants = nQuants8;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants218;
 fun = fun8;
@@ -3498,8 +3308,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #174
-nQuants = nQuants8;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants228;
 fun = fun8;
@@ -3509,8 +3317,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #175
-nQuants = nQuants8;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants318;
 fun = fun8;
@@ -3520,8 +3326,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #176
-nQuants = nQuants8;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants328;
 fun = fun8;
@@ -3531,8 +3335,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #177
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun9;
@@ -3542,8 +3344,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #178
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun9;
@@ -3553,8 +3353,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #179
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun9;
@@ -3564,8 +3362,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #180
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun9;
@@ -3575,8 +3371,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #181
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun1;
@@ -3586,8 +3381,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #182
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun1;
@@ -3597,8 +3391,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #183
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun1;
@@ -3608,8 +3401,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #184
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun1;
@@ -3619,8 +3411,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #185
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun2;
@@ -3630,8 +3421,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #186
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun2;
@@ -3641,8 +3431,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #187
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun2;
@@ -3652,8 +3441,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #188
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun2;
@@ -3663,8 +3451,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #189
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun3;
@@ -3674,8 +3461,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #190
-nQuants = nQuants9;
-spaceDims =spaceDims2;
+spaceDims = spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun3;
@@ -3685,8 +3471,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #191
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun3;
@@ -3696,8 +3481,7 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #192
-nQuants = nQuants9;
-spaceDims =spaceDims3;
+spaceDims = spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun3;
@@ -3707,8 +3491,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #193
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun4;
@@ -3718,8 +3500,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #194
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun4;
@@ -3729,8 +3509,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #195
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun4;
@@ -3740,8 +3518,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #196
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun4;
@@ -3751,8 +3527,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #197
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun5;
@@ -3762,8 +3536,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #198
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun5;
@@ -3773,8 +3545,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #199
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun5;
@@ -3784,8 +3554,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #200
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun5;
@@ -3795,8 +3563,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #201
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun6;
@@ -3806,8 +3572,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #202
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun6;
@@ -3817,8 +3581,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #203
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun6;
@@ -3828,8 +3590,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #204
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun6;
@@ -3839,8 +3599,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #205
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun7;
@@ -3850,8 +3608,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #206
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun7;
@@ -3861,8 +3617,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #207
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun7;
@@ -3872,8 +3626,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #208
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun7;
@@ -3883,8 +3635,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #209
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun8;
@@ -3894,8 +3644,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #210
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun8;
@@ -3905,8 +3653,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #211
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun8;
@@ -3916,8 +3662,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #212
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun8;
@@ -3927,8 +3671,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #213
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads1;
 quants = quants219;
 fun = fun9;
@@ -3938,8 +3680,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #214
-nQuants = nQuants9;
-spaceDims =spaceDims2;
 nGrads = nGrads2;
 quants = quants229;
 fun = fun9;
@@ -3949,8 +3689,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #215
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads1;
 quants = quants319;
 fun = fun9;
@@ -3960,8 +3698,6 @@ actSize = [size(funVals, 1), size(funVals, 2), size(funVals, 3)];
 assert( all(expSize == actSize), 'Output not of expected size.');
 
 %% Test output size #216
-nQuants = nQuants9;
-spaceDims =spaceDims3;
 nGrads = nGrads2;
 quants = quants329;
 fun = fun9;

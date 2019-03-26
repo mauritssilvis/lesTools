@@ -1450,6 +1450,6 @@ grad = [
 nQuants = 9;
 quants = compQuants(grad, nQuants);
 ixQt = 9;
-selQt = quants{ixQt}
+selQt = quants{ixQt};
 expQt = 93494.25;
 assert(expQt == selQt, 'Unexpected output');
