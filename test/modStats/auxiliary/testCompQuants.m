@@ -12,7 +12,7 @@ nGrads2 = 2;
 
 % Define arrays of velocity gradients
 grads21 = ones(spaceDims2, spaceDims2, nGrads1);
-grads22= ones(spaceDims2, spaceDims2, nGrads2);
+grads22 = ones(spaceDims2, spaceDims2, nGrads2);
 grads31 = ones(spaceDims3, spaceDims3, nGrads1);
 grads32 = ones(spaceDims3, spaceDims3, nGrads2);
 
