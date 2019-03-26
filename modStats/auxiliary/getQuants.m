@@ -6,7 +6,7 @@ function quants = getQuants(grads, nQuants)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% grads     array of matrices -- Velocity gradient.
+% grads     array of matrices -- Velocity gradients from getGrads().
 %
 % nQuants   int -- Number of velocity-gradient-based quantities to compute.
 %               The value of this argument should lie between 1 and 9,

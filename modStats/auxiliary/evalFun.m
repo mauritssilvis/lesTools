@@ -1,4 +1,4 @@
-function funVals = evalFun(fun, gradsQts)
+function funVals = evalFun(fun, quants)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -25,8 +25,8 @@ function funVals = evalFun(fun, gradsQts)
 %               Examples:
 %                   ...
 %
-% gradsQts  cell of array of matrices -- Quantities derived from the velocity 
-%               gradient.
+% quants    cell of array of matrices -- Quantities derived from the velocity 
+%               gradient as obtained from getQuants().
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -47,19 +47,16 @@ function funVals = evalFun(fun, gradsQts)
 nArgs = nargin(fun);
 
 % Size of matrices
-sQt = [ size( gradsQts{1}, 1 ), size( gradsQts{1}, 2 ) ];
+sQt = [ size( quants{1}, 1 ), size( quants{1}, 2 ) ];
 
 % Test quantities
-testQts = [
-    repmat( { ones( sQt ) } , 1, 3), ...
-    repmat( {1}, 1, 6)
-];
+testQts = getQuants( zeros(sQt), nArgs );
 
 % Size of values
 sVals = size(feval(fun, testQts{1 : nArgs}));
 
 % Number of values
-nVals = size(gradsQts{1}, 3);
+nVals = size(quants{1}, 3);
 
 % Output
 funVals = zeros( [ sVals(1), sVals(2), nVals ] );
@@ -71,7 +68,7 @@ for ix = 1 : nVals
 
     % Store current velocity-gradient-based quantities
     for jx = 1 : nArgs
-        qts{jx} = gradsQts{jx}(:, :, ix);
+        qts{jx} = quants{jx}(:, :, ix);
     end
 
     % Evaluate current function value
