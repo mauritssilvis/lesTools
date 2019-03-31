@@ -10,7 +10,7 @@ function grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, ...
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % gradsFun      function name or handle -- Generator of the velocity gradients.
-%                   Examples: 'normMats', 'unifMats', a function reading 
+%                   Examples: 'unifMats', 'normMats', a custom function reading 
 %                       velocity gradients from a file, etc.
 %
 % sampleNr      int -- Sample number.
