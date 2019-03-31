@@ -2097,7 +2097,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #9
+%% Test actual output #10
 % Define parameters
 grads = [
     1, 2;
@@ -2116,7 +2116,7 @@ expVal = 0;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #10
+%% Test actual output #11
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2140,7 +2140,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #11
+%% Test actual output #12
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2172,7 +2172,7 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #12
+%% Test actual output #13
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2204,7 +2204,7 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #13
+%% Test actual output #14
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2232,7 +2232,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #14
+%% Test actual output #15
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2260,7 +2260,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #15
+%% Test actual output #16
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2288,7 +2288,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #16
+%% Test actual output #17
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2316,7 +2316,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #17
+%% Test actual output #18
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2344,7 +2344,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #18
+%% Test actual output #19
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2368,7 +2368,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #18
+%% Test actual output #20
 % Define parameters
 grads = zeros(2, 2, 2);
 grads(:, :, 1) = [
@@ -2396,7 +2396,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #19
+%% Test actual output #21
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2416,7 +2416,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #20
+%% Test actual output #22
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2440,7 +2440,7 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #21
+%% Test actual output #23
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2464,7 +2464,7 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #22
+%% Test actual output #24
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2484,7 +2484,7 @@ expVal = 273;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #23
+%% Test actual output #25
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2504,7 +2504,7 @@ expVal = -12;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #24
+%% Test actual output #26
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2524,7 +2524,7 @@ expVal = 4455;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #25
+%% Test actual output #27
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2544,7 +2544,7 @@ expVal = -90;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #26
+%% Test actual output #28
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2564,7 +2564,7 @@ expVal = -1638;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #27
+%% Test actual output #29
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2584,7 +2584,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #27
+%% Test actual output #30
 % Define parameters
 grads = [
     1, 2, 3;
@@ -2604,7 +2604,7 @@ expVal = 0;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #28
+%% Test actual output #31
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2630,7 +2630,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #29
+%% Test actual output #32
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2666,7 +2666,7 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #30
+%% Test actual output #33
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2702,7 +2702,7 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #31
+%% Test actual output #34
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2732,7 +2732,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #32
+%% Test actual output #35
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2762,7 +2762,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #33
+%% Test actual output #36
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2792,7 +2792,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #34
+%% Test actual output #37
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2822,7 +2822,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #35
+%% Test actual output #38
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2852,7 +2852,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #36
+%% Test actual output #39
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2878,7 +2878,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #36
+%% Test actual output #40
 % Define parameters
 grads = zeros(3, 3, 2);
 grads(:, :, 1) = [
@@ -2908,7 +2908,7 @@ expVal(1, 1, :) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #37
+%% Test actual output #41
 % Define parameters
 grads = [
      1,  2,  4;
@@ -2928,7 +2928,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #38
+%% Test actual output #42
 % Define parameters
 grads = [
      1,  2,  4;
@@ -2952,7 +2952,7 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #39
+%% Test actual output #43
 % Define parameters
 grads = [
      1,  2,  4;
@@ -2976,7 +2976,7 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #40
+%% Test actual output #44
 % Define parameters
 grads = [
      1,  2,  4;
@@ -2996,7 +2996,7 @@ expVal = 2882;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #41
+%% Test actual output #45
 % Define parameters
 grads = [
      1,  2,  4;
@@ -3016,7 +3016,7 @@ expVal = -259;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #42
+%% Test actual output #46
 % Define parameters
 grads = [
      1,  2,  4;
@@ -3036,7 +3036,7 @@ expVal = 152777.5;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #43
+%% Test actual output #47
 % Define parameters
 grads = [
      1,  2,  4;
@@ -3056,7 +3056,7 @@ expVal = -6297.5;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #44
+%% Test actual output #48
 % Define parameters
 grads = [
      1,  2,  4;
@@ -3076,7 +3076,7 @@ expVal = -372384.25;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #45
+%% Test actual output #49
 % Define parameters
 grads = [
      1,  2,  4;
@@ -3096,7 +3096,7 @@ expVal = grads;
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
 
-%% Test actual output #45
+%% Test actual output #50
 % Define parameters
 grads = [
      1,  2,  4;
