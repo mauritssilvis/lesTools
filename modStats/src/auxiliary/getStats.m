@@ -71,8 +71,14 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 % Number of velocity-gradient-based quantities to compute
 nQuants = nargin(fun);
 
+% Test quantities
+testQts = compQuants( zeros(spaceDims, spaceDims), nQuants );
+
+% Size of values
+sVals = size( evalFun(fun, testQts) );
+
 % Array of averages
-avgs = zeros(...);
+avgs = zeros( sVals(1), sVals(2), nSamples );
 
 for ix = 1 : nSamples
     % Set the sample number
