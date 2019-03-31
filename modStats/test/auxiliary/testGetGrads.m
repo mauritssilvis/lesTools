@@ -10,7 +10,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -29,7 +29,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -48,7 +48,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -67,7 +67,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -86,7 +86,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -105,7 +105,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -124,7 +124,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -143,7 +143,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -162,7 +162,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -181,7 +181,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -200,7 +200,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -219,7 +219,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -238,7 +238,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -257,7 +257,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -276,7 +276,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -295,7 +295,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -314,7 +314,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -333,7 +333,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -352,7 +352,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -371,7 +371,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -390,7 +390,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -409,7 +409,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -428,7 +428,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -447,7 +447,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected type
@@ -466,7 +466,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -476,7 +476,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #2
 % Define parameters
@@ -488,7 +488,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -498,7 +498,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #3
 % Define parameters
@@ -510,7 +510,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -520,7 +520,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #4
 % Define parameters
@@ -532,7 +532,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -542,7 +542,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #5
 % Define parameters
@@ -554,7 +554,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -564,7 +564,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #6
 % Define parameters
@@ -576,7 +576,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -586,7 +586,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #7
 % Define parameters
@@ -598,7 +598,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -608,7 +608,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #8
 % Define parameters
@@ -620,7 +620,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -630,7 +630,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #9
 % Define parameters
@@ -642,7 +642,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -652,7 +652,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #10
 % Define parameters
@@ -664,7 +664,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -674,7 +674,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #11
 % Define parameters
@@ -686,7 +686,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -696,7 +696,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #12
 % Define parameters
@@ -708,7 +708,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -718,7 +718,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #13
 % Define parameters
@@ -730,7 +730,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -740,7 +740,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #14
 % Define parameters
@@ -752,7 +752,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -762,7 +762,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #15
 % Define parameters
@@ -774,7 +774,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -784,7 +784,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #16
 % Define parameters
@@ -796,7 +796,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -806,7 +806,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #17
 % Define parameters
@@ -818,7 +818,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -828,7 +828,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #18
 % Define parameters
@@ -840,7 +840,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -850,7 +850,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #19
 % Define parameters
@@ -862,7 +862,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -872,7 +872,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #20
 % Define parameters
@@ -884,7 +884,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -894,7 +894,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #21
 % Define parameters
@@ -906,7 +906,7 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -916,7 +916,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #22
 % Define parameters
@@ -928,7 +928,7 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -938,7 +938,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #23
 % Define parameters
@@ -950,7 +950,7 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -960,7 +960,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test output size #24
 % Define parameters
@@ -972,7 +972,7 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
+% Obtain value
 val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Obtain actual size
@@ -982,7 +982,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [spaceDims, spaceDims, nGrads];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
 
 %% Test actual output #1
 % Define parameters
@@ -994,11 +994,8 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1019,11 +1016,8 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1044,11 +1038,8 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1070,11 +1061,8 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1096,11 +1084,8 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1122,11 +1107,8 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = [
@@ -1148,11 +1130,8 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(2, 2, 2);
@@ -1178,11 +1157,8 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(2, 2, 2);
@@ -1208,11 +1184,8 @@ flowDims = 2;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(3, 3, 2);
@@ -1240,11 +1213,8 @@ flowDims = 2;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(3, 3, 2);
@@ -1272,11 +1242,8 @@ flowDims = 3;
 makeIncompr = false;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(3, 3, 2);
@@ -1304,11 +1271,8 @@ flowDims = 3;
 makeIncompr = true;
 checkIncompr = false;
 
-% Obtain function value
-val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
-
-% Define actual value
-actVal = val;
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
 
 % Define expected value
 expVal = zeros(3, 3, 2);
