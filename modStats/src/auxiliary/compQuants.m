@@ -159,6 +159,7 @@ end
 
 if nQuants >= 9
     % Initialize variables
+    SW = zeros(sGrads);
     SSWWSW = zeros(sGrads);
     I6 = zeros(1, 1, nGrads);
 

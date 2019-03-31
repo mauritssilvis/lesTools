@@ -68,7 +68,7 @@ end
 nVals = size(quants{1}, 3);
 
 % Output
-funVals = zeros( [ sVals(1), sVals(2), nVals ] );
+funVals = zeros( sVals(1), sVals(2), nVals );
 
 %% Compute function values
 for ix = 1 : nVals
