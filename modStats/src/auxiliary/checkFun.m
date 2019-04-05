@@ -1,4 +1,4 @@
-function state = checkFun(fun, spaceDims)
+function [state, msg] = checkFun(fun, spaceDims)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -34,6 +34,8 @@ function state = checkFun(fun, spaceDims)
 % state      int -- Zero if the supplied variable represents a valid function
 %               of the velocity gradient.
 %
+% msg        char -- Error message.
+%
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2019 Maurits H. Silvis
@@ -44,20 +46,26 @@ function state = checkFun(fun, spaceDims)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% Initialize variables
+% Error message
+msg = '';
+
 %% Check input
 % Check if 'fun' is provided
 if nargin < 1 || isempty(fun)
-    % No variable was provided for 'fun'
     state = 1;
+    msg = 'No variable was provided for ''fun''.';
     return;
 end
 
 % Check if 'fun' represents an existing function or a function handle
 if ( ~isa(fun, 'char') || exist(fun, 'file') ~= 2 ) && ...
     ~isa(fun, 'function_handle')
-    % The variable 'fun' does not represent an existing function or function 
-    % handle
+
     state = 2;
+    msg = ...
+        ['The variable ''fun'' does not represent an existing function or ', ...
+         'function handle.'];
     return;
 end
 
@@ -74,8 +82,8 @@ nArgs = nargin(fun);
 
 % Check
 if nArgs < 1 || nArgs > 9
-    % The function 'fun' does not have the proper number of arguments
     state = 3;
+    msg = 'The function ''fun'' does not have the proper number of arguments';
     return;
 end
 
@@ -98,8 +106,8 @@ end
 
 % Check
 if fail
-    % The function 'fun' does not allow for input of the right size
     state = 4;
+    msg = 'The function ''fun'' does not allow for input of the right size.';
     return;
 end
 
@@ -121,6 +129,7 @@ for ix = 1 : nChecks
         val = feval( fun, quants{:} );
     catch
         state = 5;
+        msg = 'The function ''fun'' cannot be evaluated.';
         return;
     end
 
@@ -129,8 +138,8 @@ for ix = 1 : nChecks
 
     % Check
     if ~isa(val, expType)
-        % Output not of expected type
         state = 6;
+        msg = 'The output of ''fun'' is not of the expected type ''double''.';
         return;
     end
 end
@@ -149,6 +158,7 @@ try
     val = feval( fun, quants{:} );
 catch
     state = 7;
+    msg = 'The function ''fun'' cannot be evaluated.';
     return;
 end
 
@@ -160,8 +170,8 @@ maxDim = 2;
 
 % Check
 if actDim > maxDim
-    % The function 'fun' returns a tensor of order higher than 2
     state = 8;
+    msg = 'The function ''fun'' returns a tensor of order higher than 2.';
     return;
 end
 

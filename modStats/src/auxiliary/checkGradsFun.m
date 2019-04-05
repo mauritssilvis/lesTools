@@ -1,4 +1,4 @@
-function state = checkGradsFun(gradsFun, spaceDims)
+function [state, msg] = checkGradsFun(gradsFun, spaceDims)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -18,6 +18,8 @@ function state = checkGradsFun(gradsFun, spaceDims)
 % state      int -- Zero if the supplied variable represents a valid generator
 %               of velocity gradients.
 %
+% msg        char -- Error message.
+%
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2019 Maurits H. Silvis
@@ -28,20 +30,26 @@ function state = checkGradsFun(gradsFun, spaceDims)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% Initialize variables
+% Error message
+msg = '';
+
 %% Check input
 % Check if 'gradsFun' is provided
 if nargin < 1 || isempty(gradsFun)
-    % No variable was provided for 'gradsFun'
     state = 1;
+    msg = 'No variable was provided for ''gradsFun''.';
     return;
 end
 
 % Check if 'gradsFun' represents an existing function or a function handle
 if ( ~isa(gradsFun, 'char') || exist(gradsFun, 'file') ~= 2 ) && ...
     ~isa(gradsFun, 'function_handle')
-    % The variable 'gradsFun' does not represent an existing function or function 
-    % handle
+
     state = 2;
+    msg = ...
+        ['The variable ''gradsFun'' does not represent an existing ', ...
+         'function or function handle.'];
     return;
 end
 
@@ -58,8 +66,10 @@ nArgs = nargin(gradsFun);
 
 % Check
 if nArgs ~= 3
-    % The function 'gradsFun' does not have the proper number of arguments
     state = 3;
+    msg = ...
+        ['The function ''gradsFun'' does not have the proper number of ', ...
+         'arguments.'];
     return;
 end
 
@@ -80,8 +90,10 @@ end
 
 % Check
 if fail
-    % The function 'gradsFun' does not allow for input of the right size
     state = 4;
+    msg = ...
+        ['The function ''gradsFun'' does not allow for input of the right ', ...
+         'size.'];
     return;
 end
 
@@ -101,6 +113,7 @@ for ix = 1 : nChecks
         val = feval( gradsFun, sampleNr, nGrads, spaceDims);
     catch
         state = 5;
+        msg = 'The function ''gradsFun'' cannot be evaluated.';
         return;
     end
 
@@ -109,8 +122,10 @@ for ix = 1 : nChecks
 
     % Check
     if ~isa(val, expType)
-        % Output not of expected type
         state = 6;
+        msg = ...
+            ['The output of ''gradsFun'' is not of the expected type ', ...
+             '''double''.'];
         return;
     end
 end
@@ -131,7 +146,8 @@ for ix = 1 : nChecks
     try
         val = feval( gradsFun, sampleNr, nGrads, spaceDims);
     catch
-        state = 5;
+        state = 7;
+        msg = 'The function ''gradsFun'' cannot be evaluated.';
         return;
     end
 
@@ -144,7 +160,8 @@ for ix = 1 : nChecks
     % Check
     if numel( size(val) ) > numel(expSize) || any(actSize ~= expSize)
         % Output not of expected size
-        state = 6;
+        state = 8;
+        msg = 'The output of ''gradsFun'' is not of the expected size.';
         return;
     end
 end
