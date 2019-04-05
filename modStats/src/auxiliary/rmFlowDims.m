@@ -8,6 +8,9 @@ function grad = rmFlowDims(grad, rmDims)
 %
 % grad      matrix of doubles -- Velocity gradient.
 %
+% rmDims    vector of ints -- Spatial dimensions in which there is no flow.
+%               Examples: 1, 2 or 3.
+%
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % grad      matrix of doubles -- Velocity gradient with reduced flow dimensions.

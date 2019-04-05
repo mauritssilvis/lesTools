@@ -6,7 +6,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -25,7 +25,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -44,7 +44,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -63,7 +63,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -82,7 +82,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 3];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -101,7 +101,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -118,9 +118,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 2;
-spaceDims = 2;
-flowDims = 2;
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -137,9 +137,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 2;
-spaceDims = 2;
-flowDims = 2;
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -156,9 +156,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 2;
+nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -175,9 +175,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 2;
+nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -195,8 +195,8 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
-spaceDims = 3;
-flowDims = 3;
+spaceDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -214,8 +214,8 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
-spaceDims = 3;
-flowDims = 3;
+spaceDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -230,11 +230,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #13
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
-spaceDims = 2;
-flowDims = 2;
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -249,11 +249,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #14
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
-spaceDims = 2;
-flowDims = 2;
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 2];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -268,11 +268,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #15
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
+nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 3];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -287,11 +287,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #16
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
+nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -306,11 +306,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #17
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
+nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [2, 3];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -325,11 +325,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #18
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
-nGrads = 1;
+nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -344,11 +344,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #19
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
-spaceDims = 2;
-flowDims = 2;
+spaceDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -363,11 +363,11 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #20
 % Define parameters
-gradsFun = 'normMats';
+gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
-spaceDims = 2;
-flowDims = 2;
+spaceDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -384,9 +384,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'normMats';
 sampleNr = [];
-nGrads = 2;
-spaceDims = 3;
-flowDims = 2;
+nGrads = 1;
+spaceDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -403,9 +403,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'normMats';
 sampleNr = [];
-nGrads = 2;
-spaceDims = 3;
-flowDims = 2;
+nGrads = 1;
+spaceDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -422,9 +422,9 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'normMats';
 sampleNr = [];
-nGrads = 2;
+nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -441,9 +441,313 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 % Define parameters
 gradsFun = 'normMats';
 sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #25
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #26
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #27
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #28
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #29
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = 1 : 3;
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #30
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = 1 : 3;
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #31
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #32
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #33
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 2];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #34
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #35
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #36
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #37
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #38
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #39
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = 1 : 3;
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected type
+expType = 'double';
+
+% Test
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+
+%% Test output type #40
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -462,7 +766,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -484,7 +788,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -506,7 +810,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -528,7 +832,95 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #3
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #4
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #3
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #4
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -550,7 +942,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -572,7 +964,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -594,7 +986,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -616,7 +1008,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -638,7 +1030,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -660,7 +1052,95 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #9
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #10
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #9
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #10
+% Define parameters
+gradsFun = 'unifMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -682,7 +1162,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -704,7 +1184,7 @@ gradsFun = 'unifMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -726,7 +1206,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -748,7 +1228,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -770,7 +1250,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -792,7 +1272,95 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #15
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #16
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #15
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #16
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -814,7 +1382,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -836,7 +1404,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -858,7 +1426,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -880,7 +1448,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -902,7 +1470,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -924,7 +1492,95 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #21
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #22
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #21
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain value
+val = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Obtain actual size
+actSize = [size(val, 1), size(val, 2), size(val, 3)];
+
+% Define expected size
+expSize = [spaceDims, spaceDims, nGrads];
+
+% Test
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+
+%% Test output size #22
+% Define parameters
+gradsFun = 'normMats';
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -946,7 +1602,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -968,7 +1624,7 @@ gradsFun = 'normMats';
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -990,7 +1646,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nG
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1012,7 +1668,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nG
 sampleNr = [];
 nGrads = 1;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -1034,7 +1690,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nG
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1057,7 +1713,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nG
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -1074,13 +1730,105 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #5
+%% Test actual output #5: TODO
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = [
+    1, 4, 0;
+    2, 5, 0;
+    0, 0, 0; 
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #6: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = [
+    -2,  4,  0;
+     2,  2,  0;
+     0,  0,  0; 
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #7: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = [
+    1, 4, 0;
+    2, 5, 0;
+    0, 0, 0; 
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #8: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = [
+    -2,  4,  0;
+     2,  2,  0;
+     0,  0,  0; 
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #9
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 1;
+spaceDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1097,13 +1845,13 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #6
+%% Test actual output #10
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 1;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -1120,13 +1868,13 @@ expVal = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #7
+%% Test actual output #11
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1147,13 +1895,13 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #8
+%% Test actual output #12
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 2;
-flowDims = 2;
+flowDims = 1 : 2;
 makeIncompr = true;
 checkIncompr = false;
 
@@ -1174,13 +1922,13 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #9
+%% Test actual output #13
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1203,13 +1951,13 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #10
+%% Test actual output #14
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 2;
+flowDims = [1, 2];
 makeIncompr = true;
 checkIncompr = false;
 
@@ -1232,13 +1980,129 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #11
+%% Test actual output #15: TODO
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = [1, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = zeros(3, 3, 2);
+expVal(:, :, 1) = [
+     1,  4,  0;
+     2,  5,  0;
+     0,  0,  0;
+];
+expVal(:, :, 2) = [
+    10, 13,  0;
+    11, 14,  0;
+     0,  0,  0;
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #16: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [1, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = zeros(3, 3, 2);
+expVal(:, :, 1) = [
+    -2,  4,  0;
+     2,  2,  0;
+     0,  0,  0;
+];
+expVal(:, :, 2) = [
+    -2, 13,  0;
+    11,  2,  0;
+     0,  0,  0;
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #17: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = false;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = zeros(3, 3, 2);
+expVal(:, :, 1) = [
+     1,  4,  0;
+     2,  5,  0;
+     0,  0,  0;
+];
+expVal(:, :, 2) = [
+    10, 13,  0;
+    11, 14,  0;
+     0,  0,  0;
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #18: TODO
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = [2, 3];
+makeIncompr = true;
+checkIncompr = false;
+
+% Obtain actual value
+actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+% Define expected value
+expVal = zeros(3, 3, 2);
+expVal(:, :, 1) = [
+    -2,  4,  0;
+     2,  2,  0;
+     0,  0,  0;
+];
+expVal(:, :, 2) = [
+    -2, 13,  0;
+    11,  2,  0;
+     0,  0,  0;
+];
+
+% Test
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+
+%% Test actual output #19
+% Define parameters
+gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
+sampleNr = [];
+nGrads = 2;
+spaceDims = 3;
+flowDims = 1 : 3;
 makeIncompr = false;
 checkIncompr = false;
 
@@ -1261,13 +2125,13 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #12
+%% Test actual output #20
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
 nGrads = 2;
 spaceDims = 3;
-flowDims = 3;
+flowDims = 1 : 3;
 makeIncompr = true;
 checkIncompr = false;
 

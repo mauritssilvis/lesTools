@@ -20,8 +20,8 @@ function grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, ...
 % spaceDims     int -- Number of spatial dimensions.
 %                   Examples: 2 or 3.
 %
-% flowDims      int -- Number of flow dimensions.
-%                   Examples: 2 or 3.
+% flowDims      vector of ints -- Flow dimensions.
+%                   Examples: [1, 2] or [1, 2, 3].
 %
 % makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
 %                   or not.
@@ -47,13 +47,13 @@ function grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, ...
 grads = feval(gradsFun, sampleNr, nGrads, spaceDims);
 
 %% Restrict the velocity gradients to the number of flow dimensions, if desired
-if spaceDims == flowDims
+if numel(flowDims) == spaceDims
     % Do nothing
-elseif spaceDims > flowDims
+elseif numel(flowDims) < spaceDims
     % Restrict the velocity gradients to the number of flow dimensions
 
     % Select the dimensions in which there is no flow
-    rmDims = flowDims + 1 : spaceDims;
+    rmDims = setdiff(1 : spaceDims, flowDims);
 
     % Nullify the corresponding elements
     for ix = 1 : nGrads

@@ -37,8 +37,8 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 % spaceDims     int -- Number of spatial dimensions.
 %                   Examples: 2 or 3.
 %
-% flowDims      int -- Number of flow dimensions.
-%                   Examples: 2 or 3.
+% flowDims      vector of ints -- Flow dimensions.
+%                   Examples: [1, 2] or [1, 2, 3].
 %
 % makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
 %                   or not.

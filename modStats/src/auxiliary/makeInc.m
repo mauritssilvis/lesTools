@@ -6,7 +6,10 @@ function grad = makeInc(grad, flowDims)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% grad      matrix of doubles -- Velocity gradient.
+% grad          matrix of doubles -- Velocity gradient.
+%
+% flowDims      vector of ints -- Flow dimensions.
+%                   Examples: [1, 2] or [1, 2, 3].
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -22,12 +25,12 @@ function grad = makeInc(grad, flowDims)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Compute the trace of the velocity gradient
-trGrad = trace(grad);
+% Compute the 'reduced' trace of the velocity gradient
+redTr = trace(grad) / numel(flowDims);
 
 % Make the velocity gradient incompressible (traceless)
-for ix = 1 : flowDims
-    grad(ix, ix) = grad(ix, ix) - 1 / flowDims * trGrad;
+for ix = flowDims
+    grad(ix, ix) = grad(ix, ix) - redTr;
 end
 
 end
