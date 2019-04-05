@@ -11,10 +11,10 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 % fun       function name or handle -- A function of the velocity gradient.
 %               This function should should accept between 1 and 9 arguments.
 %               The first argument should be 
-%               - the velocity gradient G (a 3 x 3 matrix).
+%               - the velocity gradient G (a matrix).
 %               The next arguments, if present, are assumed to be
-%               - the rate-of-strain tensor S (a 3 x 3 matrix),
-%               - the rate-of-rotation tensor W (a 3 x 3 matrix),
+%               - the rate-of-strain tensor S (a matrix),
+%               - the rate-of-rotation tensor W (a matrix),
 %               and the following scalar combined invariants of the 
 %               rate-of-strain and rate-of-rotation tensors:
 %               - I1 = trace(S^2),
@@ -31,7 +31,7 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 % nGrads        int -- Desired number of velocity gradients per sample.
 %
 % gradsFun      function name or handle -- Generator of the velocity gradients.
-%                   Examples: 'normMats', 'unifMats', a function reading 
+%                   Examples: 'unifMats', 'normMats', a custom function reading 
 %                       velocity gradients from a file, etc.
 %
 % spaceDims     int -- Number of spatial dimensions.

@@ -25,16 +25,14 @@ nQuants = 1;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #3
 % Define parameters
@@ -61,16 +59,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #5
 % Define parameters
@@ -81,16 +77,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 2;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #6
 % Define parameters
@@ -101,16 +95,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 3;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #7
 % Define parameters
@@ -121,16 +113,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 4;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #8
 % Define parameters
@@ -141,16 +131,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 5;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #9
 % Define parameters
@@ -161,16 +149,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 6;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #10
 % Define parameters
@@ -181,16 +167,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 7;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #11
 % Define parameters
@@ -201,16 +185,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 8;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #12
 % Define parameters
@@ -221,16 +203,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 9;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #13
 % Define parameters
@@ -257,16 +237,14 @@ nQuants = 1;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #15
 % Define parameters
@@ -293,16 +271,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #17
 % Define parameters
@@ -313,16 +289,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 2;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #18
 % Define parameters
@@ -333,16 +307,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 3;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #19
 % Define parameters
@@ -353,16 +325,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 4;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #20
 % Define parameters
@@ -373,16 +343,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 5;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #21
 % Define parameters
@@ -393,16 +361,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 6;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #22
 % Define parameters
@@ -413,16 +379,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 7;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #23
 % Define parameters
@@ -433,16 +397,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 8;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #24
 % Define parameters
@@ -453,16 +415,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 9;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #25
 % Define parameters
@@ -489,16 +449,14 @@ nQuants = 1;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #27
 % Define parameters
@@ -525,16 +483,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #29
 % Define parameters
@@ -545,16 +501,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 2;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #30
 % Define parameters
@@ -565,16 +519,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 3;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #31
 % Define parameters
@@ -585,16 +537,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 4;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #32
 % Define parameters
@@ -605,16 +555,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 5;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #33
 % Define parameters
@@ -625,16 +573,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 6;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #34
 % Define parameters
@@ -645,16 +591,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 7;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #35
 % Define parameters
@@ -665,16 +609,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 8;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #36
 % Define parameters
@@ -685,16 +627,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 9;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #37
 % Define parameters
@@ -721,16 +661,14 @@ nQuants = 1;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #39
 % Define parameters
@@ -757,16 +695,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 1;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #41
 % Define parameters
@@ -777,16 +713,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 2;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #42
 % Define parameters
@@ -797,16 +731,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 3;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #43
 % Define parameters
@@ -817,16 +749,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 4;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #44
 % Define parameters
@@ -837,16 +767,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 5;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #45
 % Define parameters
@@ -857,16 +785,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 6;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #46
 % Define parameters
@@ -877,16 +803,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 7;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #47
 % Define parameters
@@ -897,16 +821,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 8;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output type #48
 % Define parameters
@@ -917,16 +839,14 @@ nQuants = 9;
 
 % Obtain value
 val = compQuants(grads, nQuants);
-
-% Obtain selected value
 ix = 9;
-selVal = val{ix};
+val = val{ix};
 
 % Define expected type
 expType = 'double';
 
 % Test
-assert( isa(selVal, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
 
 %% Test output size #1
 % Define parameters
