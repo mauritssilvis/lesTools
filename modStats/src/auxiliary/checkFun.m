@@ -44,10 +44,6 @@ function state = checkFun(fun, spaceDims)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Initialize variables
-% Number of arguments
-nArgs = nargin(fun);
-
 %% Check input
 % Check if 'fun' is provided
 if nargin < 1 || isempty(fun)
@@ -57,7 +53,7 @@ if nargin < 1 || isempty(fun)
 end
 
 % Check if 'fun' represents an existing function or a function handle
-if ( ~isa(fun, char) || exist(fun, 'file') ~= 2 ) && ...
+if ( ~isa(fun, 'char') || exist(fun, 'file') ~= 2 ) && ...
     ~isa(fun, 'function_handle')
     % The variable 'fun' does not represent an existing function or function 
     % handle
@@ -72,6 +68,11 @@ end
 
 %% Check argument number
 % Check if 'fun' has the proper number of arguments
+
+% Number of arguments
+nArgs = nargin(fun);
+
+% Check
 if nArgs < 1 || nArgs > 9
     % The function 'fun' does not have the proper number of arguments
     state = 3;
@@ -105,11 +106,11 @@ end
 %% Check the output type
 % Check if 'fun' has the proper output type
 % Initialize variables
-nTests = 5;
+nChecks = 5;
 nQuants = nArgs;
 
-% Loop over all tests
-for ix = 1 : nTests
+% Loop over all checks
+for ix = 1 : nChecks
     % Define parameters
     nGrads = ix;
     grads = zeros(spaceDims, spaceDims, nGrads);
@@ -126,7 +127,7 @@ for ix = 1 : nTests
     % Define expected type
     expType = 'double';
 
-    % Test
+    % Check
     if ~isa(val, expType)
         % Output not of expected type
         state = 6;
@@ -157,7 +158,7 @@ actDim = numel( size(val) );
 % Define maximum dimension
 maxDim = 2;
 
-% Test
+% Check
 if actDim > maxDim
     % The function 'fun' returns a tensor of order higher than 2
     state = 8;
