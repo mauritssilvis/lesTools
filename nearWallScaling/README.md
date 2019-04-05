@@ -6,7 +6,7 @@
 
 Using numerical simulations, Chapman and Kuhn [[1](#chapmankuhn1986)] revealed the limiting power-law behavior of incompressible turbulence near a solid wall.
 Among other things, they determined the scaling behavior of the Reynolds stresses in terms of the wall-normal distance.
-It is desirable that subgrid-scale models for the turbulent stresses exhibit the same asymptotic near-wall behavior as the Reynolds stresses [[2](#nicoudetal2011), [3](#triasetal2015), [4](#silvisetal2017), [5](#silvisverstappennd)].
+To ensure that, for example, the dissipation of kinetic energy near solid walls is properly captured, subgrid-scale models for the turbulent stresses should exhibit the same asymptotic near-wall behavior as the Reynolds stresses [[2](#nicoudetal2011), [3](#triasetal2015), [4](#silvisetal2017), [5](#silvisverstappennd)].
 
 The near-wall behavior of subgrid-scale models can be studied by expanding the components of the velocity field in terms of the wall-normal coordinate [[3](#triasetal2015)].
 Due to the no-slip condition, the zeroth-order terms in these expansions have to vanish.

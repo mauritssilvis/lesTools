@@ -82,7 +82,7 @@ if nQuants >= 2
     velQts = [velQts, {G}];
 end
 
-if nQuants >=  3
+if nQuants >= 3
     % Rate-of-strain tensor
     S = 1 / 2 * ( G + G.' );
 
