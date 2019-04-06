@@ -1701,7 +1701,7 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 expVal = [
     1, 4, 0;
     2, 5, 0;
-    0, 0, 0; 
+    0, 0, 0;
 ];
 
 % Test
@@ -1724,13 +1724,13 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 expVal = [
     -2,  4,  0;
      2,  2,  0;
-     0,  0,  0; 
+     0,  0,  0;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #5: TODO
+%% Test actual output #5:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -1745,15 +1745,15 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 
 % Define expected value
 expVal = [
-    1, 4, 0;
-    2, 5, 0;
-    0, 0, 0; 
+    1, 0, 7;
+    0, 0, 0;
+    3, 0, 9;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #6: TODO
+%% Test actual output #6:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -1768,15 +1768,15 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 
 % Define expected value
 expVal = [
-    -2,  4,  0;
-     2,  2,  0;
-     0,  0,  0; 
+    -4,  0,  7;
+     0,  0,  0;
+     3,  0,  4;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #7: TODO
+%% Test actual output #7:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -1791,15 +1791,15 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 
 % Define expected value
 expVal = [
-    1, 4, 0;
-    2, 5, 0;
-    0, 0, 0; 
+    0, 0, 0;
+    0, 5, 8;
+    0, 6, 9;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #8: TODO
+%% Test actual output #8:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -1814,9 +1814,9 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 
 % Define expected value
 expVal = [
-    -2,  4,  0;
-     2,  2,  0;
-     0,  0,  0; 
+     0,  0,  0;
+     0, -2,  8;
+     0,  6,  2;
 ];
 
 % Test
@@ -1839,7 +1839,7 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 expVal = [
     1, 4, 7;
     2, 5, 8;
-    3, 6, 9; 
+    3, 6, 9;
 ];
 
 % Test
@@ -1862,7 +1862,7 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 expVal = [
     -4,  4,  7;
      2,  0,  8;
-     3,  6,  4; 
+     3,  6,  4;
 ];
 
 % Test
@@ -1980,7 +1980,7 @@ expVal(:, :, 2) = [
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #15: TODO
+%% Test actual output #15:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -1996,20 +1996,20 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 % Define expected value
 expVal = zeros(3, 3, 2);
 expVal(:, :, 1) = [
-     1,  4,  0;
-     2,  5,  0;
+     1,  0,  7;
      0,  0,  0;
+     3,  0,  9;
 ];
 expVal(:, :, 2) = [
-    10, 13,  0;
-    11, 14,  0;
+    10,  0, 16;
      0,  0,  0;
+    12,  0, 18;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #16: TODO
+%% Test actual output #16:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -2025,20 +2025,20 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 % Define expected value
 expVal = zeros(3, 3, 2);
 expVal(:, :, 1) = [
-    -2,  4,  0;
-     2,  2,  0;
+    -4,  0,  7;
      0,  0,  0;
+     3,  0,  4;
 ];
 expVal(:, :, 2) = [
-    -2, 13,  0;
-    11,  2,  0;
+    -4,  0, 16;
      0,  0,  0;
+    12,  0,  4;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #17: TODO
+%% Test actual output #17:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -2054,20 +2054,20 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 % Define expected value
 expVal = zeros(3, 3, 2);
 expVal(:, :, 1) = [
-     1,  4,  0;
-     2,  5,  0;
      0,  0,  0;
+     0,  5,  8;
+     0,  6,  9;
 ];
 expVal(:, :, 2) = [
-    10, 13,  0;
-    11, 14,  0;
      0,  0,  0;
+     0, 14, 17;
+     0, 15, 18;
 ];
 
 % Test
 assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
 
-%% Test actual output #18: TODO
+%% Test actual output #18:
 % Define parameters
 gradsFun = @(sampleNr, nGrads, spaceDims) reshape(1 : spaceDims * spaceDims * nGrads, spaceDims, spaceDims, nGrads);
 sampleNr = [];
@@ -2083,14 +2083,14 @@ actVal = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, makeIncompr, 
 % Define expected value
 expVal = zeros(3, 3, 2);
 expVal(:, :, 1) = [
-    -2,  4,  0;
-     2,  2,  0;
      0,  0,  0;
+     0, -2,  8;
+     0,  6,  2;
 ];
 expVal(:, :, 2) = [
-    -2, 13,  0;
-    11,  2,  0;
      0,  0,  0;
+     0, -2, 17;
+     0, 15,  2;
 ];
 
 % Test
