@@ -83,7 +83,7 @@ nArgs = nargin(fun);
 % Check
 if nArgs < 1 || nArgs > 9
     state = 3;
-    msg = 'The function ''fun'' does not have the proper number of arguments';
+    msg = 'The function ''fun'' does not have the proper number of arguments.';
     return;
 end
 
