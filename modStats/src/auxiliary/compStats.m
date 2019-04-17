@@ -27,11 +27,14 @@ function [avg, stdDev, relStdDev] = compAvg(vals)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Compute the average value
-avg = mean(vals, 3);
+% avg = mean(vals, 3);
+avg = compAvg(vals);
 
 %% Compute the standard deviation
 % Weighting scheme
 weight = 0;
+
+% Standard deviation
 stdDev = std(vals, weight, 3);
 
 %% Compute the relative standard deviation
