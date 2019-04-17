@@ -50,12 +50,13 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 %
 % avgs          array of scalars/vectors/matrices -- Sample averages.
 %
-% avg           scalar/vector/matrix of doubles -- Sample average.
+% avg           scalar/vector/matrix of doubles -- Average of sample averages.
 %
-% stdDev        scalar/vector/matrix of doubles -- Sample standard deviation.
+% stdDev        scalar/vector/matrix of doubles -- Standard deviation of sample
+%                   averages.
 %
-% relStdDev     scalar/vector/matrix of doubles -- Sample relative standard
-%                   deviation.
+% relStdDev     scalar/vector/matrix of doubles -- Relative standard deviation
+%                   of sample averages.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

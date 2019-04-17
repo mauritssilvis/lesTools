@@ -1,4 +1,4 @@
-function [avg, stdDev, relStdDev] = compAvg(vals)
+function [avg, stdDev, relStdDev] = compStats(vals)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
