@@ -35,7 +35,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   statistical data.
 %                   Examples: [] (empty), 10^-2, 10^-4, ...
 %                   Default: 10^-4
-%                   If empty, nGrads has to be set.
+%                   If explicitly set as empty, nGrads has to be set.
 %
 % nSamples      int -- Desired number of samples.
 %                   Examples: 10, 100, 1000, ...
@@ -94,5 +94,8 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 % that is part of this source code package.
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Check input
+% ...
 
 end
