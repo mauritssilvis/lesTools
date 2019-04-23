@@ -75,7 +75,7 @@ if nargin < 2 || isempty(spaceDims)
 end
 
 %% Check argument number
-% Check if 'fun' has the proper number of arguments
+% Check if 'fun' has the proper number of input arguments
 
 % Number of arguments
 nArgs = nargin(fun);
@@ -83,7 +83,9 @@ nArgs = nargin(fun);
 % Check
 if nArgs < 1 || nArgs > 9
     state = 3;
-    msg = 'The function ''fun'' does not have the proper number of arguments.';
+    msg = ...
+        ['The function ''fun'' does not have the proper number of input ', ...
+         'arguments.'];
     return;
 end
 

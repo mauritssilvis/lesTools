@@ -31,17 +31,17 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %
 % Optional input arguments:
 %
-% precision     double -- Desired minimal relative standard deviation of the 
-%                   statistical data.
+% precision     empty or positive double -- Desired minimal relative standard 
+%                   deviation of the statistical data.
 %                   Examples: [] (empty), 10^-2, 10^-4, ...
-%                   Default: 10^-4
+%                   Default: 10^-4.
 %                   If explicitly set as empty, nGrads has to be set.
 %
-% nSamples      int -- Desired number of samples.
+% nSamples      positive int -- Desired number of samples.
 %                   Examples: 10, 100, 1000, ...
 %                   Default: 100.
 %
-% nGrads        int -- Desired number of velocity gradients per sample.
+% nGrads        positive int -- Desired number of velocity gradients per sample.
 %                   Examples: 10^2, 10^4, 10^6, ...
 %                   Default: 10^6.
 %                   If precision is nonempty, the value of nGrads represents the
@@ -52,11 +52,11 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                       velocity gradients from a file, etc.
 %                   Default: 'unifMats'.
 %
-% spaceDims     int -- Number of spatial dimensions.
+% spaceDims     positive int -- Number of spatial dimensions.
 %                   Examples: 2 or 3.
 %                   Default: 3.
 %
-% flowDims      vector of ints -- Flow dimensions.
+% flowDims      vector of positive ints -- Flow dimensions.
 %                   Examples: [1, 2] or [1, 2, 3].
 %                   Default: [1, 2, 3].
 %
@@ -95,7 +95,198 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Check input
-% ...
+%% Add path to auxiliary functions
+% Obtain script path
+scriptPath = fileparts( which(mfilename) );
+% Add path
+addpath( fullfile(scriptPath, 'auxiliary') );
+
+%% Check input arguments
+% Check if 'fun' is provided
+if nargin < 1 || isempty(fun)
+    % No, error
+    error( ...
+        ['Please provide the name of an existing function, or a function ', ...
+         'handle, representing a valid function of the velocity gradient ', ...
+         'for ''fun''.'] ...
+    );
+end
+
+% Check if 'fun' represents a valid function of the velocity gradient
+% See below
+
+% Check if 'precision' is provided
+if nargin < 2
+    % No, set the default value
+    precision = 10^-4;
+end
+
+% Check if 'precision' is explicitly set as empty
+if isempty(precision)
+    % Yes, fix the number of velocity gradients per sample
+    fixNGrads = true;
+else
+    % No, do not fix the number of velocity gradients per sample
+    fixNGrads = false;
+end
+
+% Check if 'precision' is either empty or a positive double
+if ~isempty(precision) && ...
+    ( ~isa(precision, 'double') || numel( size(precision) ) ~= 2 || ...
+      any( size(precision) ~= [1 1] ) || precision <= 0 )
+
+    % No, error
+    error( ...
+        ['Please provide a positive double for ''precision'' or ', ...
+         'explicitly set as empty.'] ...
+    );
+end
+
+% Check if 'nSamples' is provided
+if nargin < 3 || isempty(nSamples)
+    % No, set the default value
+    nSamples = 100;
+end
+
+% Check if 'nSamples' is a positive integer
+if ~isa(nSamples, 'double') || numel( size(nSamples) ) ~= 2 || ...
+    any( size(nSamples) ~= [1 1] ) || nSamples < 1 || ...
+    mod(nSamples, 1) ~= 0
+
+    % No, error
+    error( ...
+        ['Please provide a positive integer for ''nSamples'' or leave ', ...
+         'empty for the default value.'] ...
+    );
+end
+
+% Check if 'nGrads' is provided
+if nargin < 4 || isempty(nGrads)
+    % No, check if 'nGrads' should have been provided
+    if fixNGrads
+        % Yes, error
+        error( ...
+            ['If ''precision'' is explicitly set as empty, ''nGrads'' has ', ...
+             'to be provided.'] ...
+        );
+    else
+        % No, set the default value
+        nGrads = 10^6;
+    end
+end
+
+% Check if 'nGrads' is a positive integer
+if ~isa(nGrads, 'double') || numel( size(nGrads) ) ~= 2 || ...
+    any( size(nGrads) ~= [1 1] ) || nGrads < 1 || ...
+    mod(nGrads, 1) ~= 0
+
+    % No, error
+    error( ...
+        ['Please provide a positive integer for ''nGrads'' or leave empty ', ...
+         'for the default value.'] ...
+    );
+end
+
+% Check if 'gradsFun' is provided
+if nargin < 5 || isempty(gradsFun)
+    % No, set the default value
+    gradsFun = 'unifMats';
+end
+
+% Check if 'gradsFun' represents a valid gradient-generating function
+% See below
+
+% Check if 'spaceDims' is provided
+if nargin < 6 || isempty(spaceDims)
+    % No, set the default value
+    spaceDims = 3;
+end
+
+% Check if 'spaceDims' is a positive integer
+if ~isa(spaceDims, 'double') || numel( size(spaceDims) ) ~= 2 || ...
+    any( size(spaceDims) ~= [1 1] ) || spaceDims < 1 || ...
+    mod(spaceDims, 1) ~= 0
+
+    % No, error
+    error( ...
+        ['Please provide a positive integer for ''spaceDims'' or ', ...
+         'leave empty for the default value.'] ...
+    );
+end
+
+% Check if 'flowDims' is provided
+if nargin < 7 || isempty(flowDims)
+    % No, set the default value
+    flowDims = [1, 2, 3];
+end
+
+% Check if 'flowDims' is a vector of positive integers with valid values
+if ~isa(flowDims, 'double') || numel( size(flowDims) ) ~= 2 || ...
+    ( size(flowDims, 1) ~= 1 && size(flowDims, 2) ~= 1 ) || ...
+    any(flowDims < 1) || any(flowDims > spaceDims) || ...
+    any( mod(flowDims, 1) ~= 0 )
+
+    % No, error
+    error( ...
+        ['Please provide a vector of positive integers with valid values ', ...
+        'for ''flowDims'' or leave empty for the default value.'] ...
+    );
+end
+
+% Check if 'makeIncompr' is provided
+if nargin < 8 || isempty(makeIncompr)
+    % No, set the default value
+    makeIncompr = true;
+end
+
+% Check if 'makeIncompr' is a bool
+if ~isa(makeIncompr, 'logical')
+    % No, error
+    error( ...
+        ['Please provide a bool for ''makeIncompr'' or leave empty for ', ...
+         'the default value.'] ...
+    );
+end
+
+% Check if 'checkIncompr' is provided
+if nargin < 9 || isempty(checkIncompr)
+    % No, set the default value
+    checkIncompr = false;
+end
+
+% Check if 'checkIncompr' is a bool
+if ~isa(checkIncompr, 'logical')
+    % No, error
+    error( ...
+        ['Please provide a bool for ''checkIncompr'' or leave empty for ', ...
+         'the default value.'] ...
+    );
+end
+
+% Check if 'fun' represents a valid function of the velocity gradient
+[state, msg] = checkFun(fun, spaceDims);
+if nargin < 1 || isempty(fun) || state
+    error( ...
+        [msg, newline, ...
+         'Please provide the name of an existing function, or a function ', ...
+         'handle, representing a valid function of the velocity gradient ', ...
+         'for ''fun''.'] ...
+    );
+end
+
+% Check if 'gradsFun' represents a valid gradient-generating function
+[state, msg] = checkGradsFun(gradsFun, spaceDims);
+if state
+    error( ...
+        [msg, newline, ...
+         'Please provide the name of an existing function, or a function ', ...
+         'handle, representing a valid gradient-generating function for ', ...
+         '''gradsFun'' or leave empty for the default value.'] ...
+    );
+end
+
+%% Initialize output variables
+% Statistics
+stats = [];
 
 end
