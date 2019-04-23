@@ -36,7 +36,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   deviation of the statistical data.
 %                   Examples: 10^-2, 10^-4, ...
 %                   Default: 10^-4.
-%                   If set to 0, nGrads has to be set.
+%                   If set to 0, 'nGrads' has to be set.
 %
 % nSamples      positive int -- Desired number of samples.
 %                   Examples: 10, 100, 1000, ...
@@ -45,8 +45,8 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 % nGrads        positive int -- Desired number of velocity gradients per sample.
 %                   Examples: 10^2, 10^4, 10^6, ...
 %                   Default: 10^6.
-%                   If precision is nonzero, the value of nGrads represents the
-%                   initial number of velocity gradients per sample.
+%                   If 'precision' is nonzero, the value of 'nGrads' represents 
+%                   the initial number of velocity gradients per sample.
 %
 % gradsFun      function name or handle -- Generator of the velocity gradients.
 %                   Examples: 'unifMats', 'normMats', a custom function reading 
@@ -171,8 +171,8 @@ if nargin < 4 || isempty(nGrads)
              'to be provided.'] ...
         );
     else
-        % No, set the default value
-        nGrads = 10^6;
+        % No, set the default initial value
+        nGrads = 10;
     end
 end
 
@@ -283,6 +283,30 @@ if state
          'generating function for ''gradsFun'' or leave empty for the ', ...
          'default value.'] ...
     );
+end
+
+%% Initialize variables
+% Loop flag
+loop = true;
+
+%% Compute statistics
+% Loop until the desired end state has been reached
+while loop
+
+    [nSamples, nGrads]
+
+    % Obtain statistics
+    [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
+        gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+
+    % Check if 'nGrads' is fixed or the desired precision has been reached
+    if fixNGrads || hasPrecision(relStdDev, precision)
+        % Yes, set convergence flag to true
+        loop = false;
+    else
+        % No, increase the number of velocity gradients per sample
+        nGrads = nGrads * 10;
+    end
 end
 
 %% Initialize output variables
