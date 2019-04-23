@@ -925,6 +925,8 @@ expPass = true;
 % Test
 assert(actPass == expPass, 'Refusing valid input.');
 
+%% TODO: Test valid input with shiftAvg
+
 %% Test invalid input #1
 % Define parameters
 fun = []; % Empty
@@ -3936,6 +3938,8 @@ expPass = false;
 
 % Test
 assert(actPass == expPass, 'Accepting invalid input.');
+
+%% TODO: Test invalid input with shiftAvg
 
 %% Test output type #...
 

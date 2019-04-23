@@ -1,5 +1,5 @@
-function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
-    gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr ...
+function [avgs, avg, dev, rel, shift] = getStats(fun, nSamples, nGrads, ...
+    gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg ...
 )
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -8,37 +8,18 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% fun       function name or handle -- A function of the velocity gradient.
-%               This function should should accept between 1 and 9 arguments.
-%               The first argument should be 
-%               - the velocity gradient G (a matrix).
-%               The next arguments, if present, are assumed to be
-%               - the rate-of-strain tensor S (a matrix),
-%               - the rate-of-rotation tensor W (a matrix),
-%               and the following scalar combined invariants of the 
-%               rate-of-strain and rate-of-rotation tensors:
-%               - I1 = trace(S^2),
-%               - I2 = trace(W^2),
-%               - I3 = trace(S^3),
-%               - I4 = trace(S W^2),
-%               - I5 = trace(S^2 W^2),
-%               - I6 = trace(S^2 W^2 S W).
-%               Examples:
-%                   ...
+% fun           function file name or handle -- A function of the velocity 
+%                   gradient.
 %
 % nSamples      int -- Desired number of samples.
 %
 % nGrads        int -- Desired number of velocity gradients per sample.
 %
-% gradsFun      function name or handle -- Generator of the velocity gradients.
-%                   Examples: 'unifMats', 'normMats', a custom function reading 
-%                       velocity gradients from a file, etc.
+% gradsFun      function name or handle -- Generator of velocity gradients.
 %
 % spaceDims     int -- Number of spatial dimensions.
-%                   Examples: 2 or 3.
 %
 % flowDims      vector of ints -- Flow dimensions.
-%                   Examples: [1, 2] or [1, 2, 3].
 %
 % makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
 %                   or not.
@@ -46,17 +27,22 @@ function [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
 % checkIncompr  bool -- Check the incompressibility of the velocity gradients
 %                   or not.
 %
+% shiftAvg      double -- Shift to apply to averages.
+%
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % avgs          array of scalars/vectors/matrices -- Sample averages.
 %
 % avg           scalar/vector/matrix of doubles -- Average of sample averages.
 %
-% stdDev        scalar/vector/matrix of doubles -- Standard deviation of sample
+% dev           scalar/vector/matrix of doubles -- Standard deviation of sample
 %                   averages.
 %
-% relStdDev     scalar/vector/matrix of doubles -- Relative standard deviation
+% rel           scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of sample averages.
+%
+% shift         scalar/vector/matrix of doubles -- Relative standard deviation
+%                   of shifted sample averages.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -100,6 +86,6 @@ for ix = 1 : nSamples
 end
 
 % Compute the function statistics
-[avg, stdDev, relStdDev] = compStats(avgs);
+[avg, dev, rel, shift] = compStats(avgs, shiftAvg);
 
 end

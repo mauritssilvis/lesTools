@@ -1,5 +1,5 @@
 function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
-    spaceDims, flowDims, makeIncompr, checkIncompr ...
+    spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg ...
 )
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +48,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   If 'precision' is nonzero, the value of 'nGrads' represents 
 %                   the initial number of velocity gradients per sample.
 %
-% gradsFun      function name or handle -- Generator of the velocity gradients.
+% gradsFun      function name or handle -- Generator of velocity gradients.
 %                   Examples: 'unifMats', 'normMats', a custom function reading 
 %                       velocity gradients from a file, etc.
 %                   Default: 'unifMats'.
@@ -69,6 +69,13 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   or not.
 %                   Default: false.
 %
+% shiftAvg      double -- Shift to apply to averages.
+%                   Examples: 0, 1, 10, ...
+%                   Default: 1.
+%                   If averages of the physical quantity of interest are small, 
+%                   their relative standard deviation may not reach the desired
+%                   precision. The averages will then be shifted by 'shiftAvg'.
+%
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % stats         struct -- Statistical data about the physical quantity of
@@ -83,9 +90,11 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   - spaceDims: number of spatial dimensions,
 %                   - flowDims: flow dimensions,
 %                   - avgs: averages of function value samples,
-%                   - avg: average of sample averages,
-%                   - stdDev: standard deviation of sample averages,
-%                   - relStdDev: relative standard deviation of sample averages.
+%                   - avg: average of the sample averages,
+%                   - dev: standard deviation of the sample averages,
+%                   - rel: relative standard deviation of the sample averages.
+%                   - shift: relative standard deviation of the shifted sample 
+%                       averages.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -241,7 +250,9 @@ if nargin < 8 || isempty(makeIncompr)
 end
 
 % Check if 'makeIncompr' is a bool
-if ~isa(makeIncompr, 'logical')
+if ~isa(makeIncompr, 'logical') || numel( size(makeIncompr) ) ~= 2 || ...
+    any( size(makeIncompr) ~= [1 1] )
+
     % No, error
     error( ...
         ['Please provide a bool for ''makeIncompr'' or leave empty for ', ...
@@ -256,10 +267,29 @@ if nargin < 9 || isempty(checkIncompr)
 end
 
 % Check if 'checkIncompr' is a bool
-if ~isa(checkIncompr, 'logical')
+if ~isa(checkIncompr, 'logical') || numel( size(checkIncompr) ) ~= 2 || ...
+    any( size(checkIncompr) ~= [1 1] )
+
     % No, error
     error( ...
         ['Please provide a bool for ''checkIncompr'' or leave empty for ', ...
+         'the default value.'] ...
+    );
+end
+
+% Check if 'shiftAvg' is provided
+if nargin < 10 || isempty(shiftAvg)
+    % No, set the default value
+    shiftAvg = 1;
+end
+
+% Check if 'shiftAvg' is a double
+if ~isa(shiftAvg, 'double') || numel( size(shiftAvg) ) ~= 2 || ...
+    any( size(shiftAvg) ~= [1 1] )
+
+    % No, error
+    error( ...
+        ['Please provide a double for ''shiftAvg'' or leave empty for ', ...
          'the default value.'] ...
     );
 end
@@ -293,14 +323,12 @@ loop = true;
 % Loop until the desired end state has been reached
 while loop
 
-    [nSamples, nGrads]
-
     % Obtain statistics
-    [avgs, avg, stdDev, relStdDev] = getStats(fun, nSamples, nGrads, ...
-        gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    [avgs, avg, dev, rel, shift] = getStats(fun, nSamples, nGrads, ...
+        gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
 
     % Check if 'nGrads' is fixed or the desired precision has been reached
-    if fixNGrads || hasPrecision(relStdDev, precision)
+    if fixNGrads || hasPrecision(rel, shift, precision)
         % Yes, set convergence flag to true
         loop = false;
     else

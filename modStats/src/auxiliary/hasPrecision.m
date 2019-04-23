@@ -1,14 +1,17 @@
-function flag = hasPrecision(relStdDev, precision)
+function flag = hasPrecision(rel, shift, precision)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Determine if the relative standard deviation is smaller than the desired
-% precision.
+% Determine if the relative standard deviation (of the shifted data) is smaller 
+% than the desired precision.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% relStdDev     scalar/vector/matrix of doubles -- Relative standard deviation
+% rel           scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of sample averages.
+%
+% shift         scalar/vector/matrix of doubles -- Relative standard deviation
+%                   of shifted sample averages.
 %
 % precision     nonnegative double -- Desired minimal relative standard 
 %                   deviation of the statistical data.
@@ -30,14 +33,14 @@ function flag = hasPrecision(relStdDev, precision)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Check if the desired precision has been reached
-if precision == 0 || all( all( relStdDev < precision ) )
+if precision == 0 || all( all( rel < precision ) ) || ...
+    all( all( shift < precision ) )
+
     % Yes, set the flag to true
     flag = true;
 else
     % No, set the flag to false
     flag = false;
 end
-
-% Issue: Problem with data having an average close to 0.
 
 end
