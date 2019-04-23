@@ -13,7 +13,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #2
 % Define parameters
@@ -28,7 +28,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #3
 % Define parameters
@@ -43,7 +43,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #4
 % Define parameters
@@ -58,7 +58,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #5
 % Define parameters
@@ -73,7 +73,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #6
 % Define parameters
@@ -88,7 +88,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #7
 % Define parameters
@@ -103,7 +103,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #8
 % Define parameters
@@ -118,7 +118,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #9
 % Define parameters
@@ -133,7 +133,7 @@ val = compAvg(vals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output size #1
 % Define parameters
@@ -151,7 +151,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #2
 % Define parameters
@@ -169,7 +169,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #3
 % Define parameters
@@ -187,7 +187,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #4
 % Define parameters
@@ -205,7 +205,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #5
 % Define parameters
@@ -223,7 +223,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #6
 % Define parameters
@@ -241,7 +241,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #7
 % Define parameters
@@ -259,7 +259,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #8
 % Define parameters
@@ -277,7 +277,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #9
 % Define parameters
@@ -295,7 +295,7 @@ actSize = size( val );
 expSize = [nDims, nDims];
 
 % Test
-assert( all(actSize == expSize), 'Output not of expected size.');
+assert( all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test actual output #1
 % Define parameters
@@ -311,7 +311,7 @@ actVal = compAvg(vals);
 expVal = 1;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #2
 % Define parameters
@@ -327,7 +327,7 @@ actVal = compAvg(vals);
 expVal = 1.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #3
 % Define parameters
@@ -343,7 +343,7 @@ actVal = compAvg(vals);
 expVal = 2;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #4
 % Define parameters
@@ -362,7 +362,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #5
 % Define parameters
@@ -381,7 +381,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #6
 % Define parameters
@@ -400,7 +400,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #7
 % Define parameters
@@ -420,7 +420,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #8
 % Define parameters
@@ -440,7 +440,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #9
 % Define parameters
@@ -460,4 +460,4 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );

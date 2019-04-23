@@ -13,7 +13,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #2
 % Define parameters
@@ -28,7 +28,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #3
 % Define parameters
@@ -43,7 +43,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #4
 % Define parameters
@@ -58,7 +58,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #5
 % Define parameters
@@ -73,7 +73,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #6
 % Define parameters
@@ -88,7 +88,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #7
 % Define parameters
@@ -103,7 +103,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #8
 % Define parameters
@@ -118,7 +118,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #9
 % Define parameters
@@ -133,7 +133,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #10
 % Define parameters
@@ -148,7 +148,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #11
 % Define parameters
@@ -163,7 +163,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #12
 % Define parameters
@@ -178,7 +178,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #13
 % Define parameters
@@ -193,7 +193,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #14
 % Define parameters
@@ -208,7 +208,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #15
 % Define parameters
@@ -223,7 +223,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #16
 % Define parameters
@@ -238,7 +238,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #17
 % Define parameters
@@ -253,7 +253,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #18
 % Define parameters
@@ -268,7 +268,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #19
 % Define parameters
@@ -283,7 +283,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #20
 % Define parameters
@@ -298,7 +298,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #21
 % Define parameters
@@ -313,7 +313,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #22
 % Define parameters
@@ -328,7 +328,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #23
 % Define parameters
@@ -343,7 +343,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #24
 % Define parameters
@@ -358,7 +358,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #25
 % Define parameters
@@ -373,7 +373,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #26
 % Define parameters
@@ -388,7 +388,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #27
 % Define parameters
@@ -403,7 +403,7 @@ vals = ones(nDims, nDims, nVals);
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output size #1
 % Define parameters
@@ -421,7 +421,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #2
 % Define parameters
@@ -439,7 +439,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #3
 % Define parameters
@@ -457,7 +457,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #4
 % Define parameters
@@ -475,7 +475,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #5
 % Define parameters
@@ -493,7 +493,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #6
 % Define parameters
@@ -511,7 +511,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #7
 % Define parameters
@@ -529,7 +529,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #8
 % Define parameters
@@ -547,7 +547,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #9
 % Define parameters
@@ -565,7 +565,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #10
 % Define parameters
@@ -583,7 +583,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #11
 % Define parameters
@@ -601,7 +601,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #12
 % Define parameters
@@ -619,7 +619,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #13
 % Define parameters
@@ -637,7 +637,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #14
 % Define parameters
@@ -655,7 +655,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #15
 % Define parameters
@@ -673,7 +673,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #16
 % Define parameters
@@ -691,7 +691,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #17
 % Define parameters
@@ -709,7 +709,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #18
 % Define parameters
@@ -727,7 +727,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #19
 % Define parameters
@@ -745,7 +745,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #20
 % Define parameters
@@ -763,7 +763,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #21
 % Define parameters
@@ -781,7 +781,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #22
 % Define parameters
@@ -799,7 +799,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #23
 % Define parameters
@@ -817,7 +817,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #24
 % Define parameters
@@ -835,7 +835,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #25
 % Define parameters
@@ -853,7 +853,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #26
 % Define parameters
@@ -871,7 +871,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test output size #27
 % Define parameters
@@ -889,7 +889,7 @@ actSize = [size(val, 1), size(val, 2), size(val, 3)];
 expSize = [nDims, nDims, 1];
 
 % Test
-assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.');
+assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output not of expected size.' );
 
 %% Test actual output #1
 % Define parameters
@@ -905,7 +905,7 @@ vals(:) = 1 : nDims * nDims * nVals;
 expVal = 1;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #2
 % Define parameters
@@ -921,7 +921,7 @@ vals(:) = 1 : nDims * nDims * nVals;
 expVal = 0;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #3
 % Define parameters
@@ -937,7 +937,7 @@ vals(:) = 1 : nDims * nDims * nVals;
 expVal = 0;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #4
 % Define parameters
@@ -953,7 +953,7 @@ vals(:) = 1 : nDims * nDims * nVals;
 expVal = 1.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #5
 % Define parameters
@@ -971,7 +971,7 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
 ) );
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #6
 % Define parameters
@@ -989,7 +989,7 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
 ) ) / 1.5;
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #7
 % Define parameters
@@ -1005,7 +1005,7 @@ vals(:) = 1 : nDims * nDims * nVals;
 expVal = 2;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #8
 % Define parameters
@@ -1023,7 +1023,7 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
 ) );
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #9
 % Define parameters
@@ -1041,7 +1041,7 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
 ) ) / 2;
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #10
 % Define parameters
@@ -1060,7 +1060,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #11
 % Define parameters
@@ -1079,7 +1079,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #12
 % Define parameters
@@ -1098,7 +1098,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #13
 % Define parameters
@@ -1117,7 +1117,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #14
 % Define parameters
@@ -1138,7 +1138,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #15
 % Define parameters
@@ -1159,7 +1159,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #16
 % Define parameters
@@ -1178,7 +1178,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #17
 % Define parameters
@@ -1199,7 +1199,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #18
 % Define parameters
@@ -1220,7 +1220,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #19
 % Define parameters
@@ -1240,7 +1240,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #20
 % Define parameters
@@ -1260,7 +1260,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #21
 % Define parameters
@@ -1280,7 +1280,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #22
 % Define parameters
@@ -1300,7 +1300,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #23
 % Define parameters
@@ -1326,7 +1326,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #24
 % Define parameters
@@ -1352,7 +1352,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #25
 % Define parameters
@@ -1372,7 +1372,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #26
 % Define parameters
@@ -1398,7 +1398,7 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
 
 %% Test actual output #27
 % Define parameters
@@ -1424,4 +1424,4 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
 ];
 
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.');
+assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );

@@ -14,7 +14,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #2
 % Define parameters
@@ -32,7 +32,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #3
 % Define parameters
@@ -48,7 +48,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #4
 % Define parameters
@@ -66,7 +66,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #5
 % Define parameters
@@ -84,7 +84,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #6
 % Define parameters
@@ -102,7 +102,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #7
 % Define parameters
@@ -120,7 +120,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #8
 % Define parameters
@@ -138,7 +138,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #9
 % Define parameters
@@ -156,7 +156,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #10
 % Define parameters
@@ -174,7 +174,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #11
 % Define parameters
@@ -192,7 +192,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #12
 % Define parameters
@@ -210,7 +210,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #13
 % Define parameters
@@ -226,7 +226,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #14
 % Define parameters
@@ -244,7 +244,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #15
 % Define parameters
@@ -260,7 +260,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #16
 % Define parameters
@@ -278,7 +278,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #17
 % Define parameters
@@ -296,7 +296,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #18
 % Define parameters
@@ -314,7 +314,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #19
 % Define parameters
@@ -332,7 +332,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #20
 % Define parameters
@@ -350,7 +350,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #21
 % Define parameters
@@ -368,7 +368,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #22
 % Define parameters
@@ -386,7 +386,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #23
 % Define parameters
@@ -404,7 +404,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #24
 % Define parameters
@@ -422,7 +422,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #25
 % Define parameters
@@ -438,7 +438,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #26
 % Define parameters
@@ -456,7 +456,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #27
 % Define parameters
@@ -472,7 +472,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #28
 % Define parameters
@@ -490,7 +490,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #29
 % Define parameters
@@ -508,7 +508,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #30
 % Define parameters
@@ -526,7 +526,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #31
 % Define parameters
@@ -544,7 +544,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #32
 % Define parameters
@@ -562,7 +562,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #33
 % Define parameters
@@ -580,7 +580,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #34
 % Define parameters
@@ -598,7 +598,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #35
 % Define parameters
@@ -616,7 +616,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #36
 % Define parameters
@@ -634,7 +634,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #37
 % Define parameters
@@ -650,7 +650,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #38
 % Define parameters
@@ -668,7 +668,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #39
 % Define parameters
@@ -684,7 +684,7 @@ val = compQuants(grads, nQuants);
 expType = 'cell';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #40
 % Define parameters
@@ -702,7 +702,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #41
 % Define parameters
@@ -720,7 +720,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #42
 % Define parameters
@@ -738,7 +738,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #43
 % Define parameters
@@ -756,7 +756,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #44
 % Define parameters
@@ -774,7 +774,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #45
 % Define parameters
@@ -792,7 +792,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #46
 % Define parameters
@@ -810,7 +810,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #47
 % Define parameters
@@ -828,7 +828,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #48
 % Define parameters
@@ -846,7 +846,7 @@ val = val{ix};
 expType = 'double';
 
 % Test
-assert( isa(val, expType), ['Output not of expected type ''', expType, '''.']);
+assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output size #1
 % Define parameters
@@ -1857,7 +1857,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #2
 % Define parameters
@@ -1879,7 +1879,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #3
 % Define parameters
@@ -1901,7 +1901,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #4
 % Define parameters
@@ -1920,7 +1920,7 @@ actVal = actVal{ix};
 expVal = 29.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #5
 % Define parameters
@@ -1939,7 +1939,7 @@ actVal = actVal{ix};
 expVal = -0.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #6
 % Define parameters
@@ -1958,7 +1958,7 @@ actVal = actVal{ix};
 expVal = 158.75;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #7
 % Define parameters
@@ -1977,7 +1977,7 @@ actVal = actVal{ix};
 expVal = -1.25;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #8
 % Define parameters
@@ -1996,7 +1996,7 @@ actVal = actVal{ix};
 expVal = -7.375;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #9
 % Define parameters
@@ -2015,7 +2015,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #10
 % Define parameters
@@ -2034,7 +2034,7 @@ actVal = actVal{ix};
 expVal = 0;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #11
 % Define parameters
@@ -2058,7 +2058,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #12
 % Define parameters
@@ -2090,7 +2090,7 @@ expVal(:, :, 2) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #13
 % Define parameters
@@ -2122,7 +2122,7 @@ expVal(:, :, 2) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #14
 % Define parameters
@@ -2150,7 +2150,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #15
 % Define parameters
@@ -2178,7 +2178,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #16
 % Define parameters
@@ -2206,7 +2206,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #17
 % Define parameters
@@ -2234,7 +2234,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #18
 % Define parameters
@@ -2262,7 +2262,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #19
 % Define parameters
@@ -2286,7 +2286,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #20
 % Define parameters
@@ -2314,7 +2314,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #21
 % Define parameters
@@ -2334,7 +2334,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #22
 % Define parameters
@@ -2358,7 +2358,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #23
 % Define parameters
@@ -2382,7 +2382,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #24
 % Define parameters
@@ -2402,7 +2402,7 @@ actVal = actVal{ix};
 expVal = 273;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #25
 % Define parameters
@@ -2422,7 +2422,7 @@ actVal = actVal{ix};
 expVal = -12;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #26
 % Define parameters
@@ -2442,7 +2442,7 @@ actVal = actVal{ix};
 expVal = 4455;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #27
 % Define parameters
@@ -2462,7 +2462,7 @@ actVal = actVal{ix};
 expVal = -90;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #28
 % Define parameters
@@ -2482,7 +2482,7 @@ actVal = actVal{ix};
 expVal = -1638;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #29
 % Define parameters
@@ -2502,7 +2502,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #30
 % Define parameters
@@ -2522,7 +2522,7 @@ actVal = actVal{ix};
 expVal = 0;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #31
 % Define parameters
@@ -2548,7 +2548,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #32
 % Define parameters
@@ -2584,7 +2584,7 @@ expVal(:, :, 2) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #33
 % Define parameters
@@ -2620,7 +2620,7 @@ expVal(:, :, 2) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #34
 % Define parameters
@@ -2650,7 +2650,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #35
 % Define parameters
@@ -2680,7 +2680,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #36
 % Define parameters
@@ -2710,7 +2710,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #37
 % Define parameters
@@ -2740,7 +2740,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #38
 % Define parameters
@@ -2770,7 +2770,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #39
 % Define parameters
@@ -2796,7 +2796,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #40
 % Define parameters
@@ -2826,7 +2826,7 @@ expVal(1, 1, :) = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #41
 % Define parameters
@@ -2846,7 +2846,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #42
 % Define parameters
@@ -2870,7 +2870,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #43
 % Define parameters
@@ -2894,7 +2894,7 @@ expVal = [
 ];
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #44
 % Define parameters
@@ -2914,7 +2914,7 @@ actVal = actVal{ix};
 expVal = 2882;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #45
 % Define parameters
@@ -2934,7 +2934,7 @@ actVal = actVal{ix};
 expVal = -259;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #46
 % Define parameters
@@ -2954,7 +2954,7 @@ actVal = actVal{ix};
 expVal = 152777.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #47
 % Define parameters
@@ -2974,7 +2974,7 @@ actVal = actVal{ix};
 expVal = -6297.5;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #48
 % Define parameters
@@ -2994,7 +2994,7 @@ actVal = actVal{ix};
 expVal = -372384.25;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #49
 % Define parameters
@@ -3014,7 +3014,7 @@ actVal = actVal{ix};
 expVal = grads;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #50
 % Define parameters
@@ -3034,4 +3034,4 @@ actVal = actVal{ix};
 expVal = 93494.25;
 
 % Test
-assert( all( all( all(actVal == expVal) ) ), 'Unexpected output');
+assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
