@@ -7,34 +7,18 @@ function [state, msg] = checkFun(fun, spaceDims)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% fun       function name or handle -- Alleged function of the velocity 
-%               gradient.
-%               This function should should accept between 1 and 9 arguments.
-%               The first argument should be 
-%               - the velocity gradient G (a matrix).
-%               The next arguments, if present, are assumed to be
-%               - the rate-of-strain tensor S (a matrix),
-%               - the rate-of-rotation tensor W (a matrix),
-%               and the following scalar combined invariants of the 
-%               rate-of-strain and rate-of-rotation tensors:
-%               - I1 = trace(S^2),
-%               - I2 = trace(W^2),
-%               - I3 = trace(S^3),
-%               - I4 = trace(S W^2),
-%               - I5 = trace(S^2 W^2),
-%               - I6 = trace(S^2 W^2 S W).
-%               Examples:
-%                   ...
+% fun           function name or handle -- Alleged function of the velocity 
+%                   gradient.
 %
 % spaceDims     int -- Number of spatial dimensions.
 %                   Examples: 2 or 3.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% state      int -- Zero if the supplied variable represents a valid function
-%               of the velocity gradient.
+% state         int -- Zero if the supplied variable represents a valid function
+%                   of the velocity gradient.
 %
-% msg        char -- Error message.
+% msg           char -- Error message.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -52,17 +36,15 @@ if nargin < 1
     error('Please provide a function file name or handle for ''fun''.');
 end
 
-% Check if 'spaceDims' is provided
-if nargin < 2 || isempty(spaceDims)
-    error('Please provide the number of spatial dimensions ''spaceDims''.');
-end
-
 % Check if 'spaceDims' is a positive integer
-if ~isa(spaceDims, 'double') || numel( size(spaceDims) ) ~= 2 || ...
-    any( size(spaceDims) ~= [1 1] ) || spaceDims < 1 || ...
-    mod(spaceDims, 1) ~= 0
+if nargin < 2 || isempty(spaceDims) || ~isa(spaceDims, 'double') || ...
+    numel( size(spaceDims) ) ~= 2 || any( size(spaceDims) ~= [1 1] ) || ...
+    spaceDims < 1 || mod(spaceDims, 1) ~= 0
 
-    error('Please provide a positive integer for ''spaceDims''.');
+    error( ...
+        ['Please provide a positive integer for the number of spatial ', ...
+         'dimensions ''spaceDims''.'] ...
+    );
 end
 
 %% Initialize variables
@@ -83,7 +65,7 @@ if ( ~isa(fun, 'char') || exist(fun, 'file') ~= 2 ) && ...
     state = 2;
     msg = ...
         ['The variable ''fun'' does not represent an existing file name ', ...
-        'or a function handle.'];
+        'or function handle.'];
     return;
 end
 
