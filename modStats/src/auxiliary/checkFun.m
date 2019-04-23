@@ -46,32 +46,61 @@ function [state, msg] = checkFun(fun, spaceDims)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Initialize variables
-% Error message
-msg = '';
-
 %% Check input
 % Check if 'fun' is provided
-if nargin < 1 || isempty(fun)
-    state = 1;
-    msg = 'No variable was provided for ''fun''.';
-    return;
-end
-
-% Check if 'fun' represents an existing function or a function handle
-if ( ~isa(fun, 'char') || exist(fun, 'file') ~= 2 ) && ...
-    ~isa(fun, 'function_handle')
-
-    state = 2;
-    msg = ...
-        ['The variable ''fun'' does not represent an existing function or ', ...
-         'function handle.'];
-    return;
+if nargin < 1
+    error('Please provide a function file name or handle for ''fun''.');
 end
 
 % Check if 'spaceDims' is provided
 if nargin < 2 || isempty(spaceDims)
     error('Please provide the number of spatial dimensions ''spaceDims''.');
+end
+
+% Check if 'spaceDims' is a positive integer
+if ~isa(spaceDims, 'double') || numel( size(spaceDims) ) ~= 2 || ...
+    any( size(spaceDims) ~= [1 1] ) || spaceDims < 1 || ...
+    mod(spaceDims, 1) ~= 0
+
+    error('Please provide a positive integer for ''spaceDims''.');
+end
+
+%% Initialize variables
+% Error message
+msg = '';
+
+%% Check if 'fun' is nonempty
+if isempty(fun)
+    state = 1;
+    msg = 'The variable ''fun'' is empty.';
+    return;
+end
+
+%% Check if 'fun' represents an existing file name or a function handle
+if ( ~isa(fun, 'char') || exist(fun, 'file') ~= 2 ) && ...
+    ~isa(fun, 'function_handle')
+
+    state = 2;
+    msg = ...
+        ['The variable ''fun'' does not represent an existing file name ', ...
+        'or a function handle.'];
+    return;
+end
+
+%% Check if 'fun' represents an evaluable function
+% Try
+try
+    nargin(fun);
+    fail = false;
+catch
+    fail = true;
+end
+
+% Check
+if fail
+    state = 3;
+    msg = 'The variable ''fun'' does not represent an evaluable function.';
+    return;
 end
 
 %% Check argument number
@@ -82,7 +111,7 @@ nArgs = nargin(fun);
 
 % Check
 if nArgs < 1 || nArgs > 9
-    state = 3;
+    state = 4;
     msg = ...
         ['The function ''fun'' does not have the proper number of input ', ...
          'arguments.'];
@@ -108,13 +137,14 @@ end
 
 % Check
 if fail
-    state = 4;
+    state = 5;
     msg = 'The function ''fun'' does not allow for input of the right size.';
     return;
 end
 
 %% Check the output type
 % Check if 'fun' has the proper output type
+
 % Initialize variables
 nChecks = 5;
 nQuants = nArgs;
@@ -130,7 +160,7 @@ for ix = 1 : nChecks
     try
         val = feval( fun, quants{:} );
     catch
-        state = 5;
+        state = 6;
         msg = 'The function ''fun'' cannot be evaluated.';
         return;
     end
@@ -140,14 +170,16 @@ for ix = 1 : nChecks
 
     % Check
     if ~isa(val, expType)
-        state = 6;
-        msg = 'The output of ''fun'' is not of the expected type ''double''.';
+        state = 7;
+        msg = ...
+            ['The output of ''fun'' is not of the expected type ', ...
+             '''', expType, '''.'];
         return;
     end
 end
 
 %% Check the output size
-% Check if 'fun' returns a scalar, a vector or a matrix
+% Check if the output of 'fun' is not empty
 
 % Define parameters
 nGrads = 1;
@@ -159,21 +191,35 @@ quants = compQuants(grads, nQuants);
 try
     val = feval( fun, quants{:} );
 catch
-    state = 7;
+    state = 8;
     msg = 'The function ''fun'' cannot be evaluated.';
     return;
 end
 
+% Check
+if isempty(val)
+    state = 9;
+    msg = 'The function ''fun'' has empty output.';
+    return;
+end
+
+%% Check the output size
+% Check if 'fun' returns a scalar, a vector or a matrix
+
 % Obtain actual dimension
 actDim = numel( size(val) );
 
-% Define maximum dimension
-maxDim = 2;
+% Define expected dimension
+expDim = 2;
 
 % Check
-if actDim > maxDim
-    state = 8;
-    msg = 'The function ''fun'' returns a tensor of order higher than 2.';
+if actDim < expDim
+    state = 10;
+    msg = 'The output of ''fun'' has an unexpected size.';
+    return;
+elseif actDim > expDim
+    state = 11;
+    msg = 'The function ''fun'' returns a tensor of rank higher than 2.';
     return;
 end
 
