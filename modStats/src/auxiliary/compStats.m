@@ -16,7 +16,7 @@ function [avg, stdDev, relStdDev] = compStats(vals)
 %
 % relStdDev     scalar/vector/matrix -- Relative standard deviation of values.
 %
-% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2016-2019 Maurits H. Silvis
 %

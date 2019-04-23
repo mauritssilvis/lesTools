@@ -33,7 +33,7 @@ function grads = getGrads(gradsFun, sampleNr, nGrads, spaceDims, flowDims, ...
 %
 % grads         array of matrices -- Velocity gradients.
 %
-% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2016-2019 Maurits H. Silvis
 %

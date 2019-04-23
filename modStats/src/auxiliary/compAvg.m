@@ -12,7 +12,7 @@ function avg = compAvg(vals)
 %
 % avg       scalar/vector/matrix -- Average of values.
 %
-% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2016-2019 Maurits H. Silvis
 %

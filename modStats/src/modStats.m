@@ -87,7 +87,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   - stdDev: standard deviation of sample averages,
 %                   - relStdDev: relative standard deviation of sample averages.
 %
-% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Copyright (c) 2016-2019 Maurits H. Silvis
 %
