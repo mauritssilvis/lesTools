@@ -218,7 +218,7 @@ end
 % Check if 'flowDims' is provided
 if nargin < 7 || isempty(flowDims)
     % No, set the default value
-    flowDims = [1, 2, 3];
+    flowDims = 1 : spaceDims;
 end
 
 % Check if 'flowDims' is a vector of positive integers with valid values
