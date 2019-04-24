@@ -1,4 +1,4 @@
-function [avg, dev, rel, shift] = compStats(vals, avgShift)
+function [avg, dev, relDev, relDevShift] = compStats(vals, avgShift)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -6,20 +6,20 @@ function [avg, dev, rel, shift] = compStats(vals, avgShift)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% vals      array of scalars/vectors/matrices -- Values.
+% vals          array of scalars/vectors/matrices -- Values.
 %
-% shiftAvg  double -- Shift to apply to averages.
+% shiftAvg      double -- Shift to apply to averages.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% avg       scalar/vector/matrix -- Average of values.
+% avg           scalar/vector/matrix -- Average of values.
 %
-% dev       scalar/vector/matrix -- Standard deviation of values.
+% dev           scalar/vector/matrix -- Standard deviation of values.
 %
-% rel       scalar/vector/matrix -- Relative standard deviation of values.
+% relDev        scalar/vector/matrix -- Relative standard deviation of values.
 %
-% shift     scalar/vector/matrix -- Relative standard deviation of shifted 
-%               values.
+% relDevShift   scalar/vector/matrix -- Relative standard deviation of shifted 
+%                   values.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -43,9 +43,9 @@ weight = 0;
 dev = std(vals, weight, 3);
 
 %% Compute the relative standard deviation
-rel = abs( dev ./ avg );
+relDev = abs( dev ./ avg );
 
 %% Compute the relative standard deviation of the shifted values
-shift = abs( dev ./ ( avg + avgShift ) );
+relDevShift = abs( dev ./ ( avg + avgShift ) );
 
 end

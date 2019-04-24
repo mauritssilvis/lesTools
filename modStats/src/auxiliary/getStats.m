@@ -1,5 +1,6 @@
-function [avgs, avg, dev, rel, shift] = getStats(fun, nSamples, nGrads, ...
-    gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg ...
+function [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, ...
+    nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, ...
+    shiftAvg ...
 )
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,10 +39,10 @@ function [avgs, avg, dev, rel, shift] = getStats(fun, nSamples, nGrads, ...
 % dev           scalar/vector/matrix of doubles -- Standard deviation of sample
 %                   averages.
 %
-% rel           scalar/vector/matrix of doubles -- Relative standard deviation
+% relDev        scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of sample averages.
 %
-% shift         scalar/vector/matrix of doubles -- Relative standard deviation
+% relDevShift   scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of shifted sample averages.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,6 +87,6 @@ for ix = 1 : nSamples
 end
 
 % Compute the function statistics
-[avg, dev, rel, shift] = compStats(avgs, shiftAvg);
+[avg, dev, relDev, relDevShift] = compStats(avgs, shiftAvg);
 
 end

@@ -1,4 +1,4 @@
-function flag = hasPrecision(rel, shift, precision)
+function flag = hasPrecision(relDev, relDevShift, precision)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -7,10 +7,10 @@ function flag = hasPrecision(rel, shift, precision)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% rel           scalar/vector/matrix of doubles -- Relative standard deviation
+% relDev        scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of sample averages.
 %
-% shift         scalar/vector/matrix of doubles -- Relative standard deviation
+% relDevShift   scalar/vector/matrix of doubles -- Relative standard deviation
 %                   of shifted sample averages.
 %
 % precision     nonnegative double -- Desired minimal relative standard 
@@ -33,8 +33,8 @@ function flag = hasPrecision(rel, shift, precision)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Check if the desired precision has been reached
-if precision == 0 || all( all( rel < precision ) ) || ...
-    all( all( shift < precision ) )
+if precision == 0 || all( all( relDev < precision ) ) || ...
+    all( all( relDevShift < precision ) )
 
     % Yes, set the flag to true
     flag = true;

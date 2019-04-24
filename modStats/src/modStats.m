@@ -92,9 +92,10 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   - avgs: averages of function value samples,
 %                   - avg: average of the sample averages,
 %                   - dev: standard deviation of the sample averages,
-%                   - rel: relative standard deviation of the sample averages.
-%                   - shift: relative standard deviation of the shifted sample 
+%                   - relDev: relative standard deviation of the sample 
 %                       averages.
+%                   - relDevShift: relative standard deviation of the shifted  
+%                       sample averages.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -324,11 +325,11 @@ loop = true;
 while loop
 
     % Obtain statistics
-    [avgs, avg, dev, rel, shift] = getStats(fun, nSamples, nGrads, ...
+    [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, nGrads, ...
         gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
 
     % Check if 'nGrads' is fixed or the desired precision has been reached
-    if fixNGrads || hasPrecision(rel, shift, precision)
+    if fixNGrads || hasPrecision(relDev, relDevShift, precision)
         % Yes, set convergence flag to true
         loop = false;
     else
