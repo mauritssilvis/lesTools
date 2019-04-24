@@ -2,7 +2,7 @@
 
 %% Test valid input #1
 % Define parameters
-fun = @(G) G;
+fun = @(G) zeros( size(G) );
 
 % Obtain actual pass state
 try
@@ -20,11 +20,12 @@ assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test valid input #2
 % Define parameters
-fun = @(G, S, W, I1, I2, I3, I4, I5, I6) G;
+fun = @(G) G;
+precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    modStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -38,11 +39,12 @@ assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test valid input #3
 % Define parameters
-fun = @(G, S, W, I1, I2, I3, I4, I5, I6) I6;
+fun = @(G, S, W, I1, I2, I3, I4, I5, I6) G;
+precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    modStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -56,11 +58,12 @@ assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test valid input #4
 % Define parameters
-fun = 'nueVS';
+fun = @(G, S, W, I1, I2, I3, I4, I5, I6) I6;
+precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    modStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -74,8 +77,8 @@ assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test valid input #5
 % Define parameters
-fun = @(G) G;
-precision = 1;
+fun = 'nueVS';
+precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
@@ -88,10 +91,13 @@ end
 % Define expected pass state
 expPass = true;
 
+% Test
+assert(actPass == expPass, 'Refusing valid input.');
+
 %% Test valid input #6
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = [];
 
 % Obtain actual pass state
@@ -111,7 +117,7 @@ assert(actPass == expPass, 'Refusing valid input.');
 %% Test valid input #7
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 
 % Obtain actual pass state
@@ -131,7 +137,7 @@ assert(actPass == expPass, 'Refusing valid input.');
 %% Test valid input #8
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = [];
 
@@ -194,7 +200,7 @@ assert(actPass == expPass, 'Refusing valid input.');
 %% Test valid input #11
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = 1;
 
@@ -215,7 +221,7 @@ assert(actPass == expPass, 'Refusing valid input.');
 %% Test valid input #12
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = 2;
 
@@ -925,7 +931,113 @@ expPass = true;
 % Test
 assert(actPass == expPass, 'Refusing valid input.');
 
-%% TODO: Test valid input with shiftAvg
+%% Test valid input #42
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = [];
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = true;
+
+% Test
+assert(actPass == expPass, 'Refusing valid input.');
+
+%% Test valid input #43
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = -1.5;
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = true;
+
+% Test
+assert(actPass == expPass, 'Refusing valid input.');
+
+%% Test valid input #44
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = 0;
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = true;
+
+% Test
+assert(actPass == expPass, 'Refusing valid input.');
+
+%% Test valid input #45
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = 1.5;
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = true;
+
+% Test
+assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test invalid input #1
 % Define parameters
@@ -1589,7 +1701,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #37
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = true; % Bool
 
 % Obtain actual pass state
@@ -1609,7 +1721,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #38
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = char(100); % Char
 
 % Obtain actual pass state
@@ -1629,7 +1741,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #39
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = string(); % String
 
 % Obtain actual pass state
@@ -1649,7 +1761,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #40
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = struct(); % Struct
 
 % Obtain actual pass state
@@ -1669,7 +1781,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #41
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = {''}; % Cell
 
 % Obtain actual pass state
@@ -1689,7 +1801,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #42
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = table(0); % Table
 
 % Obtain actual pass state
@@ -1709,7 +1821,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #43
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
@@ -1729,7 +1841,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #44
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
@@ -1749,7 +1861,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #45
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = -7.5; % Negative double
 
 % Obtain actual pass state
@@ -1769,7 +1881,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #46
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = -10; % Negative double
 
 % Obtain actual pass state
@@ -1789,7 +1901,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #47
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 7.5; % Noninteger double
 
 % Obtain actual pass state
@@ -1830,7 +1942,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #49
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = true; % Bool
 
@@ -1851,7 +1963,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #50
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = char(100); % Char
 
@@ -1872,7 +1984,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #51
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = string(); % String
 
@@ -1893,7 +2005,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #52
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = struct(); % Struct
 
@@ -1914,7 +2026,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #53
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = {''}; % Cell
 
@@ -1935,7 +2047,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #54
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = table(0); % Table
 
@@ -1956,7 +2068,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #55
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = zeros(2, 2); % Matrix
 
@@ -1977,7 +2089,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #56
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = zeros(3, 3, 3); % Rank-three tensor
 
@@ -1998,7 +2110,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #57
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = -7.5; % Negative double
 
@@ -2019,7 +2131,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #58
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = -10; % Negative double
 
@@ -2040,7 +2152,7 @@ assert(actPass == expPass, 'Accepting invalid input.');
 %% Test invalid input #59
 % Define parameters
 fun = @(G) G;
-precision = 1;
+precision = 10;
 nSamples = 2;
 nGrads = 7.5; % Noninteger double
 
@@ -3939,7 +4051,221 @@ expPass = false;
 % Test
 assert(actPass == expPass, 'Accepting invalid input.');
 
-%% TODO: Test invalid input with shiftAvg
+%% Test invalid input #140
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = true; % Bool
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #141
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = char(100); % Char
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #142
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = string(); % String
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #143
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = struct(); % Struct
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #144
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = {''}; % Cell
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #145
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = table(0); % Table
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #146
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = zeros(2, 2); % Matrix
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
+
+%% Test invalid input #147
+% Define parameters
+fun = @(G) G;
+precision = 0;
+nSamples = 2;
+nGrads = 1;
+gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
+spaceDims = 2;
+flowDims = 1 : 2;
+makeIncompr = false;
+checkIncompr = false;
+shiftAvg = zeros(3, 3, 3); % Rank-three tensor
+
+% Obtain actual pass state
+try
+    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actPass = true;
+catch
+    actPass = false;
+end
+
+% Define expected pass state
+expPass = false;
+
+% Test
+assert(actPass == expPass, 'Accepting invalid input.');
 
 %% Test output type #...
 
