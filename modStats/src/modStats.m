@@ -93,7 +93,9 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   - relDev: relative standard deviation of the sample 
 %                       averages,
 %                   - relDevShift: relative standard deviation of the shifted  
-%                       sample averages.
+%                       sample averages,
+%                   - hasPrecision: flag that tells if the desired precision has
+%                       been reached.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -175,7 +177,7 @@ if nargin < 4 || isempty(nGrads)
     if fixNGrads
         % Yes, error
         error( ...
-            ['If ''precision'' is explicitly set as empty, ''nGrads'' has ', ...
+            ['If ''precision'' is explicitly set to zero, ''nGrads'' has ', ...
              'to be provided.'] ...
         );
     else
@@ -322,7 +324,7 @@ loop = true;
 ix = 1;
 
 % Empty data
-emptyData = repmat( {[]}, 1, 15 );
+emptyData = repmat( {[]}, 1, 16 );
 
 % Storage
 stats(20) = storeStats( emptyData{:} );
@@ -335,14 +337,17 @@ while loop
     [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, nGrads, ...
         gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
 
+    % Determine if the desired precision has been reached
+    hasPrecision = checkPrecision(relDev, relDevShift, precision);
+
     % Store data
     stats(ix) = storeStats(fun, precision, nSamples, nGrads, gradsFun, ...
         spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg, avgs, avg, ...
-        dev, relDev, relDevShift);
+        dev, relDev, relDevShift, hasPrecision);
 
-    % Check if 'nGrads' is fixed or the desired precision has been reached
-    if fixNGrads || hasPrecision(relDev, relDevShift, precision)
-        % Yes, set convergence flag to true
+    % Check if the desired precision has been reached
+    if hasPrecision
+        % Yes, set the loop flag to false
         loop = false;
     else
         % No, increase the number of velocity gradients per sample

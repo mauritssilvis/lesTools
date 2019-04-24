@@ -1,4 +1,4 @@
-function flag = hasPrecision(relDev, relDevShift, precision)
+function hasPrecision = checkPrecision(relDev, relDevShift, precision)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -20,7 +20,7 @@ function flag = hasPrecision(relDev, relDevShift, precision)
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% flag          bool -- True if the desired precision has been reached.
+% hasPrecision  bool -- True if the desired precision has been reached.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -37,10 +37,10 @@ if precision == 0 || all( all( relDev < precision ) ) || ...
     all( all( relDevShift < precision ) )
 
     % Yes, set the flag to true
-    flag = true;
+    hasPrecision = true;
 else
     % No, set the flag to false
-    flag = false;
+    hasPrecision = false;
 end
 
 end
