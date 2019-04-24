@@ -36,7 +36,9 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   deviation of the statistical data.
 %                   Examples: 10^-2, 10^-4, ...
 %                   Default: 10^-4.
-%                   If set to 0, 'nGrads' has to be set.
+%                   If set to zero, the number of velocity gradients per sample, 
+%                   'nGrads', is not adaptively increased. In this case, 
+%                   'nGrads' has to be specified manually.
 %
 % nSamples      positive int -- Desired number of samples.
 %                   Examples: 10, 100, 1000, ...
@@ -45,8 +47,10 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 % nGrads        positive int -- Desired number of velocity gradients per sample.
 %                   Examples: 10^2, 10^4, 10^6, ...
 %                   Default: 10^6.
-%                   If 'precision' is nonzero, the value of 'nGrads' represents 
-%                   the initial number of velocity gradients per sample.
+%                   If 'precision' is zero, 'nGrads' is not adaptively 
+%                   increased. If 'precision' is nonzero, the value of 'nGrads'  
+%                   represents the initial number of velocity gradients per 
+%                   sample.
 %
 % gradsFun      function name or handle -- Generator of velocity gradients.
 %                   Examples: 'unifMats', 'normMats', a custom function reading 
@@ -80,20 +84,14 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %
 % stats         struct -- Statistical data about the physical quantity of
 %                   interest.
-%                   This structure has fields:
-%                   - fun: file name or handle of a function of the velocity 
-%                       gradient,
-%                   - nSamples: number of samples,
-%                   - nGrads: number of velocity gradients per sample,
-%                   - gradsFun: name or handle of the function generating
-%                       velocity gradients,
-%                   - spaceDims: number of spatial dimensions,
-%                   - flowDims: flow dimensions,
-%                   - avgs: averages of function value samples,
+%                   This structure contains all the provided input arguments, 
+%                   the default values of any unspecified input arguments and 
+%                   the following statistical data:
+%                   - avgs: sample averages of the physical quantity,
 %                   - avg: average of the sample averages,
 %                   - dev: standard deviation of the sample averages,
 %                   - relDev: relative standard deviation of the sample 
-%                       averages.
+%                       averages,
 %                   - relDevShift: relative standard deviation of the shifted  
 %                       sample averages.
 %
@@ -320,6 +318,15 @@ end
 % Loop flag
 loop = true;
 
+% Loop index
+ix = 1;
+
+% Empty data
+emptyData = repmat( {[]}, 1, 15 );
+
+% Storage
+stats(20) = storeStats( emptyData{:} );
+
 %% Compute statistics
 % Loop until the desired end state has been reached
 while loop
@@ -328,6 +335,11 @@ while loop
     [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, nGrads, ...
         gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
 
+    % Store data
+    stats(ix) = storeStats(fun, precision, nSamples, nGrads, gradsFun, ...
+        spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg, avgs, avg, ...
+        dev, relDev, relDevShift);
+
     % Check if 'nGrads' is fixed or the desired precision has been reached
     if fixNGrads || hasPrecision(relDev, relDevShift, precision)
         % Yes, set convergence flag to true
@@ -335,11 +347,13 @@ while loop
     else
         % No, increase the number of velocity gradients per sample
         nGrads = nGrads * 10;
+
+        % Increase the loop index
+        ix = ix + 1;
     end
 end
 
-%% Initialize output variables
-% Statistics
-stats = [];
+%% Truncate output variable
+stats(ix + 1 : end) = [];
 
 end
