@@ -138,25 +138,35 @@ for ix = 1 : nChecks
     grads = zeros(spaceDims, spaceDims, nGrads);
     quants = compQuants(grads, nQuants);
 
-    % Obtain value
-    try
-        val = feval( fun, quants{:} );
-    catch
-        state = 6;
-        msg = 'The function ''fun'' cannot be evaluated.';
-        return;
-    end
+    % Loop over all gradients
+    for jx = 1 : nGrads
 
-    % Define expected type
-    expType = 'double';
+        % Store current velocity-gradient-based quantities
+        qts = [];
+        for kx = nQuants : -1 : 1
+            qts{kx} = quants{kx}(:, :, ix);
+        end
 
-    % Check
-    if ~isa(val, expType)
-        state = 7;
-        msg = ...
-            ['The output of ''fun'' is not of the expected type ', ...
-             '''', expType, '''.'];
-        return;
+        % Obtain value
+        try
+            val = feval( fun, qts{:} );
+        catch
+            state = 6;
+            msg = 'The function ''fun'' cannot be evaluated.';
+            return;
+        end
+
+        % Define expected type
+        expType = 'double';
+
+        % Check
+        if ~isa(val, expType)
+            state = 7;
+            msg = ...
+                ['The output of ''fun'' is not of the expected type ', ...
+                 '''', expType, '''.'];
+            return;
+        end
     end
 end
 
