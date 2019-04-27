@@ -24,8 +24,18 @@ function coeff = nueSmagorinsky(~, ~, ~, I1)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Compute the reduced model coefficient
-% Compute the reduced model coefficient, i.e., compute the model coefficient
-% without model constant and length scale
-coeff = sqrt(2 * I1);
+% Store the needed factor
+fact = I1;
+
+% Analytically, this factor is nonnegative
+% Check if the factor is positive numerically
+if fact > 0
+    % Yes, compute the reduced model coefficient, i.e., compute the model
+    % coefficient without model constant and length scale
+    coeff = sqrt(2 * I1);
+else
+    % No, set the reduced model coefficient to zero
+    coeff = 0;
+end
 
 end

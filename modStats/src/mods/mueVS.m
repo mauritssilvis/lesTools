@@ -37,11 +37,12 @@ den = -I1 * I2;
 % Compute the numerator
 num = I5 - 1 / 2 * I1 *I2;
 
-% Check if the numerator and denominator are nonnegative
-if den > 0 && num > 0
+% Analytically, both the numerator and denominator are nonnegative
+% Check if the numerator and denominator are nonnegative numerically
+if num > 0 && den > 0
     % Yes, compute the reduced model coefficient, i.e., compute the model
     % coefficient without model constant and length scale
-    coeff = ( num / den )^2;
+    coeff = (num / den)^2;
 else
     % No, set the reduced model coefficient to zero
     coeff = 0;

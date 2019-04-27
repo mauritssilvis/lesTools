@@ -43,8 +43,9 @@ den = PGGT;
 % Store the numerator
 num = RGGT;
 
-% Check if the numerator and denominator are nonnegative
-if den > 0 && num > 0
+% Analytically, both the numerator and denominator are nonnegative
+% Check if the numerator and denominator are positive numerically
+if num > 0 && den > 0
     % Yes, compute the reduced model coefficient, i.e., compute the model
     % coefficient without model constant and length scale
     coeff = sqrt(num) / den;
