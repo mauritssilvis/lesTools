@@ -1361,8 +1361,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 1.5)^2 + (2.0 - 1.5)^2 ...
 ) );
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #7
 % Define parameters
@@ -1380,8 +1383,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 1.5)^2 + (2.0 - 1.5)^2 ...
 ) ) / 1.5;
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #8
 % Define parameters
@@ -1399,8 +1405,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 1.5)^2 + (2.0 - 1.5)^2 ...
 ) ) / 2.5;
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #9
 % Define parameters
@@ -1435,8 +1444,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 2.0)^2 + (2.0 - 2.0)^2 + (3.0 - 2.0)^2 ...
 ) );
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #11
 % Define parameters
@@ -1454,8 +1466,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 2.0)^2 + (2.0 - 2.0)^2 + (3.0 - 2.0)^2 ...
 ) ) / 2;
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #12
 % Define parameters
@@ -1473,8 +1488,11 @@ expVal = sqrt( 1 / (nVals - 1) * ( ...
     (1.0 - 2.0)^2 + (2.0 - 2.0)^2 + (3.0 - 2.0)^2 ...
 ) ) / 3;
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #13
 % Define parameters
@@ -1595,8 +1613,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( (4.0 - 6.0)^2 + (8.0 - 6.0)^2 );
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #19
 % Define parameters
@@ -1617,8 +1638,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( (4.0 - 6.0)^2 + (8.0 - 6.0)^2 ) / 6;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #20
 % Define parameters
@@ -1639,8 +1663,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( (4.0 - 6.0)^2 + (8.0 - 6.0)^2 ) / 7;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #21
 % Define parameters
@@ -1681,8 +1708,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 4 -  8)^2 + ( 8 -  8)^2 + (12 -  8)^2 );
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #23
 % Define parameters
@@ -1703,8 +1733,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 4 -  8)^2 + ( 8 -  8)^2 + (12 -  8)^2 ) / 8;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #24
 % Define parameters
@@ -1725,8 +1758,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 4 -  8)^2 + ( 8 -  8)^2 + (12 -  8)^2 ) / 9;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #25
 % Define parameters
@@ -1857,8 +1893,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9.0 - 13.5)^2 + (18.0 - 13.5)^2 );
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #31
 % Define parameters
@@ -1884,8 +1923,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9.0 - 13.5)^2 + (18.0 - 13.5)^2 ) / 13.5;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #32
 % Define parameters
@@ -1911,8 +1953,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9.0 - 13.5)^2 + (18.0 - 13.5)^2 ) / 14.5;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #33
 % Define parameters
@@ -1959,8 +2004,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9 - 18)^2 + (18 - 18)^2 + (27 - 18)^2 );
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #35
 % Define parameters
@@ -1986,8 +2034,11 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9 - 18)^2 + (18 - 18)^2 + (27 - 18)^2 ) / 18;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
 
 %% Test actual output #36
 % Define parameters
@@ -2013,5 +2064,8 @@ expVal = sqrt( 1 / (nVals - 1) ) * [
      sqrt( ( 9 - 18)^2 + (18 - 18)^2 + (27 - 18)^2 ) / 19;
 ];
 
+% Define tolerance
+tol = 5 * eps;
+
 % Test
-assert( all( all( all( abs( actVal - expVal ) < 5 * eps ) ) ), 'Unexpected output.' );
+assert( all( all( all( abs( actVal - expVal ) < tol ) ) ), 'Unexpected output.' );
