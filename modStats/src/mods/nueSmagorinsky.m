@@ -1,17 +1,17 @@
-function coeff = nueSmagorinsky(~, ~, ~, I1)
+function nue = nueSmagorinsky(~, ~, ~, I1)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the reduced coefficient of the Smagorinsky model.
+% Compute the reduced eddy viscosity of the Smagorinsky model.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% I1        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I1 = trace(S^2).
+% I1    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I1 = trace(S^2).
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% coeff     double -- Reduced model coefficient.
+% nue   double -- Reduced eddy viscosity.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -23,19 +23,19 @@ function coeff = nueSmagorinsky(~, ~, ~, I1)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the reduced model coefficient
+%% Compute the reduced eddy viscosity
 % Store the needed factor
 fact = I1;
 
 % Analytically, this factor is nonnegative
 % Check if the factor is positive numerically
 if fact > 0
-    % Yes, compute the reduced model coefficient, i.e., compute the model
-    % coefficient without model constant and length scale
-    coeff = sqrt(2 * I1);
+    % Yes, compute the reduced eddy viscosity, i.e., compute the eddy viscosity
+    % without model constant and length scale
+    nue = sqrt(2 * I1);
 else
-    % No, set the reduced model coefficient to zero
-    coeff = 0;
+    % No, set the reduced eddy viscosity to zero
+    nue = 0;
 end
 
 end

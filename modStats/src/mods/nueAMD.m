@@ -1,27 +1,27 @@
-function coeff = nueAMD(~, ~, ~, I1, I2, I3, I4)
+function nue = nueAMD(~, ~, ~, I1, I2, I3, I4)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the reduced coefficient of the isotropized version of the anisotropic 
-% minimum-dissipation eddy viscosity model.
+% Compute the reduced eddy viscosity of the isotropized version of the 
+% anisotropic minimum-dissipation model.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% I1        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I1 = trace(S^2).
+% I1    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I1 = trace(S^2).
 %
-% I2        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I2 = trace(W^2).
+% I2    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(W^2).
 %
-% I3        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I2 = trace(S^3).
+% I3    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(S^3).
 %
-% I4        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I2 = trace(S W^2).
+% I4    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(S W^2).
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% coeff     double -- Reduced model coefficient.
+% nue   double -- Reduced eddy viscosity.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -33,7 +33,7 @@ function coeff = nueAMD(~, ~, ~, I1, I2, I3, I4)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the reduced model coefficient
+%% Compute the reduced eddy viscosity
 % Compute the denominator
 den = I1 - I2;
 
@@ -44,13 +44,13 @@ num = -(I3 - I4);
 % indefinite
 % Check if the numerator and denominator are positive numerically
 if num > 0 && den > 0
-    % Yes, compute the reduced model coefficient, i.e., compute the model
-    % coefficient without model constant and length scale
-    coeff = num / den;
+    % Yes, compute the reduced eddy viscosity, i.e., compute the eddy viscosity
+    % without model constant and length scale
+    nue = num / den;
 else
-    % No, set the reduced model coefficient to zero (applying clipping for
+    % No, set the reduced eddy viscosity to zero (applying clipping for
     % positive I3 - I4)
-    coeff = 0;
+    nue = 0;
 end
 
 end

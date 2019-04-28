@@ -1,23 +1,23 @@
-function coeff = nueS3PQ(~, ~, ~, I1, I2, ~, ~, I5)
+function nue = nueS3PQ(~, ~, ~, I1, I2, ~, ~, I5)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the reduced coefficient of the S3PQ eddy viscosity model.
+% Compute the reduced eddy viscosity of the S3PQ model.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% I1        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I1 = trace(S^2).
+% I1    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I1 = trace(S^2).
 %
-% I2        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I2 = trace(W^2).
+% I2    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(W^2).
 %
-% I5        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I5 = trace(S^2 W^2).
+% I5    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I5 = trace(S^2 W^2).
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% coeff     double -- Reduced model coefficient.
+% nue   double -- Reduced eddy viscosity.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -29,7 +29,7 @@ function coeff = nueS3PQ(~, ~, ~, I1, I2, ~, ~, I5)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the reduced model coefficient
+%% Compute the reduced eddy viscosity
 % Compute the required invariants of G G^T
 PGGT = I1 - I2;
 QGGT = 1 / 4 * (I1 + I2)^2 + 4 * (I5 - 1 / 2 * I1 * I2);
@@ -43,12 +43,12 @@ num = QGGT;
 % Analytically, both the numerator and denominator are nonnegative
 % Check if the numerator and denominator are positive numerically
 if num > 0 && den > 0
-    % Yes, compute the reduced model coefficient, i.e., compute the model
-    % coefficient without model constant and length scale
-    coeff = num^(3 / 2) / den^(5 / 2);
+    % Yes, compute the reduced eddy viscosity, i.e., compute the eddy viscosity
+    % without model constant and length scale
+    nue = num^(3 / 2) / den^(5 / 2);
 else
-    % No, set the reduced model coefficient to zero
-    coeff = 0;
+    % No, set the reduced eddy viscosity to zero
+    nue = 0;
 end
 
 end

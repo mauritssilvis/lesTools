@@ -1,20 +1,20 @@
-function coeff = nueQR(~, ~, ~, I1, ~, I3)
+function nue = nueQR(~, ~, ~, I1, ~, I3)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the reduced coefficient of the QR eddy viscosity model.
+% Compute the reduced eddy viscosity of the QR model.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% I1        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I1 = trace(S^2).
+% I1    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I1 = trace(S^2).
 %
-% I3        double -- Combined invariant of the rate-of-strain and rate-of-
-%               rotation tensors given by I2 = trace(S^3).
+% I3    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(S^3).
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% coeff     double -- Reduced model coefficient.
+% nue   double -- Reduced eddy viscosity.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -26,7 +26,7 @@ function coeff = nueQR(~, ~, ~, I1, ~, I3)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the reduced model coefficient
+%% Compute the reduced eddy viscosity
 % Compute the denominator
 den = I1;
 
@@ -37,13 +37,13 @@ num = -I3;
 % indefinite
 % Check if the numerator and denominator are positive numerically
 if num > 0 && den > 0
-    % Yes, compute the reduced model coefficient, i.e., compute the model
-    % coefficient without model constant and length scale
-    coeff = 2 / 3 / 3 * num / den;
+    % Yes, compute the reduced eddy viscosity, i.e., compute the eddy viscosity
+    % without model constant and length scale
+    nue = 2 / 3 / 3 * num / den;
 else
-    % No, set the reduced model coefficient to zero (applying clipping for
-    % positive I3)
-    coeff = 0;
+    % No, set the reduced eddy viscosity to zero (applying clipping for positive
+    % I3)
+    nue = 0;
 end
 
 end
