@@ -77,7 +77,7 @@ assert(actPass == expPass, 'Refusing valid input.');
 
 %% Test valid input #5
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 precision = 10; % Prevent long run
 
 % Obtain actual pass state

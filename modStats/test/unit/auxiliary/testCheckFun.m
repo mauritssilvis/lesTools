@@ -478,7 +478,7 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #35
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 2;
 
 % Obtain value
@@ -492,7 +492,7 @@ assert( isa(val, expType), ['Output not of expected type ''', expType, '''.'] );
 
 %% Test output type #36
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 3;
 
 % Obtain value
@@ -1840,7 +1840,7 @@ assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output
 
 %% Test output size #35
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 2;
 
 % Obtain value
@@ -1857,7 +1857,7 @@ assert( numel( size(val) ) <= numel(expSize) && all(actSize == expSize), 'Output
 
 %% Test output size #36
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 3;
 
 % Obtain value
@@ -3268,7 +3268,7 @@ assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #35
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 2;
 
 % Obtain actual value
@@ -3282,7 +3282,7 @@ assert( all( all( all(actVal == expVal) ) ), 'Unexpected output.' );
 
 %% Test actual output #36
 % Define parameters
-fun = 'nueVS';
+fun = 'nueVortexStretching';
 spaceDims = 3;
 
 % Obtain actual value

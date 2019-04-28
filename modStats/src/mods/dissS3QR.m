@@ -1,9 +1,8 @@
-function nue = nueVS(~, ~, ~, I1, I2, ~, ~, I5)
+function diss = dissS3QR(~, ~, ~, I1, I2, I3, I4, I5)
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Compute the reduced eddy viscosity of the vortex-stretching-based eddy 
-% viscosity model.
+% Compute the reduced dissipation of kinetic energy of the S3PR model.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -13,12 +12,18 @@ function nue = nueVS(~, ~, ~, I1, I2, ~, ~, I5)
 % I2    double -- Combined invariant of the rate-of-strain and rate-of-
 %           rotation tensors given by I2 = trace(W^2).
 %
+% I3    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(S^3).
+%
+% I4    double -- Combined invariant of the rate-of-strain and rate-of-
+%           rotation tensors given by I2 = trace(S W^2).
+%
 % I5    double -- Combined invariant of the rate-of-strain and rate-of-
 %           rotation tensors given by I5 = trace(S^2 W^2).
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% nue   double -- Reduced eddy viscosity.
+% diss  double -- Reduced dissipation of kinetic energy.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -30,22 +35,19 @@ function nue = nueVS(~, ~, ~, I1, I2, ~, ~, I5)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Compute the reduced eddy viscosity
-% Compute the denominator
-den = -I1 * I2;
+%% Compute the reduced dissipation of kinetic energy
+% Store the needed factor
+fact = I1;
 
-% Compute the numerator
-num = I5 - 1 / 2 * I1 *I2;
-
-% Analytically, both the numerator and denominator are nonnegative
-% Check if the numerator and denominator are positive numerically
-if num > 0 && den > 0
-    % Yes, compute the reduced eddy viscosity, i.e., compute the eddy viscosity
+% Analytically, this factor is nonnegative
+% Check if the factor is positive numerically
+if fact > 0
+    % Yes, compute the reduced dissipation, i.e., compute the dissipation
     % without model constant and length scale
-    nue = sqrt(2 * I1) * ( num / den )^(3 / 2);
+    diss = 2 * I1 * feval('nueS3QR', [], [], [], I1, I2, I3, I4, I5);
 else
-    % No, set the reduced eddy viscosity to zero
-    nue = 0;
+    % No, set the reduced dissipation to zero
+    diss = 0;
 end
 
 end
