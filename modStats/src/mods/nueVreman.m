@@ -36,10 +36,10 @@ PGGT = I1 - I2;
 QGGT = 1 / 4 * (I1 + I2)^2 + 4 * (I5 - 1 / 2 * I1 * I2);
 
 % Store the denominator
-den = PGGT
+den = PGGT;
 
 % Store the numerator
-num = QGGT
+num = QGGT;
 
 % Analytically, both the numerator and denominator are nonnegative
 % Check if the numerator and denominator are positive numerically
@@ -49,7 +49,7 @@ if num > 0 && den > 0
     nue = sqrt(num / den);
 else
     % No, set the reduced eddy viscosity to zero
-    nue = 0
+    nue = 0;
 end
 
 end
