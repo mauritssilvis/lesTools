@@ -13,7 +13,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %
 % fun           function file name or handle -- A function of the velocity
 %                   gradient.
-%                   This function should should accept between 1 and 9 
+%                   This function should accept between 1 and 9 
 %                   arguments. The first argument should be 
 %                   - the velocity gradient G (a matrix).
 %                   The next arguments, if present, are assumed to be
@@ -62,7 +62,7 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   Default: 3.
 %
 % flowDims      vector of positive ints -- Flow dimensions.
-%                   Examples: [1, 2] or [1, 2, 3].
+%                   Examples: [1, 2], [1, 2, 3], ...
 %                   Default: [1, 2, 3].
 %
 % makeIncompr   bool -- Make the velocity gradients incompressible (traceless)
