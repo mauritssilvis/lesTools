@@ -116,7 +116,7 @@ If valid input is provided, the script produces one output variable:
 
 More details on the usage of this script will be provided through this readme in the near future.
 
-Depending on your purposes, please consider citing the work by Silvis et al. [[6](#silvisetal2017ms)], Silvis and Verstappen [[7](#silvisverstappenndms)] and/or Silvis et al. [[8](#silvisetal2019ms)] when making use of the `modStats` module.
+Depending on your purposes, please consider citing the work by Silvis et al. [[6](#silvisetal2017ms)] and/or Silvis et al. [[8](#silvisetal2019ms)] when making use of the `modStats` module.
 
 ### More information
 
