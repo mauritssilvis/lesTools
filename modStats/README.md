@@ -23,7 +23,7 @@ To obtain an estimate of the model constant of the nonlinear term, we then compa
 ## Module
 
 The `modStats` module provides scripts that facilitate the determination of the average dissipation and the average model coefficients of subgrid-scale models.
-As such, this module can be used to determine the model constants of subgrid-scale models [[7](#silvisverstappennd), [8](#silvisetal2019)].
+As such, this module can be used to determine the model constants of subgrid-scale models [[6](#silvisetal2017), [7](#silvisverstappennd), [8](#silvisetal2019)].
 More generally, the `modStats` module can be used to study the average behavior of any quantity that is based on the velocity gradient of a turbulent flow.
 
 ## Usage
@@ -34,21 +34,74 @@ Usage was tested in `MATLAB R2018a`.
 The main function of the `modStats` module can be found in the script [modStats.m](src/modStats.m).
 This function has one required argument:
 
-* `fun`: This argument should be the file name of a function or a function handle, representing a function of the velocity gradient.
-This function should accept between 1 and 9 arguments. 
-The first argument should be 
-    + the velocity gradient `G` (a matrix).
-The next arguments, if present, are assumed to be
-    + the rate-of-strain tensor `S` (a matrix),
-    + the rate-of-rotation tensor `W` (a matrix),
-and the following scalar combined invariants of the 
-rate-of-strain and rate-of-rotation tensors:
-    + `I1 = trace(S^2)`,
-    + `I2 = trace(W^2)`,
-    + `I3 = trace(S^3)`,
-    + `I4 = trace(S W^2)`,
-    + `I5 = trace(S^2 W^2)`,
-    + `I6 = trace(S^2 W^2 S W)`.
+* `fun`
+    + This argument should be the file name of a function or a function handle, representing a function of the velocity gradient.
+    + This function should accept between 1 and 9 arguments. 
+    + The first argument should be 
+        - the velocity gradient `G` (a matrix).
+    + The next arguments, if present, are assumed to be
+        - the rate-of-strain tensor `S` (a matrix),
+        - the rate-of-rotation tensor `W` (a matrix),
+    + and the following scalar combined invariants of the rate-of-strain and rate-of-rotation tensors:
+        - `I1 = trace(S^2)`,
+        - `I2 = trace(W^2)`,
+        - `I3 = trace(S^3)`,
+        - `I4 = trace(S W^2)`,
+        - `I5 = trace(S^2 W^2)`,
+        - `I6 = trace(S^2 W^2 S W)`.
+
+The function in [modStats.m](src/modStats.m) additionally has a number of optional arguments:
+
+* `precision`
+    + A nonnegative double that marks the desired minimal relative standard deviation of the statistical data.
+    + Examples: `10^-2`, `10^-4`, ...
+    + Default: `10^-4`.
+    + If set to zero, the number of velocity gradients per sample, `nGrads`, is not adaptively increased. In this case, `nGrads` has to be specified manually.
+* `nSamples`
+    + A positive integer signifying the desired number of samples.
+    + Examples: `10`, `100`, `1000`, ...
+    + Default: `100`.
+* `nGrads`
+    + A positive integer denoting the desired number of velocity gradients per sample.
+    + Examples: `10^2`, `10^4`, `10^6`, ...
+    + Default: `10^6`.
+    + If `precision` is zero, `nGrads` is not adaptively increased. If `precision` is nonzero, the value of `nGrads` represents the initial number of velocity gradients per sample.
+* `gradsFun`
+    + A function name or handle of a generator of velocity gradients.
+    + Examples: `'unifMats'`, `'normMats'`, a custom function reading velocity gradients from a file, etc.
+    + Default: `'unifMats'`.
+* `spaceDims`
+    + A positive integer that denotes the number of spatial dimensions.
+    + Examples: `2` or `3`.
+    + Default: `3`.
+* `flowDims`
+    + A vector of positive integers that mark the flow dimensions.
+    + Examples: `[1, 2]`, `[1, 2, 3]`, ...
+    + Default: `[1, 2, 3]`.
+* `makeIncompr`
+    + A boolean that signals if velocity gradients have to be made incompressible (traceless) or not.
+    + Default: `true`.
+* `checkIncompr`
+    + A boolean that tells if the incompressibility of velocity gradients has to be checked or not.
+    + Default: `false`.
+* `shiftAvg`
+    + A double that can be set to shift any computed averages.
+    + Examples: `0`, `1`, `10`, ...
+    + Default: `1`.
+    + If averages of the physical quantity of interest are small, their relative standard deviation may not reach the desired precision. The averages will then be shifted by `shiftAvg`.
+
+If valid input is provided, the script produces one output variable:
+
+* `stats`
+    + A struct that contains all the provided input arguments, the default values of any unspecified input arguments and the following statistical data:
+        - `avgs`: the sample averages of the physical quantity,
+        - `avg`: the average of the sample averages,
+        - `dev`: the standard deviation of the sample averages,
+        - `relDev`: the relative standard deviation of the sample averages,
+        - `relDevShift`: the relative standard deviation of the shifted sample averages,
+        - `hasPrecision`: a flag that tells if the data have the desired precision.
+
+Depending on your purposes, please consider citing the work by Silvis et al. [[6](#silvisetal2017)], Silvis and Verstappen [[7](#silvisverstappennd)] and/or Silvis et al. [8](#silvisetal2019)] when making use of the `modStats` module.
 
 ## More information
 
