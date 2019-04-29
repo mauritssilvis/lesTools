@@ -9,10 +9,16 @@ In large-eddy simulation, the large scales of motion in flows are explicitly com
 Most subgrid-scale models can, however, only be used in a practical large-eddy simulation, once the value of one or more model constants has been determined.
 
 The model constants of eddy viscosity models can be estimated using a straight-forward dissipation argument.
-One simply requires that the average subgrid dissipation due to an eddy viscosity model matches the average dissipation of the Smagorinsky model [[3](#nicoudducros1999), [4](#nicoudetal2011), [5](#triasetal2015), [6](#silvis-pof17)].
+One simply requires that the average subgrid dissipation due to an eddy viscosity model matches the average dissipation of the Smagorinsky model [[3](#nicoudducros1999), [4](#nicoudetal2011), [5](#triasetal2015), [6](#silvisetal2017)].
 The average subgrid dissipation of a subgrid-scale model can, for example, be computed using the velocity field of a homogeneous isotropic turbulent flow, either coming from an experiment or a numerical simulation [[3](#nicoudducros1999)].
-Alternatively, the subgrid dissipation can be estimated using a large number of synthetic velocity gradients, given by random matrices [[4](#nicoudetal2011), [5](#triasetal2015)] that may be sampled from a uniform distribution [[6](#silvis-pof17)].
-One can subsequently equate the average subgrid dissipation from the eddy viscosity model of interest with the average dissipation of the Smagorinsky model to obtain an estimate of the sought model constant in terms of the Smagorinsky constant.
+Alternatively, the subgrid dissipation can be estimated using a large number of synthetic velocity gradients, given by random matrices [[4](#nicoudetal2011), [5](#triasetal2015)] that may be sampled from a uniform distribution [[6](#silvisetal2017)].
+One subsequently equates the average subgrid dissipation from the eddy viscosity model of interest with the average dissipation of the Smagorinsky model to obtain an estimate of the sought model constant in terms of the Smagorinsky constant.
+
+The above dissipation estimate cannot be used to determine the model constant of subgrid-scale model terms that are nondissipative.
+Consider, for example, nonlinear terms that are proportional to the commutator of the rate-of-strain and rate-of-rotation tensors [[7](#silvisverstappennd), [8](#silvisetal2019)].
+We can, however, determine the desired order of magnitude of the model constant of such a nonlinear term as follows [[8](#silvisetal2019)].
+We first determine the average value of the coefficient that accompanies the nonlinear term by using a large number of synthetic velocity gradients.
+To obtain an estimate of the model constant of the nonlinear term, we then compare this average with the proportionality constant of 1 / 12 of the same nonlinear term in the gradient model, which forms the lowest-order Taylor series approximation of the turbulent stress tensor in terms of the filter length.
 
 ## Module
 
@@ -46,7 +52,9 @@ Mirko Signorelli is kindly acknowledged for his assistance in determining the ac
 
 6. **Silvis**, M. H., Remmerswaal, R. A. and Verstappen, R. (2017). <a name="silvisetal2017"></a> “Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows”. *Physics of Fluids* 29, 015105. DOI: [10.1063/1.4974093](http://doi.org/10.1063/1.4974093).
 
-7. **Silvis**, M. H., Bae, H. J., Trias, F. X., Abkar, M., Verstappen, R. (2019). <a name="silvisetal2019"></a> &#8220;A nonlinear subgrid-scale model for large-eddy simulations of rotating turbulent flows&#8221;. *arXiv* [physics.flu-dyn]. (submitted). 
+7. **Silvis**, M. H. and Verstappen, R. (n.d.). <a name="silvisverstappennd"></a> “Creating physics-based turbulence models for large-eddy simulation”. (in preparation).
+
+8. **Silvis**, M. H., Bae, H. J., Trias, F. X., Abkar, M., Verstappen, R. (2019). <a name="silvisetal2019"></a> &#8220;A nonlinear subgrid-scale model for large-eddy simulations of rotating turbulent flows&#8221;. *arXiv* [physics.flu-dyn]. (submitted). 
 
 ## License
 
