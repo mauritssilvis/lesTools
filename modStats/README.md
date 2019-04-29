@@ -17,11 +17,14 @@ One subsequently equates the average subgrid dissipation from the eddy viscosity
 The above dissipation estimate cannot be used to determine the model constant of subgrid-scale model terms that are nondissipative.
 Consider, for example, nonlinear terms that are proportional to the commutator of the rate-of-strain and rate-of-rotation tensors [[7](#silvisverstappennd), [8](#silvisetal2019)].
 We can, however, determine the desired order of magnitude of the model constant of such a nonlinear term as follows [[8](#silvisetal2019)].
-We first determine the average value of the coefficient that accompanies the nonlinear term by using a large number of synthetic velocity gradients.
+We first determine the average value of the coefficient that accompanies the nonlinear term.
 To obtain an estimate of the model constant of the nonlinear term, we then compare this average with the proportionality constant of 1 / 12 of the same nonlinear term in the gradient model, which forms the lowest-order Taylor series approximation of the turbulent stress tensor in terms of the filter length.
 
 ## Module
 
+The `modStats` module provides scripts that facilitate the determination of the average dissipation and the average model coefficients of subgrid-scale models.
+As such, this module can be used to determine the model constants of subgrid-scale models [[7](#silvisverstappennd), [8](#silvisetal2019)].
+More generally, the `modStats` module can be used to study the average behavior of any quantity that is based on the velocity gradient of a turbulent flow.
 
 ## Usage
 
@@ -29,6 +32,23 @@ To use the scripts of the `modStats` module, one needs `MATLAB`.
 Usage was tested in `MATLAB R2018a`.
 
 The main function of the `modStats` module can be found in the script [modStats.m](src/modStats.m).
+This function has one required argument:
+
+* `fun`: This argument should be the file name of a function or a function handle, representing a function of the velocity gradient.
+This function should accept between 1 and 9 arguments. 
+The first argument should be 
+    + the velocity gradient `G` (a matrix).
+The next arguments, if present, are assumed to be
+    + the rate-of-strain tensor `S` (a matrix),
+    + the rate-of-rotation tensor `W` (a matrix),
+and the following scalar combined invariants of the 
+rate-of-strain and rate-of-rotation tensors:
+    + `I1 = trace(S^2)`,
+    + `I2 = trace(W^2)`,
+    + `I3 = trace(S^3)`,
+    + `I4 = trace(S W^2)`,
+    + `I5 = trace(S^2 W^2)`,
+    + `I6 = trace(S^2 W^2 S W)`.
 
 ## More information
 
