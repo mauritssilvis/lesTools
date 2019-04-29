@@ -39,8 +39,6 @@ function quants = compQuants(grads, nQuants)
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Check input
-
 %% Initialize variables
 % Size of gradients matrix
 sGrads = size(grads);
