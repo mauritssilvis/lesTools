@@ -6,12 +6,13 @@ function mats = normMats(~, nMats, dims)
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% nMats     int -- Desired number matrices
-% dims      int -- Desired matrix dimensions
+% nMats     int -- Desired number matrices.
+%
+% dims      int -- Desired matrix dimensions.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% mats      array of matrices of doubles -- Random matrices
+% mats      array of matrices of doubles -- Random matrices.
 %
 % LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

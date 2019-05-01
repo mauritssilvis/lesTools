@@ -8,22 +8,6 @@ function funVals = evalFun(fun, quants)
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % fun       function name or handle -- A function of the velocity gradient.
-%               This function should should accept between 1 and 9 arguments.
-%               The first argument should be 
-%               - the velocity gradient G (a matrix).
-%               The next arguments, if present, are assumed to be
-%               - the rate-of-strain tensor S (a matrix),
-%               - the rate-of-rotation tensor W (a matrix),
-%               and the following scalar combined invariants of the 
-%               rate-of-strain and rate-of-rotation tensors:
-%               - I1 = trace(S^2),
-%               - I2 = trace(W^2),
-%               - I3 = trace(S^3),
-%               - I4 = trace(S W^2),
-%               - I5 = trace(S^2 W^2),
-%               - I6 = trace(S^2 W^2 S W).
-%               Examples:
-%                   ...
 %
 % quants    cell of array of matrices -- Quantities derived from the velocity 
 %               gradient as obtained from compQuants().
