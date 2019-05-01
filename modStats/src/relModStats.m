@@ -1,17 +1,19 @@
-function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
-    spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg ...
+function relStats = relModStats(fun1, fun2, precision, nSamples, nGrads, ...
+    gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg1, ...
+    shiftAvg2 ...
 )
 
 % DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Determine the average behavior of a physical quantity that depends on the
-% velocity gradient of a turbulent flow.
+% Determine the average behavior of a physical quantity that depends on the 
+% velocity gradient of a turbulent flow relative to the average behavior of a 
+% different velocity-gradient-based physical quantity.
 %
 % INPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Required input arguments:
 %
-% fun           function file name or handle -- A function of the velocity
+% fun1          function file name or handle -- A function of the velocity
 %                   gradient.
 %                   This function should accept between 1 and 9 
 %                   arguments. The first argument should be 
@@ -29,6 +31,13 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   - I6 = trace(S^2 W^2 S W).
 %                   Examples:
 %                       ...
+%
+% fun2          function file name or handle -- Another function of the velocity
+%                   gradient.
+%                   This function should have the same units as the first 
+%                   function.
+%                   Like the first function, this function should accept between
+%                   1 and 9 of the arguments listed above.
 %
 % Optional input arguments:
 %
@@ -73,22 +82,31 @@ function stats = modStats(fun, precision, nSamples, nGrads, gradsFun, ...
 %                   or not.
 %                   Default: false.
 %
-% shiftAvg      double -- Shift to apply to averages.
+% shiftAvg1     double -- Shift to apply to averages of the first function.
 %                   Examples: 0, 1, 10, ...
 %                   Default: 1.
 %                   If averages of the physical quantity of interest are small, 
 %                   their relative standard deviation may not reach the desired
-%                   precision. The averages will then be shifted by 'shiftAvg'.
+%                   precision. The averages will then be shifted by 'shiftAvg1'.
+%
+% shiftAvg2     double -- Shift to apply to averages of the second function.
+%                   Examples: 0, 1, 10, ...
+%                   Default: 1.
+%                   If averages of the physical quantity of interest are small, 
+%                   their relative standard deviation may not reach the desired
+%                   precision. The averages will then be shifted by 'shiftAvg2'.
 %
 % OUTPUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% stats         struct -- Statistical data about the physical quantity of
-%                   interest.
+% relStats      struct -- Statistical data about the physical quantity of
+%                   interest relative to another physical quantity.
 %                   This structure contains all the provided input arguments, 
 %                   the default values of any unspecified input arguments and 
 %                   the following statistical data:
-%                   - avgs: sample averages of the physical quantity,
-%                   - avg: average of the sample averages,
+%                   - avgs: sample averages of the physical quantity relative
+%                       to another physical quantity,
+%                   - avg: average of the sample averages relative to another
+%                       average,
 %                   - dev: standard deviation of the sample averages,
 %                   - relDev: relative standard deviation of the sample 
 %                       averages,
@@ -114,20 +132,29 @@ scriptPath = fileparts( which(mfilename) );
 addpath( fullfile(scriptPath, 'auxiliary') );
 
 %% Check input arguments
-% Check if 'fun' is provided
-if nargin < 1 || isempty(fun)
+% Check if 'fun1' is provided
+if nargin < 1 || isempty(fun1)
     % No, error
     error( ...
         ['Please provide a file name or handle of a valid function of the ', ...
-         'velocity gradient for ''fun''.'] ...
+         'velocity gradient for ''fun1''.'] ...
     );
 end
 
-% Check if 'fun' represents a valid function of the velocity gradient
+% Check if 'fun2' is provided
+if nargin < 2 || isempty(fun2)
+    % No, error
+    error( ...
+        ['Please provide a file name or handle of a valid function of the ', ...
+         'velocity gradient for ''fun2''.'] ...
+    );
+end
+
+% Check if 'fun1' and 'fun2' represent valid functions of the velocity gradient
 % See below
 
 % Check if 'precision' is provided
-if nargin < 2 || isempty(precision)
+if nargin < 3 || isempty(precision)
     % No, set the default value
     precision = 10^-4;
 end
@@ -154,7 +181,7 @@ if ( ~isa(precision, 'double') || numel( size(precision) ) ~= 2 || ...
 end
 
 % Check if 'nSamples' is provided
-if nargin < 3 || isempty(nSamples)
+if nargin < 4 || isempty(nSamples)
     % No, set the default value
     nSamples = 100;
 end
@@ -172,7 +199,7 @@ if ~isa(nSamples, 'double') || numel( size(nSamples) ) ~= 2 || ...
 end
 
 % Check if 'nGrads' is provided
-if nargin < 4 || isempty(nGrads)
+if nargin < 5 || isempty(nGrads)
     % No, check if 'nGrads' should have been provided
     if fixNGrads
         % Yes, error
@@ -199,7 +226,7 @@ if ~isa(nGrads, 'double') || numel( size(nGrads) ) ~= 2 || ...
 end
 
 % Check if 'gradsFun' is provided
-if nargin < 5 || isempty(gradsFun)
+if nargin < 6 || isempty(gradsFun)
     % No, set the default value
     gradsFun = 'unifMats';
 end
@@ -208,7 +235,7 @@ end
 % See below
 
 % Check if 'spaceDims' is provided
-if nargin < 6 || isempty(spaceDims)
+if nargin < 7 || isempty(spaceDims)
     % No, set the default value
     spaceDims = 3;
 end
@@ -226,7 +253,7 @@ if ~isa(spaceDims, 'double') || numel( size(spaceDims) ) ~= 2 || ...
 end
 
 % Check if 'flowDims' is provided
-if nargin < 7 || isempty(flowDims)
+if nargin < 8 || isempty(flowDims)
     % No, set the default value
     flowDims = 1 : spaceDims;
 end
@@ -245,7 +272,7 @@ if ~isa(flowDims, 'double') || numel( size(flowDims) ) ~= 2 || ...
 end
 
 % Check if 'makeIncompr' is provided
-if nargin < 8 || isempty(makeIncompr)
+if nargin < 9 || isempty(makeIncompr)
     % No, set the default value
     makeIncompr = true;
 end
@@ -262,7 +289,7 @@ if ~isa(makeIncompr, 'logical') || numel( size(makeIncompr) ) ~= 2 || ...
 end
 
 % Check if 'checkIncompr' is provided
-if nargin < 9 || isempty(checkIncompr)
+if nargin < 10 || isempty(checkIncompr)
     % No, set the default value
     checkIncompr = false;
 end
@@ -278,30 +305,57 @@ if ~isa(checkIncompr, 'logical') || numel( size(checkIncompr) ) ~= 2 || ...
     );
 end
 
-% Check if 'shiftAvg' is provided
-if nargin < 10 || isempty(shiftAvg)
+% Check if 'shiftAvg1' is provided
+if nargin < 11 || isempty(shiftAvg1)
     % No, set the default value
-    shiftAvg = 1;
+    shiftAvg1 = 1;
 end
 
-% Check if 'shiftAvg' is a double
-if ~isa(shiftAvg, 'double') || numel( size(shiftAvg) ) ~= 2 || ...
-    any( size(shiftAvg) ~= [1 1] )
+% Check if 'shiftAvg1' is a double
+if ~isa(shiftAvg1, 'double') || numel( size(shiftAvg1) ) ~= 2 || ...
+    any( size(shiftAvg1) ~= [1 1] )
 
     % No, error
     error( ...
-        ['Please provide a double for ''shiftAvg'' or leave empty for ', ...
+        ['Please provide a double for ''shiftAvg1'' or leave empty for ', ...
          'the default value.'] ...
     );
 end
 
-% Check if 'fun' represents a valid function of the velocity gradient
-[state, msg] = checkFun(fun, spaceDims);
+% Check if 'shiftAvg2' is provided
+if nargin < 12 || isempty(shiftAvg2)
+    % No, set the default value
+    shiftAvg2 = 1;
+end
+
+% Check if 'shiftAvg2' is a double
+if ~isa(shiftAvg2, 'double') || numel( size(shiftAvg2) ) ~= 2 || ...
+    any( size(shiftAvg2) ~= [1 1] )
+
+    % No, error
+    error( ...
+        ['Please provide a double for ''shiftAvg2'' or leave empty for ', ...
+         'the default value.'] ...
+    );
+end
+
+% Check if 'fun1' represents a valid function of the velocity gradient
+[state, msg] = checkFun(fun1, spaceDims);
 if state
     error( ...
         [msg, newline, ...
          'Please provide a file name or handle of a valid function of the ', ...
-         'velocity gradient for ''fun''.'] ...
+         'velocity gradient for ''fun1''.'] ...
+    );
+end
+
+% Check if 'fun2' represents a valid function of the velocity gradient
+[state, msg] = checkFun(fun2, spaceDims);
+if state
+    error( ...
+        [msg, newline, ...
+         'Please provide a file name or handle of a valid function of the ', ...
+         'velocity gradient for ''fun2''.'] ...
     );
 end
 
@@ -316,49 +370,6 @@ if state
     );
 end
 
-%% Initialize variables
-% Loop flag
-loop = true;
 
-% Loop index
-ix = 1;
-
-% Empty data
-emptyData = repmat( {[]}, 1, 16 );
-
-% Storage
-stats(20) = storeStats( emptyData{:} );
-
-%% Compute statistics
-% Loop until the desired end state has been reached
-while loop
-
-    % Obtain statistics
-    [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, nGrads, ...
-        gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
-
-    % Determine if the desired precision has been reached
-    hasPrecision = checkPrecision(relDev, relDevShift, precision);
-
-    % Store data
-    stats(ix) = storeStats(fun, precision, nSamples, nGrads, gradsFun, ...
-        spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg, avgs, avg, ...
-        dev, relDev, relDevShift, hasPrecision);
-
-    % Check if the desired precision has been reached
-    if hasPrecision
-        % Yes, set the loop flag to false
-        loop = false;
-    else
-        % No, increase the number of velocity gradients per sample
-        nGrads = nGrads * 10;
-
-        % Increase the loop index
-        ix = ix + 1;
-    end
-end
-
-%% Truncate output variable
-stats(ix + 1 : end) = [];
 
 end
