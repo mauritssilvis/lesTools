@@ -77,8 +77,7 @@ This function, which can be used to compute the average of a physical quantity t
         - the function handle `@(G, S, W, I1) = sqrt(2 * I1)` or, equivalently, the file name `'nueSmagorinsky'` of the example function in the [mods](modStats/src/mods) folder: the reduced eddy viscosity of the Smagorinsky model, i.e., the eddy viscosity without the model constant and the squared length scale;
         - the file names `'nueAMD'`, `'nueQR'`, `'nueS3PQ'`, `'nueS3PR'`, `'nueS3QR'`, `'nueVortexStretching'`, `'nueVreman'` or `'nueWALE'`: the reduced eddy viscosity of several other example eddy viscosity models in the [mods](modStats/src/mods) folder;
         - `@(G, S, W, I1) = 2 * I1 * sqrt(2 * I1)` or `'dissSmagorinsky'`: the reduced dissipation of kinetic energy of the Smagorinsky model, i.e., the dissipation without model constant and squared length scale;
-        - the file names `'dissAMD'`, `'dissQR'`, `'dissS3PQ'`, `'dissS3PR'`, `'dissS3QR'`, `'dissVortexStretching'`, `'dissVreman'` or `'dissWALE'`: the reduced dissipation of kinetic energy of several other example eddy viscosity models in the [mods](modStats/src/mods) folder;
-        - etc.
+        - the file names `'dissAMD'`, `'dissQR'`, `'dissS3PQ'`, `'dissS3PR'`, `'dissS3QR'`, `'dissVortexStretching'`, `'dissVreman'` or `'dissWALE'`: the reduced dissipation of kinetic energy of several other example eddy viscosity models in the [mods](modStats/src/mods) folder.
 
 The `modStats()` function additionally has a number of optional arguments:
 
@@ -102,8 +101,7 @@ The `modStats()` function additionally has a number of optional arguments:
     + Examples: 
         - the file name `'unifMats'`: a function that returns matrices with elements that are uniformly distributed on the interval [-1, 1], representing random velocity gradients; 
         - `'normMats'`: a function that returns matrices with elements that are distributed according to the standard normal distribution, representing random velocity gradients;
-        - a custom function reading velocity gradients from a file;
-        - etc.
+        - a custom function reading velocity gradients from a file.
     + Default: `'unifMats'`.
 * `spaceDims`
     + A positive integer that denotes the number of spatial dimensions.
