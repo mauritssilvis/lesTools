@@ -332,7 +332,6 @@ stats(20) = storeStats( emptyData{:} );
 %% Compute statistics
 % Loop until the desired end state has been reached
 while loop
-
     % Obtain statistics
     [avgs, avg, dev, relDev, relDevShift] = getStats(fun, nSamples, nGrads, ...
         gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);

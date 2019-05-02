@@ -103,15 +103,10 @@ function relStats = relModStats(fun1, fun2, precision, nSamples, nGrads, ...
 %                   This structure contains all the provided input arguments, 
 %                   the default values of any unspecified input arguments and 
 %                   the following statistical data:
-%                   - avgs: sample averages of the physical quantity relative
-%                       to another physical quantity,
-%                   - avg: average of the sample averages relative to another
-%                       average,
-%                   - dev: standard deviation of the sample averages,
-%                   - relDev: relative standard deviation of the sample 
-%                       averages,
-%                   - relDevShift: relative standard deviation of the shifted  
-%                       sample averages,
+%                   - relAvg: average of the first physical quantity relative to
+%                       the average of the second physical quantity,
+%                   - relDev: relative standard deviation of the computed ratio
+%                       of averages,
 %                   - hasPrecision: flag that tells if the desired precision has
 %                       been reached.
 %
@@ -370,6 +365,59 @@ if state
     );
 end
 
+%% Initialize variables
+% Required precision per physical quantity
+reqPrecision = precision / sqrt(2);
 
+%% Compute statistics
+% Determine the average behavior of the first physical quantity
+stats1 = modStats(fun1, reqPrecision, nSamples, nGrads, gradsFun, ...
+    spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg1);
+
+% Determine the behavior of the second physical quantity
+stats2 = modStats(fun2, reqPrecision, nSamples, nGrads, gradsFun, ...
+    spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg2);
+
+%% Extract variables
+% Averages
+avg1 = stats1.avg;
+avg2 = stats2.avg;
+
+% Relative standard deviation of the first physical quantity
+% Determine if the relative standard deviation of the unshifted averages is 
+% smaller than the relative standard deviation of the shifted averages
+if sum( sum(stats1.relDev < stats1.relDevShift) ) >= numel(stats1.relDev) / 2
+    % Yes, store the relative standard deviation of the unshifted averages
+    relDev1 = stats1.relDev;
+else
+    % No, store the relative standard deviation of the shifted averages
+    relDev1 = stats1.relDevShift;
+end
+
+% Relative standard deviation of the second physical quantity
+% Determine if the relative standard deviation of the unshifted averages is 
+% smaller than the relative standard deviation of the shifted averages
+if sum( sum(stats2.relDev < stats2.relDevShift) ) >= numel(stats2.relDev) / 2
+    % Yes, store the relative standard deviation of the unshifted averages
+    relDev2 = stats2.relDev;
+else
+    % No, store the relative standard deviation of the shifted averages
+    relDev2 = stats2.relDevShift;
+end
+
+%% Obtain relative statistics
+% Relative average
+relAvg = avg1 ./ avg2;
+
+% Relative standard deviation
+relDev = sqrt(relDev1.^2 + relDev2.^2);
+
+% Determine if the desired precision has been reached
+hasPrecision = checkPrecision(relDev, relDev, precision);
+
+% Store data
+relStats = storeRelStats(fun1, fun2, precision, nSamples, nGrads, gradsFun, ...
+    spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg1, shiftAvg2, ...
+    relAvg, relDev, hasPrecision);
 
 end
