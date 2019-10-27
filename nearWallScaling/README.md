@@ -2,12 +2,12 @@
 
 ## nearWallScaling
 
-> A tool to study the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows
+> A tool to study the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows
 
 ### About
 
 This document describes in detail how to use the `MATLAB` scripts of the `nearWallScaling` module of `lesTools`.
-For more information about this module, see the `lesTools` [readme](../README.md).
+For background information about this module, see the `lesTools` [readme](../README.md).
 
 ### Usage
 

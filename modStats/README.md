@@ -7,7 +7,7 @@
 ### About
 
 This document describes in detail how to use the `MATLAB` scripts of the `modStats` module of `lesTools`.
-For more information about this module, see the `lesTools` [readme](../README.md).
+For background information about this module, see the `lesTools` [readme](../README.md).
 
 ### Usage
 

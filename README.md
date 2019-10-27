@@ -8,16 +8,16 @@
 
 Currently, `lesTools` consists of two modules:
 
-1. [modStats](#modStats)
-2. [nearWallScaling](#nearwallscaling)
+1. the model statistics module [modStats](#modStats);
+2. the near-wall scaling module [nearWallScaling](#nearwallscaling).
 
-## modStats
+## Model statistics module `modStats`
 
 > A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
 
 ### About
 
-The `modStats` module of `lesTools` is a tool that can be used to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows.
+The `modStats` module is a tool that can be used to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows.
 As such, this module can be used to estimate the model constants of subgrid-scale models for large-eddy simulation.
 
 ### Background
@@ -54,9 +54,14 @@ Depending on your purposes, please consider citing the work by Silvis et al. [[6
 
 Mirko Signorelli is kindly acknowledged for his assistance in determining the accuracy of the model statistics.
 
-## nearWallScaling
+## Near-wall scaling behavior `nearWallScaling`
 
-> A tool to study the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows
+> A tool to study the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows
+
+### About
+
+The `nearWallScaling` module of `lesTools` is a tool to study the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows.
+This module can, for example, be used to analyze the near-wall scaling behavior of subgrid-scale models.
 
 ### Background
 
@@ -72,7 +77,7 @@ The expansion of the velocity field can be inserted in subgrid-scale models (or 
 
 ### Module
 
-The `nearWallScaling` module, which can be found in the [nearWallScaling](nearWallScaling) folder of this toolbox, facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows [[6](#silvisetal2017), [7](#silvisverstappennd)].
+The `nearWallScaling` module facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows [[6](#silvisetal2017), [7](#silvisverstappennd)].
 
 ### Usage
 
