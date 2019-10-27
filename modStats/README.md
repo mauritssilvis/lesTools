@@ -1,11 +1,13 @@
-# lesTools usage information
+# Usage information
 
 ## modStats
 
+> A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
+
 ### About
 
-This document describes in detail how the MATLAB scripts of the `modStats` module of `lesTools` can be used.
-For more information about this module, see the `lesTools` readme in the [top-level folder](../).
+This document describes in detail how to use the `MATLAB` scripts of the `modStats` module of `lesTools`.
+For more information about this module, see the `lesTools` [readme](../README.md).
 
 ### Usage
 

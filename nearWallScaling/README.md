@@ -1,24 +1,15 @@
-# nearWallScaling
+# Usage information
+
+## nearWallScaling
 
 > A tool to study the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows
 
-## Background
+### About
 
-Using numerical simulations, Chapman and Kuhn [[1](#chapmankuhn1986nws)] revealed the limiting power-law behavior of incompressible turbulence near a solid wall.
-Among other things, they determined the scaling behavior of the Reynolds stresses in terms of the wall-normal distance.
-To ensure that, for example, the dissipation of kinetic energy near solid walls is properly captured, subgrid-scale models for the turbulent stresses should exhibit the same asymptotic near-wall behavior as the Reynolds stresses [[2](#nicoudetal2011nws), [3](#triasetal2015nws), [4](#silvisetal2017nws), [5](#silvisverstappenndnws)].
+This document describes in detail how to use the `MATLAB` scripts of the `nearWallScaling` module of `lesTools`.
+For more information about this module, see the `lesTools` [readme](../README.md).
 
-The near-wall behavior of subgrid-scale models can be studied by expanding the components of the velocity field in terms of the wall-normal coordinate [[3](#triasetal2015nws)].
-Due to the no-slip condition, the zeroth-order terms in these expansions have to vanish.
-By incompressibility, the first-order term in the expansion of the wall-normal velocity component then also has to vanish.
-The tangential velocity components will, thus, be first order in the wall-normal coordinate, while the wall-normal velocity component exhibits a second-order near-wall scaling.
-The expansion of the velocity field can be inserted in subgrid-scale models (or other physical quantities based on the velocity field) to study their behavior near a solid wall.
-
-## Module
-
-The `nearWallScaling` module facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows [[4](#silvisetal2017nws), [5](#silvisverstappenndnws)].
-
-## Usage
+### Usage
 
 To use the scripts of the `nearWallScaling` module, one needs `MATLAB` with the `symbolic` toolbox.
 Usage was tested in `MATLAB R2018a`.
@@ -66,24 +57,6 @@ The second variable, `expn`, contains the full expansion of the provided quantit
 Note that, currently, functions `fun` involving fractions, fractional powers and/or special functions of the velocity field and/or velocity gradient are not accepted.
 To study the near-wall scaling behavior of quantities involving fractional functions of the velocity field or gradient, one can first study the numerators and denominators separately, and then (manually) draw conclusions about the near-wall scaling behavior of the full function.
 The same holds for (the arguments of) special functions and nth roots.
-
-Depending on your purposes, please consider citing the work by Silvis et al. [[4](#silvisetal2017nws)] and/or Silvis and Verstappen [[5](#silvisverstappenndnws)] when making use of the `nearWallScaling` module.
-
-## More information
-
-Refer to http://www.mauritssilvis.nl/code.php#nearWallScaling for more information.
-
-## References
-
-1. Chapman, D. R. and Kuhn, G. D. (1986). <a name="chapmankuhn1986nws"></a> “The limiting behaviour of turbulence near a wall”. *Journal of Fluid Mechanics* 170, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
-
-2. Nicoud, F., Baya Toda, H., Cabrit, O., Bose, S. and Lee, J. (2011). <a name="nicoudetal2011nws"></a> “Using singular values to build a subgrid-scale model for large eddy simulations”. *Physics of Fluids* 23, 085106. DOI: [10.1063/1.3623274](http://doi.org/10.1063/1.3623274).
-
-3. Trias, F. X., Folch, D., Gorobets, A. and Oliva, A. (2015). <a name="triasetal2015nws"></a> “Building proper invariants for eddy-viscosity subgrid-scale models”. *Physics of Fluids* 27, 065103. DOI: [10.1063/1.4921817](http://doi.org/10.1063/1.4921817).
-
-4. **Silvis**, M. H., Remmerswaal, R. A. and Verstappen, R. (2017). <a name="silvisetal2017nws"></a> “Physical consistency of subgrid-scale models for large-eddy simulation of incompressible turbulent flows”. *Physics of Fluids* 29, 015105. DOI: [10.1063/1.4974093](http://doi.org/10.1063/1.4974093).
-
-5. **Silvis**, M. H. and Verstappen, R. (n.d.). <a name="silvisverstappenndnws"></a> “Creating physics-based turbulence models for large-eddy simulation”. (in preparation).
 
 ## License
 
