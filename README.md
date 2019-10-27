@@ -11,7 +11,7 @@ Currently, `lesTools` consists of two modules:
 1. the model statistics module [modStats](#modStats);
 2. the near-wall scaling module [nearWallScaling](#nearwallscaling).
 
-## Model statistics module `modStats`
+## Model statistics module modStats
 
 > A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
 
@@ -54,7 +54,7 @@ Depending on your purposes, please consider citing the work by Silvis et al. [[6
 
 Mirko Signorelli is kindly acknowledged for his assistance in determining the accuracy of the model statistics.
 
-## Near-wall scaling behavior `nearWallScaling`
+## Near-wall scaling behavior nearWallScaling
 
 > A tool to study the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows
 
@@ -101,7 +101,7 @@ Depending on your purposes, please consider citing the work by Silvis et al. [[6
 
 7. **Silvis**, M. H. and Verstappen, R. (n.d.). <a name="silvisverstappennd"></a> “Creating physics-based subgrid-scale models for large-eddy simulation”. (in preparation).
 
-8. **Silvis**, M. H., Bae, H. J., Trias, F. X., Abkar, M., Verstappen, R. (2019). <a name="silvisetal2019"></a> &#8220;A nonlinear subgrid-scale model for large-eddy simulations of rotating turbulent flows&#8221;. *arXiv* [physics.flu-dyn]. (submitted). 
+8. **Silvis**, M. H., Bae, H. J., Trias, F. X., Abkar, M., Verstappen, R. (2019). <a name="silvisetal2019"></a> &#8220;A nonlinear subgrid-scale model for large-eddy simulations of rotating turbulent flows&#8221;. *arXiv* [1904.12748 [physics.flu-dyn]](http://arxiv.org/abs/1904.12748).
 
 9. Chapman, D. R. and Kuhn, G. D. (1986). <a name="chapmankuhn1986"></a> “The limiting behaviour of turbulence near a wall”. *Journal of Fluid Mechanics* 170, 265-292. DOI: [10.1017/S0022112086000885](http://doi.org/10.1017/S0022112086000885).
 
