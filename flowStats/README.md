@@ -1,20 +1,20 @@
 # Usage information
 
-## modStats
+## flowStats
 
 > A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
 
 ### About
 
-This document describes in detail how to use the `MATLAB` scripts of the `modStats` module of `lesTools`.
+This document describes in detail how to use the `MATLAB` scripts of the `flowStats` module of `lesTools`.
 For background information about this module, see the `lesTools` [readme](../README.md).
 
 ### Usage
 
-To use the scripts of the `modStats` module, one needs `MATLAB`.
+To use the scripts of the `flowStats` module, one needs `MATLAB`.
 Usage was tested in `MATLAB R2018a`.
 
-The main function of the `modStats` module is called `modStats()` and can be found in the script [modStats.m](src/modStats.m).
+The main function of the `flowStats` module is called `flowStats()` and can be found in the script [flowStats.m](src/flowStats.m).
 This function, which can be used to compute the average of a physical quantity that is based on the velocity gradient of a turbulent flow, has one required argument:
 
 * `fun`
@@ -44,7 +44,7 @@ This function, which can be used to compute the average of a physical quantity t
         - `@(G, S, W, I1) = 2 * I1 * sqrt(2 * I1)` or `'dissSmagorinsky'`: the reduced dissipation of kinetic energy of the Smagorinsky model, i.e., the dissipation without model constant and squared length scale;
         - the file names `'dissAMD'`, `'dissQR'`, `'dissS3PQ'`, `'dissS3PR'`, `'dissS3QR'`, `'dissVortexStretching'`, `'dissVreman'` or `'dissWALE'`: the reduced dissipation of kinetic energy of several other example eddy viscosity models in the [mods](src/mods) folder.
 
-The `modStats()` function additionally has a number of optional arguments:
+The `flowStats()` function additionally has a number of optional arguments:
 
 * `precision`
     + A nonnegative double that marks the desired minimal relative standard deviation of the computed average of the physical quantity represented by the function `fun`.
@@ -88,7 +88,7 @@ The `modStats()` function additionally has a number of optional arguments:
     + Default: `1`.
     + If averages of the physical quantity of interest are small, their relative standard deviation may not reach the desired precision. The averages will then be shifted by `shiftAvg`.
 
-If valid input is provided, the `modStats()` function produces one output variable:
+If valid input is provided, the `flowStats()` function produces one output variable:
 
 * `stats`
     + A struct that contains information about the average behavior of the physical quantity of interest.
@@ -102,12 +102,12 @@ If valid input is provided, the `modStats()` function produces one output variab
     + All subsequent entries will contain similar information, but now for an increased number of gradients `nGrads` per sample.
 
 The sample averages `avgs`, the average `avg` of the physical quantity of interest and the standard deviation `dev` make use of the same units of time, or the same characteristic time scale, that is provided by the generator of velocity gradients `gradsFun`.
-That is, when the input parameter `gradsFun` is set to the name of a custom function that generates (random) velocity gradients or that reads velocity gradients from a file, the output of the `modStats()` function uses the same units of time as provided by those velocity gradients.
-If, on the other hand, the generator of velocity gradients `gradsFun` is specified as `'unifMats'`,  as `'normMats'` or is left empty to attain the default (former) value, the output from the `modStats()` function is expressed with respect to an arbitrary and unknown time scale.
+That is, when the input parameter `gradsFun` is set to the name of a custom function that generates (random) velocity gradients or that reads velocity gradients from a file, the output of the `flowStats()` function uses the same units of time as provided by those velocity gradients.
+If, on the other hand, the generator of velocity gradients `gradsFun` is specified as `'unifMats'`,  as `'normMats'` or is left empty to attain the default (former) value, the output from the `flowStats()` function is expressed with respect to an arbitrary and unknown time scale.
 In this latter case, only output for physical quantities `fun` that are a dimensionless function of the velocity gradient can be interpreted directly.
 Output for all other, dimensionful functions of the velocity gradient should only be interpreted relative to other dimensionful functions.
 
-To facilitate the comparison of dimensionful function of the velocity gradient, the `modStats` module will soon provide a function called `relModStats()`.
+To facilitate the comparison of dimensionful function of the velocity gradient, the `flowStats` module will soon provide a function called `relflowStats()`.
 More details on the usage of this function will be provided through this readme in the near future.
 
 ## License

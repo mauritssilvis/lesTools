@@ -1,4 +1,4 @@
-% Test modStats()
+% Test flowStats()
 
 %% Test valid input #1
 % Define parameters
@@ -6,7 +6,7 @@ fun = @(G) zeros( size(G) );
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -25,7 +25,7 @@ precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -44,7 +44,7 @@ precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -63,7 +63,7 @@ precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -82,7 +82,7 @@ precision = 10; % Prevent long run
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -102,7 +102,7 @@ nSamples = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -122,7 +122,7 @@ nSamples = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -143,7 +143,7 @@ nGrads = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -164,7 +164,7 @@ nGrads = 1;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -185,7 +185,7 @@ nGrads = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -206,7 +206,7 @@ nGrads = 1;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -227,7 +227,7 @@ nGrads = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -249,7 +249,7 @@ gradsFun = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -271,7 +271,7 @@ gradsFun = '';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -293,7 +293,7 @@ gradsFun = 'unifMats';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -315,7 +315,7 @@ gradsFun = 'normMats';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -337,7 +337,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims, spaceDims, nGrads);
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -360,7 +360,7 @@ spaceDims = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -383,7 +383,7 @@ spaceDims = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -406,7 +406,7 @@ spaceDims = 3;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -430,7 +430,7 @@ flowDims = 1;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -454,7 +454,7 @@ flowDims = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -478,7 +478,7 @@ flowDims =  1 : 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -502,7 +502,7 @@ flowDims = (1 : 2)';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -526,7 +526,7 @@ flowDims = 1;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -550,7 +550,7 @@ flowDims = 2;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -574,7 +574,7 @@ flowDims = 3;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -598,7 +598,7 @@ flowDims = [1, 2];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -622,7 +622,7 @@ flowDims = [1, 2]';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -646,7 +646,7 @@ flowDims = [1, 3];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -670,7 +670,7 @@ flowDims = [1, 3]';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -694,7 +694,7 @@ flowDims = [2, 3];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -718,7 +718,7 @@ flowDims = [2, 3]';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -742,7 +742,7 @@ flowDims =  1 : 3;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -766,7 +766,7 @@ flowDims = (1 : 3)';
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -791,7 +791,7 @@ makeIncompr = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -816,7 +816,7 @@ makeIncompr = true;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -841,7 +841,7 @@ makeIncompr = false;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -867,7 +867,7 @@ checkIncompr = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -893,7 +893,7 @@ checkIncompr = true;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -919,7 +919,7 @@ checkIncompr = false;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -946,7 +946,7 @@ shiftAvg = [];
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -973,7 +973,7 @@ shiftAvg = -1.5;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -1000,7 +1000,7 @@ shiftAvg = 0;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -1027,7 +1027,7 @@ shiftAvg = 1.5;
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -1045,7 +1045,7 @@ fun = []; % Empty
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1063,7 +1063,7 @@ fun = ''; % Empty
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1081,7 +1081,7 @@ fun = 10; % Double
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1099,7 +1099,7 @@ fun = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1117,7 +1117,7 @@ fun = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1135,7 +1135,7 @@ fun = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1153,7 +1153,7 @@ fun = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1171,7 +1171,7 @@ fun = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1189,7 +1189,7 @@ fun = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1207,7 +1207,7 @@ fun = 'nonExistingFunctionName'; % Nonexisting function name
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1225,7 +1225,7 @@ fun = 'emptyScript'; % Nonevaluable script file
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1243,7 +1243,7 @@ fun = @() 1; % Zero input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1261,7 +1261,7 @@ fun = @(a, b, c, d, e, f, g, h, i, j) 1; % Ten input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1279,7 +1279,7 @@ fun = @(varargin) 1; % Variable number of input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1297,7 +1297,7 @@ fun = @(G, S) zeros( size(G) ) + zeros( size(S) + 2 ); % Invalid operation
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1315,7 +1315,7 @@ fun = @(G) true; % Bool output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1333,7 +1333,7 @@ fun = @(G) char(100); % Char output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1351,7 +1351,7 @@ fun = @(G) string(); % String output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1369,7 +1369,7 @@ fun = @(G) struct(); % Struct output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1387,7 +1387,7 @@ fun = @(G) {''}; % Cell output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1405,7 +1405,7 @@ fun = @(G) table(0); % Table output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1423,7 +1423,7 @@ fun = @(G) @(G) G; % Function handle output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1441,7 +1441,7 @@ fun = @(G) []; % Empty output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1459,7 +1459,7 @@ fun = @(G) zeros(3, 3, 3); % Rank-three tensor output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1477,7 +1477,7 @@ fun = @(G) zeros(3, 3, 3, 3); % Rank-four tensor output
 
 % Obtain actual pass state
 try
-    modStats(fun);
+    flowStats(fun);
     actPass = true;
 catch
     actPass = false;
@@ -1496,7 +1496,7 @@ precision = 0; % Zero (invalid in combination with empty nGrads)
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1515,7 +1515,7 @@ precision = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1534,7 +1534,7 @@ precision = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1553,7 +1553,7 @@ precision = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1572,7 +1572,7 @@ precision = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1591,7 +1591,7 @@ precision = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1610,7 +1610,7 @@ precision = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1629,7 +1629,7 @@ precision = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1648,7 +1648,7 @@ precision = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1667,7 +1667,7 @@ precision = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1686,7 +1686,7 @@ precision = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision);
+    flowStats(fun, precision);
     actPass = true;
 catch
     actPass = false;
@@ -1706,7 +1706,7 @@ nSamples = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1726,7 +1726,7 @@ nSamples = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1746,7 +1746,7 @@ nSamples = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1766,7 +1766,7 @@ nSamples = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1786,7 +1786,7 @@ nSamples = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1806,7 +1806,7 @@ nSamples = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1826,7 +1826,7 @@ nSamples = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1846,7 +1846,7 @@ nSamples = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1866,7 +1866,7 @@ nSamples = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1886,7 +1886,7 @@ nSamples = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1906,7 +1906,7 @@ nSamples = 7.5; % Noninteger double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples);
+    flowStats(fun, precision, nSamples);
     actPass = true;
 catch
     actPass = false;
@@ -1927,7 +1927,7 @@ nGrads = []; % Empty (invalid in combination with zero precision)
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -1948,7 +1948,7 @@ nGrads = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -1969,7 +1969,7 @@ nGrads = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -1990,7 +1990,7 @@ nGrads = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2011,7 +2011,7 @@ nGrads = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2032,7 +2032,7 @@ nGrads = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2053,7 +2053,7 @@ nGrads = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2074,7 +2074,7 @@ nGrads = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2095,7 +2095,7 @@ nGrads = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2116,7 +2116,7 @@ nGrads = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2137,7 +2137,7 @@ nGrads = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2158,7 +2158,7 @@ nGrads = 7.5; % Noninteger double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads);
+    flowStats(fun, precision, nSamples, nGrads);
     actPass = true;
 catch
     actPass = false;
@@ -2180,7 +2180,7 @@ gradsFun = 10; % Double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2202,7 +2202,7 @@ gradsFun = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2224,7 +2224,7 @@ gradsFun = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2246,7 +2246,7 @@ gradsFun = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2268,7 +2268,7 @@ gradsFun = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2290,7 +2290,7 @@ gradsFun = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2312,7 +2312,7 @@ gradsFun = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2334,7 +2334,7 @@ gradsFun = 'nonExistingFunctionName'; % Nonexisting function name
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2356,7 +2356,7 @@ gradsFun = 'emptyScript'; % Nonevaluable script file
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2378,7 +2378,7 @@ gradsFun = @() 1; % Zero input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2400,7 +2400,7 @@ gradsFun = @(a, b, c, d, e, f, g, h, i, j) 1; % Ten input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2422,7 +2422,7 @@ gradsFun = @(varargin) 1; % Variable number of input arguments
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2444,7 +2444,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) zeros(spaceDims + 1, spaceDims + 1) + 
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2466,7 +2466,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) true; % Bool output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2488,7 +2488,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) char(100); % Char output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2510,7 +2510,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) string(); % String output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2532,7 +2532,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) struct(); % Struct output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2554,7 +2554,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) {''}; % Cell output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2576,7 +2576,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) table(0); % Table output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2598,7 +2598,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) @(sampleNr, nGrads, spaceDims) sampleN
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2620,7 +2620,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) []; % Empty output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2642,7 +2642,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) zeros(1); % Scalar output
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2664,7 +2664,7 @@ gradsFun = @(sampleNr, nGrads, spaceDims) zeros(3, 3, 3, 3); % Rank-four tensor 
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun);
     actPass = true;
 catch
     actPass = false;
@@ -2687,7 +2687,7 @@ spaceDims = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2710,7 +2710,7 @@ spaceDims = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2733,7 +2733,7 @@ spaceDims = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2756,7 +2756,7 @@ spaceDims = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2779,7 +2779,7 @@ spaceDims = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2802,7 +2802,7 @@ spaceDims = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2825,7 +2825,7 @@ spaceDims = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2848,7 +2848,7 @@ spaceDims = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2871,7 +2871,7 @@ spaceDims = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2894,7 +2894,7 @@ spaceDims = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2917,7 +2917,7 @@ spaceDims = 7.5; % Noninteger double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims);
     actPass = true;
 catch
     actPass = false;
@@ -2941,7 +2941,7 @@ flowDims = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -2965,7 +2965,7 @@ flowDims = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -2989,7 +2989,7 @@ flowDims = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3013,7 +3013,7 @@ flowDims = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3037,7 +3037,7 @@ flowDims = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3061,7 +3061,7 @@ flowDims = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3085,7 +3085,7 @@ flowDims = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3109,7 +3109,7 @@ flowDims = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3133,7 +3133,7 @@ flowDims = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3157,7 +3157,7 @@ flowDims = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3181,7 +3181,7 @@ flowDims = 7.5; % Noninteger double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3205,7 +3205,7 @@ flowDims = 0; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3229,7 +3229,7 @@ flowDims =  0 : 2; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3253,7 +3253,7 @@ flowDims = (0 : 2)'; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3277,7 +3277,7 @@ flowDims = 3; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3301,7 +3301,7 @@ flowDims =  1 : 3; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3325,7 +3325,7 @@ flowDims = (1 : 3)'; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3349,7 +3349,7 @@ flowDims = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3373,7 +3373,7 @@ flowDims = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3397,7 +3397,7 @@ flowDims = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3421,7 +3421,7 @@ flowDims = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3445,7 +3445,7 @@ flowDims = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3469,7 +3469,7 @@ flowDims = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3493,7 +3493,7 @@ flowDims = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3517,7 +3517,7 @@ flowDims = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3541,7 +3541,7 @@ flowDims = -7.5; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3565,7 +3565,7 @@ flowDims = -10; % Negative double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3589,7 +3589,7 @@ flowDims = 7.5; % Noninteger double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3613,7 +3613,7 @@ flowDims = 0; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3637,7 +3637,7 @@ flowDims =  0 : 2; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3661,7 +3661,7 @@ flowDims = (0 : 2)'; % Zero
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3685,7 +3685,7 @@ flowDims = 4; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3709,7 +3709,7 @@ flowDims =  1 : 4; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3733,7 +3733,7 @@ flowDims = (1 : 4)'; % Larger than spaceDims
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims);
     actPass = true;
 catch
     actPass = false;
@@ -3758,7 +3758,7 @@ makeIncompr = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3783,7 +3783,7 @@ makeIncompr = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3808,7 +3808,7 @@ makeIncompr = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3833,7 +3833,7 @@ makeIncompr = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3858,7 +3858,7 @@ makeIncompr = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3883,7 +3883,7 @@ makeIncompr = 10; % Double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3909,7 +3909,7 @@ checkIncompr = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3935,7 +3935,7 @@ checkIncompr = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3961,7 +3961,7 @@ checkIncompr = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -3987,7 +3987,7 @@ checkIncompr = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -4013,7 +4013,7 @@ checkIncompr = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -4039,7 +4039,7 @@ checkIncompr = 10; % Double
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr);
     actPass = true;
 catch
     actPass = false;
@@ -4066,7 +4066,7 @@ shiftAvg = true; % Bool
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4093,7 +4093,7 @@ shiftAvg = char(100); % Char
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4120,7 +4120,7 @@ shiftAvg = string(); % String
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4147,7 +4147,7 @@ shiftAvg = struct(); % Struct
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4174,7 +4174,7 @@ shiftAvg = {''}; % Cell
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4201,7 +4201,7 @@ shiftAvg = table(0); % Table
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4228,7 +4228,7 @@ shiftAvg = zeros(2, 2); % Matrix
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;
@@ -4255,7 +4255,7 @@ shiftAvg = zeros(3, 3, 3); % Rank-three tensor
 
 % Obtain actual pass state
 try
-    modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     actPass = true;
 catch
     actPass = false;

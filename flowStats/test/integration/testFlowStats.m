@@ -1,4 +1,4 @@
-% Test modStats()
+% Test flowStats()
 % Set which tests should be run
 skipShort = false; % Run 1-second tests
 skipMedium = true; % Skip 10-second tests
@@ -24,7 +24,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -56,7 +56,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -88,7 +88,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -120,7 +120,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -152,7 +152,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -184,7 +184,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -216,7 +216,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -248,7 +248,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -280,7 +280,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -312,7 +312,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -344,7 +344,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -376,7 +376,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -408,7 +408,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -440,7 +440,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -472,7 +472,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -504,7 +504,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -536,7 +536,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -568,7 +568,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -600,7 +600,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -632,7 +632,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -664,7 +664,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -696,7 +696,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -728,7 +728,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -760,7 +760,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -792,7 +792,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -824,7 +824,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -856,7 +856,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -888,7 +888,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -920,7 +920,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -952,7 +952,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -984,7 +984,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1016,7 +1016,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1048,7 +1048,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1080,7 +1080,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1112,7 +1112,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1144,7 +1144,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1176,7 +1176,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1208,7 +1208,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1240,7 +1240,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1272,7 +1272,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1304,7 +1304,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1336,7 +1336,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1368,7 +1368,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1400,7 +1400,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1432,7 +1432,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1464,7 +1464,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1496,7 +1496,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1528,7 +1528,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1560,7 +1560,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1592,7 +1592,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1624,7 +1624,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1656,7 +1656,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1688,7 +1688,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1720,7 +1720,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1752,7 +1752,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1784,7 +1784,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1816,7 +1816,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1848,7 +1848,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1880,7 +1880,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1912,7 +1912,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1944,7 +1944,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -1976,7 +1976,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2008,7 +2008,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2040,7 +2040,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2072,7 +2072,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2104,7 +2104,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2136,7 +2136,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2168,7 +2168,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2200,7 +2200,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2232,7 +2232,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2264,7 +2264,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2296,7 +2296,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2328,7 +2328,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2360,7 +2360,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2392,7 +2392,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2424,7 +2424,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2456,7 +2456,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2488,7 +2488,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2520,7 +2520,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2552,7 +2552,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2584,7 +2584,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2616,7 +2616,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2648,7 +2648,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2680,7 +2680,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2712,7 +2712,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2744,7 +2744,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2776,7 +2776,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2808,7 +2808,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2840,7 +2840,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2872,7 +2872,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2904,7 +2904,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2936,7 +2936,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -2968,7 +2968,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3000,7 +3000,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3032,7 +3032,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3064,7 +3064,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3096,7 +3096,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3128,7 +3128,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3160,7 +3160,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3192,7 +3192,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3224,7 +3224,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3256,7 +3256,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3288,7 +3288,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3320,7 +3320,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3352,7 +3352,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3384,7 +3384,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3416,7 +3416,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3448,7 +3448,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3480,7 +3480,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3512,7 +3512,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3544,7 +3544,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3576,7 +3576,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3608,7 +3608,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3640,7 +3640,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3672,7 +3672,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3704,7 +3704,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3736,7 +3736,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3768,7 +3768,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3800,7 +3800,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3832,7 +3832,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3864,7 +3864,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3896,7 +3896,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3928,7 +3928,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3960,7 +3960,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -3992,7 +3992,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4024,7 +4024,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4056,7 +4056,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4088,7 +4088,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4120,7 +4120,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4152,7 +4152,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4184,7 +4184,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4216,7 +4216,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4248,7 +4248,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4280,7 +4280,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4312,7 +4312,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4344,7 +4344,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4376,7 +4376,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4408,7 +4408,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4440,7 +4440,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4472,7 +4472,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4504,7 +4504,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4536,7 +4536,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4568,7 +4568,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4600,7 +4600,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4632,7 +4632,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4664,7 +4664,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4696,7 +4696,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4728,7 +4728,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4760,7 +4760,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4792,7 +4792,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4824,7 +4824,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4856,7 +4856,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4888,7 +4888,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4920,7 +4920,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4952,7 +4952,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -4984,7 +4984,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5016,7 +5016,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5048,7 +5048,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5080,7 +5080,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5112,7 +5112,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5144,7 +5144,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5176,7 +5176,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5208,7 +5208,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5240,7 +5240,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5272,7 +5272,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5304,7 +5304,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5336,7 +5336,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5368,7 +5368,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5400,7 +5400,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5432,7 +5432,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5464,7 +5464,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5496,7 +5496,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5528,7 +5528,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5560,7 +5560,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5592,7 +5592,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5624,7 +5624,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5656,7 +5656,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5688,7 +5688,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5720,7 +5720,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5752,7 +5752,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5784,7 +5784,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5816,7 +5816,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5848,7 +5848,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5880,7 +5880,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5912,7 +5912,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5944,7 +5944,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -5976,7 +5976,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6008,7 +6008,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6040,7 +6040,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6072,7 +6072,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6104,7 +6104,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6136,7 +6136,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6168,7 +6168,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6200,7 +6200,7 @@ if ~skipVeryVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6232,7 +6232,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6264,7 +6264,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6296,7 +6296,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6328,7 +6328,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6360,7 +6360,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6392,7 +6392,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6424,7 +6424,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6456,7 +6456,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6488,7 +6488,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6520,7 +6520,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6552,7 +6552,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6584,7 +6584,7 @@ if ~skipShort
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6616,7 +6616,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6648,7 +6648,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6680,7 +6680,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6712,7 +6712,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6744,7 +6744,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6776,7 +6776,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6808,7 +6808,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6840,7 +6840,7 @@ if ~skipMedium
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6872,7 +6872,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6904,7 +6904,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6936,7 +6936,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -6968,7 +6968,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7000,7 +7000,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7032,7 +7032,7 @@ if ~skipLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7064,7 +7064,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7096,7 +7096,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7128,7 +7128,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 
@@ -7160,7 +7160,7 @@ if ~skipVeryLong
     shiftAvg = 1;
 
     % Obtain actual value
-    actVal = modStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
+    actVal = flowStats(fun, precision, nSamples, nGrads, gradsFun, spaceDims, flowDims, makeIncompr, checkIncompr, shiftAvg);
     field = 'avg';
     actVal = actVal.avg;
 

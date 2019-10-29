@@ -8,16 +8,16 @@
 
 Currently, `lesTools` consists of two modules:
 
-1. the model statistics module [modStats](#modStats);
+1. the flow statistics module [flowStats](#flowStats);
 2. the near-wall scaling module [nearWallScaling](#nearwallscaling).
 
-## Model statistics module modStats
+## Flow statistics module flowStats
 
 > A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
 
 ### About
 
-The `modStats` module is a tool that can be used to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows.
+The `flowStats` module is a tool that can be used to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows.
 As such, this module can be used to estimate the model constants of subgrid-scale models for large-eddy simulation.
 
 ### Background
@@ -40,19 +40,19 @@ To obtain an estimate of the model constant of the nonlinear term, we then compa
 
 ### Module
 
-The `modStats` module provides scripts that facilitate the determination of the average dissipation and the average model coefficients of subgrid-scale models.
+The `flowStats` module provides scripts that facilitate the determination of the average dissipation and the average model coefficients of subgrid-scale models.
 As such, this module can be used to determine the model constants of subgrid-scale models [[6](#silvisetal2017), [7](#silvisverstappennd), [8](#silvisetal2019)].
-More generally, the `modStats` module can be used to study the average behavior of any quantity that is based on the velocity gradient of a turbulent flow.
+More generally, the `flowStats` module can be used to study the average behavior of any quantity that is based on the velocity gradient of a turbulent flow.
 
 ### Usage
 
-Usage of the `MATLAB` scripts of the `modStats` module is explained in detail in the readme in the [modStats](modStats) folder of this toolbox.
+Usage of the `MATLAB` scripts of the `flowStats` module is explained in detail in the readme in the [flowStats](flowStats) folder of this toolbox.
 
-Depending on your purposes, please consider citing the work by Silvis et al. [[6](#silvisetal2017)] and/or Silvis et al. [[8](#silvisetal2019)] when making use of the `modStats` module.
+Depending on your purposes, please consider citing the work by Silvis et al. [[6](#silvisetal2017)] and/or Silvis et al. [[8](#silvisetal2019)] when making use of the `flowStats` module.
 
 ### Acknowledgments
 
-Mirko Signorelli is kindly acknowledged for his assistance in determining the accuracy of the model statistics.
+Mirko Signorelli is kindly acknowledged for his assistance in determining the accuracy of the flow statistics.
 
 ## Near-wall scaling behavior nearWallScaling
 
