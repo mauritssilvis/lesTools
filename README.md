@@ -11,13 +11,13 @@ Currently, `lesTools` consists of two modules:
 1. the flow statistics module [flowStats](#flowStats);
 2. the near-wall scaling module [nearWallScaling](#nearwallscaling).
 
-## Flow statistics module flowStats
+## flowStats
 
-> A tool to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows
+> A tool to study the statistical behavior of physical quantities that are based on the velocity gradient of turbulent flows
 
 ### About
 
-The `flowStats` module is a tool that can be used to study the average behavior of physical quantities that are based on the velocity gradient of turbulent flows.
+The `flowStats` module is a tool that can be used to study the statistical behavior of physical quantities that are based on the velocity gradient of turbulent flows.
 As such, this module can be used to estimate the model constants of subgrid-scale models for large-eddy simulation.
 
 ### Background
@@ -26,8 +26,8 @@ Large-eddy simulation is a powerful methodology for the numerical prediction of 
 In large-eddy simulation, the large scales of motion in flows are explicitly computed, whereas the effects of the small-scale motions are modeled using subgrid-scale models (see, e.g., the monographs by Sagaut [[1](#sagaut2006)] and Pope [[2](#pope2011)]).
 Most subgrid-scale models can, however, only be used in a practical large-eddy simulation, once the value of one or more model constants has been determined.
 
-The model constants of eddy viscosity models can be estimated using a straight-forward dissipation argument.
-One simply requires that the average subgrid dissipation due to an eddy viscosity model matches the average dissipation of the Smagorinsky model [[3](#nicoudducros1999), [4](#nicoudetal2011), [5](#triasetal2015), [6](#silvisetal2017)].
+The model constants of eddy viscosity models can be estimated using a simple dissipation argument.
+One requires that the average subgrid dissipation due to an eddy viscosity model matches the average dissipation of the Smagorinsky model [[3](#nicoudducros1999), [4](#nicoudetal2011), [5](#triasetal2015), [6](#silvisetal2017)].
 The average subgrid dissipation of a subgrid-scale model can, for example, be computed using the velocity field of a homogeneous isotropic turbulent flow, either coming from an experiment or a numerical simulation [[3](#nicoudducros1999)].
 Alternatively, the subgrid dissipation can be estimated using a large number of synthetic velocity gradients, given by random matrices [[4](#nicoudetal2011), [5](#triasetal2015)] that may be sampled from a uniform distribution [[6](#silvisetal2017)].
 One subsequently equates the average subgrid dissipation from the eddy viscosity model of interest with the average dissipation of the Smagorinsky model to obtain an estimate of the sought model constant in terms of the Smagorinsky constant.
@@ -40,9 +40,9 @@ To obtain an estimate of the model constant of the nonlinear term, we then compa
 
 ### Module
 
-The `flowStats` module provides scripts that facilitate the determination of the average dissipation and the average model coefficients of subgrid-scale models.
-As such, this module can be used to determine the model constants of subgrid-scale models [[6](#silvisetal2017), [7](#silvisverstappennd), [8](#silvisetal2019)].
-More generally, the `flowStats` module can be used to study the average behavior of any quantity that is based on the velocity gradient of a turbulent flow.
+The `flowStats` module provides scripts that facilitate the determination of the statistical behavior of physical quantities that are based on the velocity gradient of turbulent flows.
+In particular, this module can be used to determine the average dissipation and the average model coefficients of subgrid-scale models.
+We can, thus, use this module to estimate the model constants of subgrid-scale models for large-eddy simulation [[6](#silvisetal2017), [7](#silvisverstappennd), [8](#silvisetal2019)].
 
 ### Usage
 
@@ -54,7 +54,7 @@ Depending on your purposes, please consider citing the work by Silvis et al. [[6
 
 Mirko Signorelli is kindly acknowledged for his assistance in determining the accuracy of the flow statistics.
 
-## Near-wall scaling behavior nearWallScaling
+## nearWallScaling
 
 > A tool to study the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows
 
@@ -77,7 +77,8 @@ The expansion of the velocity field can be inserted in subgrid-scale models (or 
 
 ### Module
 
-The `nearWallScaling` module facilitates the study of the near-wall scaling behavior of subgrid-scale models and other physical quantities that are based on the velocity field of incompressible turbulent flows [[6](#silvisetal2017), [7](#silvisverstappennd)].
+The `nearWallScaling` module facilitates the study of the near-wall scaling behavior of physical quantities that are based on the velocity field of incompressible turbulent flows.
+This module can, for example, be used to analyze the near-wall scaling behavior of subgrid-scale models [[6](#silvisetal2017), [7](#silvisverstappennd)].
 
 ### Usage
 
